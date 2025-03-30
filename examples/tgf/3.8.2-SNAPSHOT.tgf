@@ -1,0 +1,212 @@
+1694804085 org.apache.maven.plugins:maven-dependency-plugin:maven-plugin:3.8.2-SNAPSHOT
+904031493 org.apache.maven:maven-artifact:jar:3.6.3:provided
+1642905321 org.apache.maven:maven-plugin-api:jar:3.6.3:provided
+464994546 org.codehaus.plexus:plexus-classworlds:jar:2.6.0:provided
+624475142 org.apache.maven:maven-model:jar:3.6.3:provided
+1643565953 org.apache.maven:maven-core:jar:3.6.3:provided
+1701388960 org.apache.maven:maven-settings-builder:jar:3.6.3:provided
+1148735023 org.sonatype.plexus:plexus-sec-dispatcher:jar:1.4:provided
+608174634 org.sonatype.plexus:plexus-cipher:jar:1.4:provided
+1937618936 org.apache.maven:maven-builder-support:jar:3.6.3:provided
+1596843797 org.apache.maven:maven-model-builder:jar:3.6.3:provided
+1495454697 org.apache.maven.resolver:maven-resolver-impl:jar:1.4.1:provided
+2102909877 org.apache.maven.resolver:maven-resolver-spi:jar:1.4.1:provided
+1661690256 org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M3:provided
+1395533739 com.google.inject:guice:jar:no_aop:4.2.1:provided
+484187068 aopalliance:aopalliance:jar:1.0:provided
+1603662305 com.google.guava:guava:jar:25.1-android:provided
+1730813026 com.google.code.findbugs:jsr305:jar:3.0.2:provided
+1167813715 org.checkerframework:checker-compat-qual:jar:2.0.0:provided
+971415207 com.google.errorprone:error_prone_annotations:jar:2.1.3:provided
+1225554563 com.google.j2objc:j2objc-annotations:jar:1.1:provided
+2121443020 org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:provided
+1612031141 org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:compile
+1829440934 org.apache.maven:maven-repository-metadata:jar:3.6.3:provided
+1199155942 org.apache.maven:maven-settings:jar:3.6.3:provided
+752230403 org.apache.maven:maven-resolver-provider:jar:3.6.3:provided
+1638631856 org.apache.maven.doxia:doxia-sink-api:jar:2.0.0:compile
+1417203230 org.apache.maven.reporting:maven-reporting-api:jar:4.0.0:compile
+1591505133 org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0:compile
+1125614861 org.apache.maven.doxia:doxia-site-model:jar:2.0.0:compile
+2118939350 org.apache.maven.doxia:doxia-core:jar:2.0.0:compile
+1825983295 org.apache.commons:commons-text:jar:1.12.0:compile
+1370494288 org.apache.maven.doxia:doxia-integration-tools:jar:2.0.0:compile
+787537286 org.apache.maven.doxia:doxia-site-renderer:jar:2.0.0:compile
+859295820 org.apache.maven.doxia:doxia-skin-model:jar:2.0.0:compile
+1843853990 org.apache.maven.doxia:doxia-module-xhtml5:jar:2.0.0:compile
+1017997535 org.codehaus.plexus:plexus-velocity:jar:2.2.0:compile
+345607713 org.apache.velocity:velocity-engine-core:jar:2.4:compile
+421632334 org.apache.velocity.tools:velocity-tools-generic:jar:3.1:compile
+1137210118 commons-beanutils:commons-beanutils:jar:1.9.4:compile
+351535152 commons-logging:commons-logging:jar:1.2:compile
+1279556617 commons-collections:commons-collections:jar:3.2.2:compile
+1496999718 org.apache.commons:commons-digester3:jar:3.2:compile
+1500151620 com.github.cliftonlabs:json-simple:jar:3.0.2:compile
+1839923673 org.apache.maven.doxia:doxia-module-apt:jar:2.0.0:runtime
+48274513 org.apache.maven.doxia:doxia-module-xdoc:jar:2.0.0:runtime
+141154428 org.apache.maven:maven-archiver:jar:3.6.2:compile
+49485418 org.codehaus.plexus:plexus-archiver:jar:4.10.0:compile
+929266212 org.apache.commons:commons-compress:jar:1.26.2:compile
+837249677 commons-codec:commons-codec:jar:1.17.0:compile
+1997270773 io.airlift:aircompressor:jar:0.27:compile
+1842476600 org.tukaani:xz:jar:1.9:runtime
+1095701500 com.github.luben:zstd-jni:jar:1.5.6-3:runtime
+1266068058 org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M3:provided
+1671596423 org.apache.commons:commons-lang3:jar:3.17.0:compile
+18928637 commons-io:commons-io:jar:2.16.1:test
+952754390 org.codehaus.plexus:plexus-utils:jar:4.0.1:compile
+1184082415 org.codehaus.plexus:plexus-xml:jar:3.0.1:compile
+822799883 org.codehaus.plexus:plexus-io:jar:3.5.1:compile
+909278444 org.codehaus.plexus:plexus-i18n:jar:1.0-beta-10:compile
+1091233196 org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.1:compile
+445509811 org.ow2.asm:asm:jar:9.7.1:compile
+2081501023 org.apache.maven.shared:maven-dependency-tree:jar:3.3.0:compile
+1499588909 org.apache.maven.shared:maven-common-artifact-filters:jar:3.4.0:compile
+1339052072 org.apache.maven.shared:maven-artifact-transfer:jar:0.13.1:compile
+976042249 org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile
+1337168580 org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.13.1:provided
+424489630 javax.inject:javax.inject:jar:1:provided
+1423007887 org.apache.maven.resolver:maven-resolver-api:jar:1.4.1:provided
+132644461 org.apache.maven.resolver:maven-resolver-util:jar:1.4.1:compile
+1410431463 org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile
+607676473 org.slf4j:slf4j-api:jar:1.7.36:compile
+2066919721 org.apache.maven.resolver:maven-resolver-connector-basic:jar:1.4.1:test
+1134443700 org.apache.maven.resolver:maven-resolver-transport-file:jar:1.4.1:test
+480230241 org.apache.maven.resolver:maven-resolver-transport-http:jar:1.4.1:test
+2072076651 org.apache.httpcomponents:httpclient:jar:4.5.6:test
+366226635 org.apache.httpcomponents:httpcore:jar:4.4.10:test
+664656217 org.slf4j:jcl-over-slf4j:jar:1.7.25:test
+1178090104 org.junit.jupiter:junit-jupiter-api:jar:5.10.3:test
+918716909 org.opentest4j:opentest4j:jar:1.3.0:test
+38027658 org.junit.platform:junit-platform-commons:jar:1.10.3:test
+1264191370 org.apiguardian:apiguardian-api:jar:1.1.2:test
+1278615395 org.junit.jupiter:junit-jupiter-params:jar:5.10.3:test
+1859724001 jakarta.json:jakarta.json-api:jar:2.0.2:test
+1320248993 org.glassfish:jakarta.json:jar:2.0.1:test
+1431064234 org.junit.vintage:junit-vintage-engine:jar:5.10.3:test
+704482919 org.junit.platform:junit-platform-engine:jar:1.10.3:test
+236220307 junit:junit:jar:4.13.2:test
+1272284318 org.hamcrest:hamcrest-core:jar:1.3:test
+2094770768 org.apache.maven.plugin-testing:maven-plugin-testing-harness:jar:3.3.0:test
+965778714 org.mockito:mockito-core:jar:4.11.0:test
+341120332 net.bytebuddy:byte-buddy:jar:1.12.19:test
+1933808172 net.bytebuddy:byte-buddy-agent:jar:1.12.19:test
+1382756158 org.objenesis:objenesis:jar:3.3:test
+1865289764 org.mockito:mockito-junit-jupiter:jar:4.11.0:test
+1399691256 org.assertj:assertj-core:jar:3.27.2:test
+1011920203 org.apache.maven:maven-compat:jar:3.6.3:test
+927557408 org.codehaus.plexus:plexus-interpolation:jar:1.25:compile
+687472349 org.apache.maven.wagon:wagon-provider-api:jar:3.3.4:test
+395607661 org.eclipse.jetty:jetty-server:jar:9.4.57.v20241219:test
+773301025 javax.servlet:javax.servlet-api:jar:3.1.0:test
+1377546660 org.eclipse.jetty:jetty-http:jar:9.4.57.v20241219:test
+905159212 org.eclipse.jetty:jetty-io:jar:9.4.57.v20241219:test
+27313641 org.eclipse.jetty:jetty-util:jar:9.4.57.v20241219:test
+306016343 org.eclipse.jetty:jetty-security:jar:9.4.57.v20241219:test
+488928549 org.slf4j:slf4j-simple:jar:1.7.36:test
+#
+1694804085 904031493 provided
+1642905321 464994546 provided
+1694804085 1642905321 provided
+1694804085 624475142 provided
+1148735023 608174634 provided
+1701388960 1148735023 provided
+1643565953 1701388960 provided
+1643565953 1937618936 provided
+1643565953 1596843797 provided
+1643565953 1495454697 provided
+1643565953 2102909877 provided
+1643565953 1661690256 provided
+1395533739 484187068 provided
+1603662305 1730813026 provided
+1603662305 1167813715 provided
+1603662305 971415207 provided
+1603662305 1225554563 provided
+1603662305 2121443020 provided
+1395533739 1603662305 provided
+1643565953 1395533739 provided
+1643565953 1612031141 compile
+1694804085 1643565953 provided
+1694804085 1829440934 provided
+1694804085 1199155942 provided
+1694804085 752230403 provided
+1694804085 1638631856 compile
+1694804085 1417203230 compile
+1591505133 1125614861 compile
+2118939350 1825983295 compile
+1591505133 2118939350 compile
+1591505133 1370494288 compile
+787537286 859295820 compile
+787537286 1843853990 compile
+787537286 1017997535 compile
+787537286 345607713 compile
+1137210118 351535152 compile
+1137210118 1279556617 compile
+421632334 1137210118 compile
+421632334 1496999718 compile
+421632334 1500151620 compile
+787537286 421632334 compile
+1591505133 787537286 compile
+1591505133 1839923673 runtime
+1591505133 48274513 runtime
+1591505133 141154428 compile
+1694804085 1591505133 compile
+929266212 837249677 compile
+49485418 929266212 compile
+49485418 1997270773 compile
+49485418 1842476600 runtime
+49485418 1095701500 runtime
+1694804085 49485418 compile
+1694804085 1266068058 provided
+1694804085 1671596423 compile
+1694804085 18928637 test
+1694804085 952754390 compile
+1694804085 1184082415 compile
+1694804085 822799883 compile
+1694804085 909278444 compile
+1091233196 445509811 compile
+1694804085 1091233196 compile
+1694804085 2081501023 compile
+1694804085 1499588909 compile
+1694804085 1339052072 compile
+1694804085 976042249 compile
+1694804085 1337168580 provided
+1694804085 424489630 provided
+1694804085 1423007887 provided
+1694804085 132644461 compile
+1694804085 1410431463 compile
+1694804085 607676473 compile
+1694804085 2066919721 test
+1694804085 1134443700 test
+480230241 2072076651 test
+480230241 366226635 test
+480230241 664656217 test
+1694804085 480230241 test
+1178090104 918716909 test
+1178090104 38027658 test
+1178090104 1264191370 test
+1694804085 1178090104 test
+1694804085 1278615395 test
+1694804085 1859724001 test
+1694804085 1320248993 test
+1431064234 704482919 test
+1694804085 1431064234 test
+236220307 1272284318 test
+1694804085 236220307 test
+1694804085 2094770768 test
+965778714 341120332 test
+965778714 1933808172 test
+965778714 1382756158 test
+1694804085 965778714 test
+1694804085 1865289764 test
+1694804085 1399691256 test
+1011920203 927557408 compile
+1011920203 687472349 test
+1694804085 1011920203 test
+395607661 773301025 test
+395607661 1377546660 test
+395607661 905159212 test
+1694804085 395607661 test
+1694804085 27313641 test
+1694804085 306016343 test
+1694804085 488928549 test

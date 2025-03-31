@@ -95,6 +95,7 @@ under the License.
     <resolverVersion>1.4.1</resolverVersion>
     <slf4jVersion>1.7.36</slf4jVersion>
     <jettyVersion>9.4.57.v20241219</jettyVersion>
+    <velocityVersion>2.4</velocityVersion>
     <mockito.version>4.11.0</mockito.version>
     <plexus-archiver.version>4.10.0</plexus-archiver.version>
     <pluginTestingVersion>3.3.0</pluginTestingVersion>
@@ -144,6 +145,13 @@ under the License.
       <artifactId>maven-resolver-provider</artifactId>
       <version>${mavenVersion}</version>
       <scope>provided</scope>
+    </dependency>
+
+    <!-- this had been transitive dependency of doxia-site-renderer (and others?) -->
+    <dependency>
+      <groupId>org.apache.velocity</groupId>
+      <artifactId>velocity-engine-core</artifactId>
+      <version>${velocityVersion}</version>
     </dependency>
 
     <!-- doxia -->
@@ -431,6 +439,10 @@ under the License.
                 Files with test data.
               -->
               <exclude>src/test/resources/unit/list-test/testListClasses*.txt</exclude>
+              <!--
+                Examples of generated output
+              -->
+              <exclude>examples/**</exclude>
             </excludes>
           </configuration>
         </plugin>

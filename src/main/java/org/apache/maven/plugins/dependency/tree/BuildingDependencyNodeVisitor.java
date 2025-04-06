@@ -140,7 +140,6 @@ public class BuildingDependencyNodeVisitor implements DependencyNodeVisitor {
     }
 
     private static class WrapperNode implements DependencyNode {
-
         private final Artifact artifact;
 
         private final DependencyNode parent;

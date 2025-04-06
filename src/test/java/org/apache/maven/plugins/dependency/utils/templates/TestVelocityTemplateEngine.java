@@ -93,8 +93,27 @@ public class TestVelocityTemplateEngine {
         final String template = "#foreach( $item in $list)]\n#endfor\n";
         final VelocityTemplateEngine engine = new VelocityTemplateEngine();
 
-        assertThrows(ParseErrorException.class, () -> engine.withDynamicTemplate(template)
+        final Exception thrown = assertThrows(Exception.class, () -> engine.withDynamicTemplate(template)
                 .put("list", Collections.emptyList())
                 .evaluate());
+
+        assertEquals(thrown.getClass().getName(), ParseErrorException.class.getName());
+    }
+
+    @Test
+    public void testGivenValidTemplateWithStyleThenSuccess() {
+        final Style style = new Style();
+        style.setFontname("times roman");
+
+        final String pattern = "fontname is '%s'";
+        final String template = String.format(pattern, "$style.fontname");
+        final String expected = String.format(pattern, style.getFontname());
+
+        final VelocityTemplateEngine engine = new VelocityTemplateEngine();
+
+        final String actual =
+                engine.withDynamicTemplate(template).withStyle(style).evaluate();
+
+        assertEquals(expected, actual.trim());
     }
 }

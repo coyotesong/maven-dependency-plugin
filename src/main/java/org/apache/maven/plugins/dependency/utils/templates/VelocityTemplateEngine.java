@@ -29,6 +29,8 @@ import java.util.List;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
+import org.apache.velocity.app.event.implement.PrintExceptions;
+import org.apache.velocity.app.event.implement.ReportInvalidReferences;
 import org.apache.velocity.context.Context;
 import org.apache.velocity.exception.ParseErrorException;
 import org.apache.velocity.exception.ResourceNotFoundException;
@@ -36,13 +38,15 @@ import org.apache.velocity.runtime.ParserPoolImpl;
 import org.apache.velocity.runtime.RuntimeConstants;
 import org.apache.velocity.runtime.resource.ResourceManagerImpl;
 import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
-import org.apache.velocity.runtime.resource.loader.FileResourceLoader;
 import org.apache.velocity.util.introspection.UberspectImpl;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.slf4j.MDC;
 
 /**
  * Implementation of TemplateEngine using Velocity
+ *
+ * {@see https://velocity.apache.org/engine/developer-guide.html#orgapachevelocityappeventinvalidreferenceevennthandler}
  *
  * @author <a href="mailto:bgiles@coyotesong.com">Bear Giles</a>
  * @since 3.8.2
@@ -60,6 +64,7 @@ public class VelocityTemplateEngine implements TemplateEngine {
 
     private Style style;
     private String input;
+    private String templateName;
     private Template template;
 
     /**
@@ -84,14 +89,24 @@ public class VelocityTemplateEngine implements TemplateEngine {
 
         // note: we can't use the default velocity.properties file since that breaks
         // some of the tests.
+        //
+        // This is explicitly added since I've seen inconsistent behavior without it.
         engine.setProperty(RuntimeConstants.RESOURCE_MANAGER_CLASS, ResourceManagerImpl.class.getName());
         engine.setProperty(RuntimeConstants.PARSER_POOL_CLASS, ParserPoolImpl.class.getName());
         engine.setProperty(RuntimeConstants.UBERSPECT_CLASSNAME, UberspectImpl.class.getName());
 
+        // throw exception if the template contains an invalid reference. This will
+        // usually better for us than creating an invalid result.klk
+        engine.setProperty(RuntimeConstants.EVENTHANDLER_INVALIDREFERENCES, ReportInvalidReferences.class.getName());
+        engine.setProperty("event_handler.invalid_references.exception", "true");
+
+        // log any exception thrown by our code
+        engine.setProperty(RuntimeConstants.EVENTHANDLER_METHODEXCEPTION, PrintExceptions.class.getName());
+
+        // application-specific properties
         engine.setProperty(RuntimeConstants.RESOURCE_LOADERS, "classpath,file");
         engine.setProperty(
                 RuntimeConstants.RESOURCE_LOADER + ".classpath.class", ClasspathResourceLoader.class.getName());
-        engine.setProperty(RuntimeConstants.RESOURCE_LOADER + ".file.class", FileResourceLoader.class.getName());
 
         directives.forEach(engine::loadDirective);
 
@@ -117,12 +132,16 @@ public class VelocityTemplateEngine implements TemplateEngine {
      * {@inheritDoc}
      */
     public VelocityTemplateEngine withTemplateName(String templateName) throws ResourceNotFoundException {
+        final MDC.MDCCloseable mdc = MDC.putCloseable("templateName", templateName);
         try {
+            this.templateName = templateName;
             template = engine.getTemplate(templateName);
         } catch (ResourceNotFoundException e) {
             // this looks silly but allows for future I18N
             // we can't use 'resourceExists' since a template isn't considered a resource. (!!)
             throw new ResourceNotFoundException(String.format(MESSAGE_RESOURCE_NOT_FOUND, templateName), e);
+        } finally {
+            mdc.close();
         }
 
         return this;
@@ -160,6 +179,23 @@ public class VelocityTemplateEngine implements TemplateEngine {
     }
 
     /**
+     * Clean up string - trim it, use proper line separators, etc.
+     *
+     * @param dirty output from Velocity engine
+     * @return cleaned up content
+     */
+    String cleanup(String dirty) {
+        String clean = dirty.trim();
+        if (clean.indexOf("\n") > 0) {
+            clean = clean + "\n";
+        }
+        if (!"\n".equals(System.lineSeparator())) {
+            clean = clean.replace("\n", System.lineSeparator());
+        }
+        return clean;
+    }
+
+    /**
      * {@inheritDoc}
      */
     public String evaluate() throws ResourceNotFoundException, ParseErrorException {
@@ -174,11 +210,16 @@ public class VelocityTemplateEngine implements TemplateEngine {
         // future work - support I18N as above.
         try (StringWriter sw = new StringWriter()) {
             if (template != null) {
-                template.merge(context, sw, macroList);
+                final MDC.MDCCloseable mdc = MDC.putCloseable("templateName", templateName);
+                try {
+                    template.merge(context, sw, macroList);
+                } finally {
+                    mdc.close();
+                }
             } else {
                 engine.evaluate(context, sw, "dynamic", input);
             }
-            return sw.toString();
+            return cleanup(sw.toString());
         } catch (IOException e) {
             // this should never happen... I saw the recommendation for throwing
             // AssertionErrors as a good way to handle this as long is it won't

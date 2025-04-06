@@ -19,10 +19,20 @@
 package org.apache.maven.plugins.dependency.tree;
 
 import java.io.Writer;
+import java.util.Collections;
 import java.util.List;
+import java.util.function.Function;
 
+import org.apache.maven.plugins.dependency.utils.templates.TemplateEngine;
+import org.apache.maven.plugins.dependency.utils.templates.VelocityTemplateEngine;
+import org.apache.maven.plugins.dependency.utils.velocity.runtime.directive.Indent;
 import org.apache.maven.shared.dependency.graph.DependencyNode;
 import org.apache.maven.shared.dependency.graph.traversal.DependencyNodeVisitor;
+import org.apache.velocity.exception.ParseErrorException;
+import org.apache.velocity.exception.ResourceNotFoundException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.slf4j.MDC;
 
 /**
  * A dependency node visitor that serializes visited nodes to <a href="https://en.wikipedia.org/wiki/DOT_language">DOT
@@ -31,7 +41,12 @@ import org.apache.maven.shared.dependency.graph.traversal.DependencyNodeVisitor;
  * @author <a href="mailto:pi.songs@gmail.com">Pi Song</a>
  * @since 2.1
  */
-public class DOTDependencyNodeVisitor extends AbstractSerializingVisitor implements DependencyNodeVisitor {
+public class DOTDependencyNodeVisitor extends AbstractSerializingVisitor
+        implements DependencyNodeVisitor, Function<DependencyNode, Boolean> {
+    private static final Logger LOG = LoggerFactory.getLogger(DOTDependencyNodeVisitor.class);
+
+    private String templateName;
+    private DOTStyle style = new DOTStyle();
 
     /**
      * Constructor.
@@ -40,6 +55,10 @@ public class DOTDependencyNodeVisitor extends AbstractSerializingVisitor impleme
      */
     public DOTDependencyNodeVisitor(Writer writer) {
         super(writer);
+
+        // this could be pulled from mojo properties
+        // templateName = "templates/dot/legacy-dependency-tree.dot.vm";
+        templateName = "templates/dot/dependency-tree.dot.vm";
     }
 
     /**
@@ -47,18 +66,6 @@ public class DOTDependencyNodeVisitor extends AbstractSerializingVisitor impleme
      */
     @Override
     public boolean visit(DependencyNode node) {
-        if (node.getParent() == null || node.getParent() == node) {
-            writer.write("digraph \"" + node.toNodeString() + "\" { " + System.lineSeparator());
-        }
-
-        // Generate "currentNode -> Child" lines
-
-        List<DependencyNode> children = node.getChildren();
-
-        for (DependencyNode child : children) {
-            writer.println("\t\"" + node.toNodeString() + "\" -> \"" + child.toNodeString() + "\" ; ");
-        }
-
         return true;
     }
 
@@ -68,8 +75,39 @@ public class DOTDependencyNodeVisitor extends AbstractSerializingVisitor impleme
     @Override
     public boolean endVisit(DependencyNode node) {
         if (node.getParent() == null || node.getParent() == node) {
-            writer.write(" } ");
+            return Boolean.TRUE.equals(apply(node));
         }
         return true;
+    }
+
+    /**
+     * Generates output using Velocity engine, template, and dependency tree.
+     * {@inheritDoc}
+     */
+    @Override
+    public Boolean apply(DependencyNode root) {
+        final DecoratedNode decoratedRoot = new DecoratedNode(root, style);
+
+        final MDC.MDCCloseable mdc = MDC.putCloseable("rootNode", root.toNodeString());
+        try {
+            final List<String> directives = Collections.singletonList(Indent.class.getName());
+            final TemplateEngine engine = new VelocityTemplateEngine(directives);
+            writer.write(engine.withTemplateName(templateName)
+                    .withStyle(style)
+                    .put("root", decoratedRoot)
+                    .evaluate());
+        } catch (ResourceNotFoundException | ParseErrorException e) {
+            LOG.info(
+                    "{}: an error occurred while evaluating '{}' for root '{}'",
+                    e.getClass().getName(),
+                    templateName,
+                    root.toNodeString(),
+                    e);
+            return Boolean.FALSE;
+        } finally {
+            mdc.close();
+        }
+
+        return Boolean.TRUE;
     }
 }

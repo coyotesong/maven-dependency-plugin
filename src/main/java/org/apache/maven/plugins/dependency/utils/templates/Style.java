@@ -18,42 +18,35 @@
  */
 package org.apache.maven.plugins.dependency.utils.templates;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
+import java.util.HashMap;
+import java.util.Map;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import org.apache.maven.shared.dependency.graph.DependencyNode;
 
 /**
  * Optional styles, for the velocity templates that can use them.
  */
 public class Style {
-    private static final Logger LOG = LoggerFactory.getLogger(Style.class);
+    private static String defaultFontname = "Helvetica,Arial,sans-serif";
+    private static String defaultItalicFontname = "Helvetica:italic,Arial:italic,sans-serif:italic";
+    private static int defaultFontSize = 9;
+    private static String defaultColor = "black";
 
-    public static final Style DEFAULT_STYLE = new Style();
-
-    private static String defaultFontname;
-    private static String defaultItalicFontname;
-    private static int defaultFontSize;
-
-    static {
-        final String filename = Style.class.getName().replace('.', '/') + "properties";
-        try (InputStream is = Thread.currentThread().getContextClassLoader().getResourceAsStream(filename)) {
-            final Properties props = new Properties();
-            props.load(is);
-            defaultFontname = props.getProperty("defaultFontName", "Helvetica,Arial,sans-serif");
-            defaultItalicFontname = props.getProperty("defaultFontName", "Helvetica,Arial,sans-serif");
-            defaultFontSize = Integer.parseInt(props.getProperty("defaultFontSize", "9"), 10);
-        } catch (IOException e) {
-            LOG.info("unable to load property file '{}'", filename);
-            // safe to ignore...
-        }
-    }
+    private final Map<String, String> scopeColors = new HashMap<>();
 
     private String fontname = defaultFontname;
     private String italicFontname = defaultItalicFontname;
     private int fontsize = defaultFontSize;
+    private String color = defaultColor;
+
+    public Style() {
+        scopeColors.put("compile", "black");
+        scopeColors.put("test", "darkgreen");
+        scopeColors.put("provided", "blue");
+        scopeColors.put("system", "blue");
+        scopeColors.put("runtime", "blue");
+        scopeColors.put("import", "orange");
+    }
 
     public String getFontname() {
         return fontname;
@@ -77,5 +70,13 @@ public class Style {
 
     public void setFontsize(int fontsize) {
         this.fontsize = fontsize;
+    }
+
+    public String getDefaultColor() {
+        return defaultColor;
+    }
+
+    public String getColorForNode(DependencyNode node) {
+        return scopeColors.getOrDefault(node.getArtifact().getScope(), "red");
     }
 }

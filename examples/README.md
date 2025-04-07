@@ -2,12 +2,12 @@
 
 ## Initial Motivation
 
-The initial motivation was modifying `DOTDependencyNodeVisitor` so it creates usuable results.
+The initial motivation was modifying `DOTDependencyNodeVisitor` so it creates usable results.
 
 The best way to demonstrate the need and improvements can be seen in the `png` files:
 
 | Release        | Generated image                                               |
-+----------------+---------------------------------------------------------------+ 
+|----------------|---------------------------------------------------------------| 
 | 3.8.2-SNAPSHOT | PNG image data, 32767 x 472, 8-bit/color RGB, non-interlaced  |
 | refactored     | PNG image data, 7687 x 1243, 8-bit/color RGBA, non-interlaced |
 

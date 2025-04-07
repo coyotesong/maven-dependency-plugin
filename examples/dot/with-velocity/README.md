@@ -1,6 +1,6 @@
 # DOT generated files
 
-The lsegacy format was unusable - the equivalent images were often
+The legacy format was unusable - the equivalent images were often
 around 32k by 600 pixels and could not be opened at all by some common
 viewers.
 
@@ -14,13 +14,13 @@ null values, does not show the 'jar' type), etc. It's still wide - but it
 can now be viewed by most if not all common viewers and the user can usually
 'zoom in' if they want to see the details.
 
-- [!png](with-velocity.png "PNG")
+- ![png](with-velocity.png "PNG")
 
-- [!jpg](with-velocity.jpg "JPG")
+- ![jpg](with-velocity.jpg "JPG")
 
-- [!gif](with-velocity.gif "GIF")
+- ![gif](with-velocity.gif "GIF")
 
-- [!svg](with-velocity.svg "SVG")
+- ![svg](with-velocity.svg "SVG")
 
 Note: the `svg` format supports interactive elements like "tooltips".
 I haven not included them (yet) but they could provide additional

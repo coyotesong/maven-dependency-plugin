@@ -50,4 +50,5 @@ with-velocity.jpg: JPEG image data, JFIF standard 1.01, resolution (DPI), densit
 with-velocity.pdf: PDF document, version 1.7
 with-velocity.png: PNG image data, 7687 x 1243, 8-bit/color RGBA, non-interlaced
 with-velocity.ps:  PostScript document text conforming DSC level 3.0
+with-velocity.svg: SVG Scalable Vector Graphics image
 ```

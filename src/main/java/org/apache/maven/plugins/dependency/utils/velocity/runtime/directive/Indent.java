@@ -31,10 +31,42 @@ import org.apache.velocity.util.StringBuilderWriter;
 import org.apache.velocity.util.introspection.Info;
 
 /**
- * Indent directive is used to indent blocks of output
+ * The Indent directive is used with recursive calls
+ * </p>
+ * Many templates use recursion to handle trees and other
+ * nested data structures. We want the output to be human-friendly
+ * and that often involves indentation matching the recursion
+ * depth. (Not always!)
+ * </p>
+ * This seems hard to do in pure VTL.
+ * </p>
+ * This Directive solves this problem by adding a predefined
+ * padding at each level of recursion.
+ * </p>
+ * POSSIBLE ENHANCEMENTS
+ * </p>
+ * The most obvious is allowing the user to define their own
+ * padding. I'm looking into this, esp. if it should be a
+ * string literal, a reference, or either. This may be added
+ * to the 'maven-dependency-plugin' version.
+ * </p>
+ * The second is allowing the user to specify a reference that
+ * will be filled with the current depth of recursion. See #for
+ * for a good analogy.
+ * </p>
+ * The third and fourth is allowing the user to specify a reference
+ * that  be filled with the current position (among children)
+ * at the current depth of recursion.
+ * </p>
+ * This can be used to provide document labels like "II", "C", "4", "f)".
+ * The user would use the standard '#indent' but then call a macro
+ * using both depth and position to get the desired label.
  */
 public class Indent extends Block {
 
+    private static final String NEWLINE = "\n";
+
+    // not yet configurable
     private String padding = "  ";
 
     protected Info uberInfo;
@@ -68,9 +100,9 @@ public class Indent extends Block {
     public boolean render(InternalContextAdapter context, Writer writer, Node node) throws IOException {
         try (Writer w = new StringBuilderWriter()) {
             if (super.render(context, w)) {
-                // for some reason s.replace() isn't reliable...
-                for (String element : w.toString().split("\n")) {
-                    writer.write(padding + element + "\n");
+                // using 'split()' gives us the most flexiblity. See #collapse.
+                for (String element : w.toString().split(NEWLINE)) {
+                    writer.write(padding + element + NEWLINE);
                 }
 
                 return true;

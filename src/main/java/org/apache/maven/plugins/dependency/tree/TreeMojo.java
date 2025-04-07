@@ -64,6 +64,7 @@ import org.apache.maven.shared.dependency.graph.traversal.SerializingDependencyN
  * <a href="https://en.wikipedia.org/wiki/GraphML">GraphML</a>,
  * <a href="https://en.wikipedia.org/wiki/Trivial_Graph_Format">TGF</a> and
  * <a href="https://en.wikipedia.org/wiki/JSON">JSON</a>.
+ * <a href="https://en.wikipedia.org/wiki/YAML">YAML</a>.
  *
  *
  * @author <a href="mailto:markhobson@gmail.com">Mark Hobson</a>
@@ -105,7 +106,7 @@ public class TreeMojo extends AbstractMojo {
     /**
      * If specified, this parameter will cause the dependency tree to be written using the specified format. Currently
      * supported formats are: <code>text</code> (default), <code>dot</code>, <code>graphml</code>, <code>tgf</code>
-     * and <code>json</code> (since 3.7.0).
+     * <code>json</code> (since 3.7.0), and <code>yaml</code> (since 3.9)
      * These additional formats can be plotted to image files.
      *
      * @since 2.2
@@ -364,6 +365,8 @@ public class TreeMojo extends AbstractMojo {
             return new DOTDependencyNodeVisitor(writer);
         } else if ("json".equals(outputType)) {
             return new JsonDependencyNodeVisitor(writer);
+        } else if ("yaml".equals(outputType) || "yml".equals(outputType)) {
+            return new YamlDependencyNodeVisitor(writer);
         } else {
             return new SerializingDependencyNodeVisitor(writer, toGraphTokens(tokens));
         }

@@ -18,50 +18,49 @@ under the License.
 *#
 
 #**
-This template produces the .dot format dependency tree post 3.8.2
+This template produces the dependency tree post 3.8.2
 *#
 
-digraph "$root.toNodeString()" {
-    graph [ ranksep=1.5; nodesep=0.2; $style.defaultGraphFormat ]
-    node [ shape="none"; margin=0; $style.defaultNodeFormat ]
-    edge [ $style.defaultEdgeFormat ]
-
+#**
+ * TODO - add ability to have string between nodes and edges (tgf))
+ *#
+#header($root $style)
+#if ($nestedFormat)
+    #walkTree($root)
+#end
+#if (!$nestedFormat)
     #walkTreeForNodes($root)
 
     #walkTreeForEdges($root)
-}
+#end
+#footer($root $style)
 
+#**
+ * All recursion is handled by the macro - this is because the
+ * children are often delimited in some manner.
+ *#
+#macro(walkTree $parent)
+    #showNestingDependencies($root)
+#end
+
+#**
+ * Recursive macro that shows the artifacts
+ * Note: spacing is handled by the macros
+ *#
 #macro(walkTreeForNodes $parent)
-#indent
     #showSimpleDependency($parent)
 #foreach ($child in $parent.children)
     #walkTreeForNodes($child)
 #end
 #end
-#end
 
-#macro (showSimpleDependency $dependency)
-#set ($artifact = $dependency.artifact)
-    "$dependency.alias" [ $dependency.nodeFormat label = <
-       <table>
-          <tr><td>$artifact.groupId</td></tr>
-          <tr><td>$artifact.artifactId</td></tr>
-          <tr><td>$artifact.version</td></tr>
-    #if ($dependency.showType)
-          <tr><td>$artifact.type</td></tr>
-    #end
-    #if ($dependency.showClassifier)
-          <tr><td><b>$artifact.classifier</b></td></tr>
-    #end
-         </table>
-    >;
-    ]
-
-#end
-
+#**
+ * Recursive macro that shows the dependencies
+ * Note: spacing is handled by the macros
+ *#
 #macro(walkTreeForEdges $parent)
     #foreach ($child in $parent.children)
-    "$parent.alias" -> "$child.alias" [ $child.edgeFormat ];
+        #showSimpleEdge($parent, $child)
         #walkTreeForEdges($child)
     #end
 #end

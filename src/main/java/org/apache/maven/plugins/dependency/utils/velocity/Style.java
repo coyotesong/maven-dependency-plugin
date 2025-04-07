@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.maven.plugins.dependency.utils.templates;
+package org.apache.maven.plugins.dependency.utils.velocity;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,20 +24,20 @@ import java.util.Map;
 import org.apache.maven.shared.dependency.graph.DependencyNode;
 
 /**
- * Optional styles, for the velocity templates that can use them.
+ * Style properties, for the templates that can use them.
  */
 public class Style {
     private static String defaultFontname = "Helvetica,Arial,sans-serif";
-    private static String defaultItalicFontname = "Helvetica:italic,Arial:italic,sans-serif:italic";
     private static int defaultFontSize = 9;
     private static String defaultColor = "black";
+    private static String defaultBackgroundColor = "white";
 
     private final Map<String, String> scopeColors = new HashMap<>();
 
     private String fontname = defaultFontname;
-    private String italicFontname = defaultItalicFontname;
     private int fontsize = defaultFontSize;
     private String color = defaultColor;
+    private String backgroundColor = defaultBackgroundColor;
 
     public Style() {
         scopeColors.put("compile", "black");
@@ -48,6 +48,26 @@ public class Style {
         scopeColors.put("import", "orange");
     }
 
+    public String getBackgroundColor() {
+        return backgroundColor;
+    }
+
+    public void setBackgroundColor(String backgroundColor) {
+        this.backgroundColor = backgroundColor;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getDefaultColor() {
+        return color;
+    }
+
     public String getFontname() {
         return fontname;
     }
@@ -56,24 +76,12 @@ public class Style {
         this.fontname = fontname;
     }
 
-    public String getItalicFontname() {
-        return italicFontname;
-    }
-
-    public void setItalicFontname(String italicFontname) {
-        this.italicFontname = italicFontname;
-    }
-
     public int getFontsize() {
         return fontsize;
     }
 
     public void setFontsize(int fontsize) {
         this.fontsize = fontsize;
-    }
-
-    public String getDefaultColor() {
-        return defaultColor;
     }
 
     public String getColorForNode(DependencyNode node) {

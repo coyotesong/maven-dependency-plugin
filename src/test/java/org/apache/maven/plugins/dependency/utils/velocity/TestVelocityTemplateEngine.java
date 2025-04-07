@@ -16,7 +16,7 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.maven.plugins.dependency.utils.templates;
+package org.apache.maven.plugins.dependency.utils.velocity;
 
 import java.util.Collections;
 

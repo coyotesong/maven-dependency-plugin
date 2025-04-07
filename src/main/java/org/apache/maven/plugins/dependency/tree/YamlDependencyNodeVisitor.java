@@ -21,20 +21,20 @@ package org.apache.maven.plugins.dependency.tree;
 import java.io.Writer;
 
 /**
- * A dependency node visitor that serializes visited nodes to a writer using the
- * <a href="https://en.wikipedia.org/wiki/Trivial_Graph_Format">TGF format</a>.
+ * A dependency node visitor that serializes visited nodes to <a href="https://en.wikipedia.org/wiki/YAML>YAML</a>
+ * format</a>
  *
- * @author <a href="mailto:jerome.creignou@gmail.com">Jerome Creignou</a>
- * @author <a href="mailto:bgiles@coyotesong.com">Bear Giles</a> (3.9)
- * @since 2.1
+ * @author <a href="mailto:bgiles@coyotesong.com">Bear Giles</a>
+ * @since 3.9
  */
-public class TGFDependencyNodeVisitor extends VelocityDependencyNodeVisitor {
-    public static final String DEFAULT_MACRO_LIBRARY = "templates/macros/tgf/tgf-macros-for-dependency-tree.vm";
+public class YamlDependencyNodeVisitor extends VelocityDependencyNodeVisitor {
+    public static final String DEFAULT_MACRO_LIBRARY = "templates/macros/yaml/yaml-macros-for-dependency-tree.vm";
 
     /**
      * {@inheritDoc}
      */
-    public TGFDependencyNodeVisitor(Writer writer) {
+    public YamlDependencyNodeVisitor(Writer writer) {
         super(writer, DEFAULT_TEMPLATE_NAME, DEFAULT_MACRO_LIBRARY);
+        super.setNested(Boolean.TRUE);
     }
 }

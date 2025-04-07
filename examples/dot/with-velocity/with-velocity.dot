@@ -2,879 +2,856 @@ digraph "org.apache.maven.plugins:maven-dependency-plugin:maven-plugin:3.8.2-SNA
     graph [ ranksep=1.5; nodesep=0.2; color = "black"; fontcolor = "black"; fontname = "Helvetica,Arial,sans-serif"; fontsize = 11 ]
     node [ shape="none"; margin=0; color = "black"; fontcolor = "black"; fontname = "Helvetica,Arial,sans-serif"; fontsize = 9; style = "filled"; fillcolor = "white" ]
     edge [ color = "black"; fontcolor = "black"; fontname = "Helvetica,Arial,sans-serif"; fontsize = 9; style = "solid" ]
-
-      "node1" [ color = "red", fontcolor = "red"; label = <
-         <table>
+    "node1" [ color = "red", fontcolor = "red"; label = <
+        <table>
             <tr><td>org.apache.maven.plugins</td></tr>
             <tr><td>maven-dependency-plugin</td></tr>
             <tr><td>3.8.2-SNAPSHOT</td></tr>
             <tr><td>maven-plugin</td></tr>
-           </table>
-      >;
-      ]
-  
-        "node2" [ color = "blue", fontcolor = "blue"; label = <
-           <table>
-              <tr><td>org.apache.maven</td></tr>
-              <tr><td>maven-artifact</td></tr>
-              <tr><td>3.6.3</td></tr>
-             </table>
-        >;
-        ]
-        "node3" [ color = "blue", fontcolor = "blue"; label = <
-           <table>
-              <tr><td>org.apache.maven</td></tr>
-              <tr><td>maven-plugin-api</td></tr>
-              <tr><td>3.6.3</td></tr>
-             </table>
-        >;
-        ]
-    
-          "node4" [ color = "blue", fontcolor = "blue"; label = <
-             <table>
-                <tr><td>org.codehaus.plexus</td></tr>
-                <tr><td>plexus-classworlds</td></tr>
-                <tr><td>2.6.0</td></tr>
-               </table>
-          >;
-          ]
-        "node5" [ color = "blue", fontcolor = "blue"; label = <
-           <table>
-              <tr><td>org.apache.maven</td></tr>
-              <tr><td>maven-model</td></tr>
-              <tr><td>3.6.3</td></tr>
-             </table>
-        >;
-        ]
-        "node6" [ color = "blue", fontcolor = "blue"; label = <
-           <table>
-              <tr><td>org.apache.maven</td></tr>
-              <tr><td>maven-core</td></tr>
-              <tr><td>3.6.3</td></tr>
-             </table>
-        >;
-        ]
-    
-          "node7" [ color = "blue", fontcolor = "blue"; label = <
-             <table>
-                <tr><td>org.apache.maven</td></tr>
-                <tr><td>maven-settings-builder</td></tr>
-                <tr><td>3.6.3</td></tr>
-               </table>
-          >;
-          ]
-      
-            "node8" [ color = "blue", fontcolor = "blue"; label = <
-               <table>
-                  <tr><td>org.sonatype.plexus</td></tr>
-                  <tr><td>plexus-sec-dispatcher</td></tr>
-                  <tr><td>1.4</td></tr>
-                 </table>
-            >;
-            ]
-        
-              "node9" [ color = "blue", fontcolor = "blue"; label = <
-                 <table>
-                    <tr><td>org.sonatype.plexus</td></tr>
-                    <tr><td>plexus-cipher</td></tr>
-                    <tr><td>1.4</td></tr>
-                   </table>
-              >;
-              ]
-          "node10" [ color = "blue", fontcolor = "blue"; label = <
-             <table>
-                <tr><td>org.apache.maven</td></tr>
-                <tr><td>maven-builder-support</td></tr>
-                <tr><td>3.6.3</td></tr>
-               </table>
-          >;
-          ]
-          "node11" [ color = "blue", fontcolor = "blue"; label = <
-             <table>
-                <tr><td>org.apache.maven</td></tr>
-                <tr><td>maven-model-builder</td></tr>
-                <tr><td>3.6.3</td></tr>
-               </table>
-          >;
-          ]
-          "node12" [ color = "blue", fontcolor = "blue"; label = <
-             <table>
-                <tr><td>org.apache.maven.resolver</td></tr>
-                <tr><td>maven-resolver-impl</td></tr>
-                <tr><td>1.4.1</td></tr>
-               </table>
-          >;
-          ]
-          "node13" [ color = "blue", fontcolor = "blue"; label = <
-             <table>
-                <tr><td>org.apache.maven.resolver</td></tr>
-                <tr><td>maven-resolver-spi</td></tr>
-                <tr><td>1.4.1</td></tr>
-               </table>
-          >;
-          ]
-          "node14" [ color = "blue", fontcolor = "blue"; label = <
-             <table>
-                <tr><td>org.eclipse.sisu</td></tr>
-                <tr><td>org.eclipse.sisu.inject</td></tr>
-                <tr><td>0.9.0.M3</td></tr>
-               </table>
-          >;
-          ]
-          "node15" [ color = "blue", fontcolor = "blue"; label = <
-             <table>
-                <tr><td>com.google.inject</td></tr>
-                <tr><td>guice</td></tr>
-                <tr><td>4.2.1</td></tr>
-                <tr><td><b>no_aop</b></td></tr>
-               </table>
-          >;
-          ]
-      
-            "node16" [ color = "blue", fontcolor = "blue"; label = <
-               <table>
-                  <tr><td>aopalliance</td></tr>
-                  <tr><td>aopalliance</td></tr>
-                  <tr><td>1.0</td></tr>
-                 </table>
-            >;
-            ]
-            "node17" [ color = "blue", fontcolor = "blue"; label = <
-               <table>
-                  <tr><td>com.google.guava</td></tr>
-                  <tr><td>guava</td></tr>
-                  <tr><td>25.1-android</td></tr>
-                 </table>
-            >;
-            ]
-        
-              "node18" [ color = "blue", fontcolor = "blue"; label = <
-                 <table>
-                    <tr><td>com.google.code.findbugs</td></tr>
-                    <tr><td>jsr305</td></tr>
-                    <tr><td>3.0.2</td></tr>
-                   </table>
-              >;
-              ]
-              "node19" [ color = "blue", fontcolor = "blue"; label = <
-                 <table>
-                    <tr><td>org.checkerframework</td></tr>
-                    <tr><td>checker-compat-qual</td></tr>
-                    <tr><td>2.0.0</td></tr>
-                   </table>
-              >;
-              ]
-              "node20" [ color = "blue", fontcolor = "blue"; label = <
-                 <table>
-                    <tr><td>com.google.errorprone</td></tr>
-                    <tr><td>error_prone_annotations</td></tr>
-                    <tr><td>2.1.3</td></tr>
-                   </table>
-              >;
-              ]
-              "node21" [ color = "blue", fontcolor = "blue"; label = <
-                 <table>
-                    <tr><td>com.google.j2objc</td></tr>
-                    <tr><td>j2objc-annotations</td></tr>
-                    <tr><td>1.1</td></tr>
-                   </table>
-              >;
-              ]
-              "node22" [ color = "blue", fontcolor = "blue"; label = <
-                 <table>
-                    <tr><td>org.codehaus.mojo</td></tr>
-                    <tr><td>animal-sniffer-annotations</td></tr>
-                    <tr><td>1.14</td></tr>
-                   </table>
-              >;
-              ]
-          "node23" [  label = <
-             <table>
-                <tr><td>org.codehaus.plexus</td></tr>
-                <tr><td>plexus-component-annotations</td></tr>
-                <tr><td>2.1.0</td></tr>
-               </table>
-          >;
-          ]
-        "node24" [ color = "blue", fontcolor = "blue"; label = <
-           <table>
-              <tr><td>org.apache.maven</td></tr>
-              <tr><td>maven-repository-metadata</td></tr>
-              <tr><td>3.6.3</td></tr>
-             </table>
-        >;
-        ]
-        "node25" [ color = "blue", fontcolor = "blue"; label = <
-           <table>
-              <tr><td>org.apache.maven</td></tr>
-              <tr><td>maven-settings</td></tr>
-              <tr><td>3.6.3</td></tr>
-             </table>
-        >;
-        ]
-        "node26" [ color = "blue", fontcolor = "blue"; label = <
-           <table>
-              <tr><td>org.apache.maven</td></tr>
-              <tr><td>maven-resolver-provider</td></tr>
-              <tr><td>3.6.3</td></tr>
-             </table>
-        >;
-        ]
-        "node27" [  label = <
-           <table>
-              <tr><td>org.apache.velocity</td></tr>
-              <tr><td>velocity-engine-core</td></tr>
-              <tr><td>2.4</td></tr>
-             </table>
-        >;
-        ]
-        "node28" [  label = <
-           <table>
-              <tr><td>org.apache.maven.doxia</td></tr>
-              <tr><td>doxia-sink-api</td></tr>
-              <tr><td>2.0.0</td></tr>
-             </table>
-        >;
-        ]
-        "node29" [  label = <
-           <table>
-              <tr><td>org.apache.maven.reporting</td></tr>
-              <tr><td>maven-reporting-api</td></tr>
-              <tr><td>4.0.0</td></tr>
-             </table>
-        >;
-        ]
-        "node30" [  label = <
-           <table>
-              <tr><td>org.apache.maven.reporting</td></tr>
-              <tr><td>maven-reporting-impl</td></tr>
-              <tr><td>4.0.0</td></tr>
-             </table>
-        >;
-        ]
-    
-          "node31" [  label = <
-             <table>
-                <tr><td>org.apache.maven.doxia</td></tr>
-                <tr><td>doxia-site-model</td></tr>
-                <tr><td>2.0.0</td></tr>
-               </table>
-          >;
-          ]
-          "node32" [  label = <
-             <table>
-                <tr><td>org.apache.maven.doxia</td></tr>
-                <tr><td>doxia-core</td></tr>
-                <tr><td>2.0.0</td></tr>
-               </table>
-          >;
-          ]
-      
-            "node33" [  label = <
-               <table>
-                  <tr><td>org.apache.commons</td></tr>
-                  <tr><td>commons-text</td></tr>
-                  <tr><td>1.12.0</td></tr>
-                 </table>
-            >;
-            ]
-          "node34" [  label = <
-             <table>
-                <tr><td>org.apache.maven.doxia</td></tr>
-                <tr><td>doxia-integration-tools</td></tr>
-                <tr><td>2.0.0</td></tr>
-               </table>
-          >;
-          ]
-          "node35" [  label = <
-             <table>
-                <tr><td>org.apache.maven.doxia</td></tr>
-                <tr><td>doxia-site-renderer</td></tr>
-                <tr><td>2.0.0</td></tr>
-               </table>
-          >;
-          ]
-      
-            "node36" [  label = <
-               <table>
-                  <tr><td>org.apache.maven.doxia</td></tr>
-                  <tr><td>doxia-skin-model</td></tr>
-                  <tr><td>2.0.0</td></tr>
-                 </table>
-            >;
-            ]
-            "node37" [  label = <
-               <table>
-                  <tr><td>org.apache.maven.doxia</td></tr>
-                  <tr><td>doxia-module-xhtml5</td></tr>
-                  <tr><td>2.0.0</td></tr>
-                 </table>
-            >;
-            ]
-            "node38" [  label = <
-               <table>
-                  <tr><td>org.codehaus.plexus</td></tr>
-                  <tr><td>plexus-velocity</td></tr>
-                  <tr><td>2.2.0</td></tr>
-                 </table>
-            >;
-            ]
-            "node39" [  label = <
-               <table>
-                  <tr><td>org.apache.velocity.tools</td></tr>
-                  <tr><td>velocity-tools-generic</td></tr>
-                  <tr><td>3.1</td></tr>
-                 </table>
-            >;
-            ]
-        
-              "node40" [  label = <
-                 <table>
-                    <tr><td>commons-beanutils</td></tr>
-                    <tr><td>commons-beanutils</td></tr>
-                    <tr><td>1.9.4</td></tr>
-                   </table>
-              >;
-              ]
-          
-                "node41" [  label = <
-                   <table>
-                      <tr><td>commons-logging</td></tr>
-                      <tr><td>commons-logging</td></tr>
-                      <tr><td>1.2</td></tr>
-                     </table>
-                >;
-                ]
-                "node42" [  label = <
-                   <table>
-                      <tr><td>commons-collections</td></tr>
-                      <tr><td>commons-collections</td></tr>
-                      <tr><td>3.2.2</td></tr>
-                     </table>
-                >;
-                ]
-              "node43" [  label = <
-                 <table>
-                    <tr><td>org.apache.commons</td></tr>
-                    <tr><td>commons-digester3</td></tr>
-                    <tr><td>3.2</td></tr>
-                   </table>
-              >;
-              ]
-              "node44" [  label = <
-                 <table>
-                    <tr><td>com.github.cliftonlabs</td></tr>
-                    <tr><td>json-simple</td></tr>
-                    <tr><td>3.0.2</td></tr>
-                   </table>
-              >;
-              ]
-          "node45" [ color = "blue", fontcolor = "blue"; label = <
-             <table>
-                <tr><td>org.apache.maven.doxia</td></tr>
-                <tr><td>doxia-module-apt</td></tr>
-                <tr><td>2.0.0</td></tr>
-               </table>
-          >;
-          ]
-          "node46" [ color = "blue", fontcolor = "blue"; label = <
-             <table>
-                <tr><td>org.apache.maven.doxia</td></tr>
-                <tr><td>doxia-module-xdoc</td></tr>
-                <tr><td>2.0.0</td></tr>
-               </table>
-          >;
-          ]
-          "node47" [  label = <
-             <table>
-                <tr><td>org.apache.maven</td></tr>
-                <tr><td>maven-archiver</td></tr>
-                <tr><td>3.6.2</td></tr>
-               </table>
-          >;
-          ]
-        "node48" [  label = <
-           <table>
-              <tr><td>org.codehaus.plexus</td></tr>
-              <tr><td>plexus-archiver</td></tr>
-              <tr><td>4.10.0</td></tr>
-             </table>
-        >;
-        ]
-    
-          "node49" [  label = <
-             <table>
-                <tr><td>org.apache.commons</td></tr>
-                <tr><td>commons-compress</td></tr>
-                <tr><td>1.26.2</td></tr>
-               </table>
-          >;
-          ]
-      
-            "node50" [  label = <
-               <table>
-                  <tr><td>commons-codec</td></tr>
-                  <tr><td>commons-codec</td></tr>
-                  <tr><td>1.17.0</td></tr>
-                 </table>
-            >;
-            ]
-          "node51" [  label = <
-             <table>
-                <tr><td>io.airlift</td></tr>
-                <tr><td>aircompressor</td></tr>
-                <tr><td>0.27</td></tr>
-               </table>
-          >;
-          ]
-          "node52" [ color = "blue", fontcolor = "blue"; label = <
-             <table>
-                <tr><td>org.tukaani</td></tr>
-                <tr><td>xz</td></tr>
-                <tr><td>1.9</td></tr>
-               </table>
-          >;
-          ]
-          "node53" [ color = "blue", fontcolor = "blue"; label = <
-             <table>
-                <tr><td>com.github.luben</td></tr>
-                <tr><td>zstd-jni</td></tr>
-                <tr><td>1.5.6-3</td></tr>
-               </table>
-          >;
-          ]
-        "node54" [ color = "blue", fontcolor = "blue"; label = <
-           <table>
-              <tr><td>org.eclipse.sisu</td></tr>
-              <tr><td>org.eclipse.sisu.plexus</td></tr>
-              <tr><td>0.9.0.M3</td></tr>
-             </table>
-        >;
-        ]
-        "node55" [  label = <
-           <table>
-              <tr><td>org.apache.commons</td></tr>
-              <tr><td>commons-lang3</td></tr>
-              <tr><td>3.17.0</td></tr>
-             </table>
-        >;
-        ]
-        "node56" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>commons-io</td></tr>
-              <tr><td>commons-io</td></tr>
-              <tr><td>2.16.1</td></tr>
-             </table>
-        >;
-        ]
-        "node57" [  label = <
-           <table>
-              <tr><td>org.codehaus.plexus</td></tr>
-              <tr><td>plexus-utils</td></tr>
-              <tr><td>4.0.1</td></tr>
-             </table>
-        >;
-        ]
-        "node58" [  label = <
-           <table>
-              <tr><td>org.codehaus.plexus</td></tr>
-              <tr><td>plexus-xml</td></tr>
-              <tr><td>3.0.1</td></tr>
-             </table>
-        >;
-        ]
-        "node59" [  label = <
-           <table>
-              <tr><td>org.codehaus.plexus</td></tr>
-              <tr><td>plexus-io</td></tr>
-              <tr><td>3.5.1</td></tr>
-             </table>
-        >;
-        ]
-        "node60" [  label = <
-           <table>
-              <tr><td>org.codehaus.plexus</td></tr>
-              <tr><td>plexus-i18n</td></tr>
-              <tr><td>1.0-beta-10</td></tr>
-             </table>
-        >;
-        ]
-        "node61" [  label = <
-           <table>
-              <tr><td>org.apache.maven.shared</td></tr>
-              <tr><td>maven-dependency-analyzer</td></tr>
-              <tr><td>1.15.1</td></tr>
-             </table>
-        >;
-        ]
-    
-          "node62" [  label = <
-             <table>
-                <tr><td>org.ow2.asm</td></tr>
-                <tr><td>asm</td></tr>
-                <tr><td>9.7.1</td></tr>
-               </table>
-          >;
-          ]
-        "node63" [  label = <
-           <table>
-              <tr><td>org.apache.maven.shared</td></tr>
-              <tr><td>maven-dependency-tree</td></tr>
-              <tr><td>3.3.0</td></tr>
-             </table>
-        >;
-        ]
-        "node64" [  label = <
-           <table>
-              <tr><td>org.apache.maven.shared</td></tr>
-              <tr><td>maven-common-artifact-filters</td></tr>
-              <tr><td>3.4.0</td></tr>
-             </table>
-        >;
-        ]
-        "node65" [  label = <
-           <table>
-              <tr><td>org.apache.maven.shared</td></tr>
-              <tr><td>maven-artifact-transfer</td></tr>
-              <tr><td>0.13.1</td></tr>
-             </table>
-        >;
-        ]
-        "node66" [  label = <
-           <table>
-              <tr><td>org.apache.maven.shared</td></tr>
-              <tr><td>maven-shared-utils</td></tr>
-              <tr><td>3.4.2</td></tr>
-             </table>
-        >;
-        ]
-        "node67" [ color = "blue", fontcolor = "blue"; label = <
-           <table>
-              <tr><td>org.apache.maven.plugin-tools</td></tr>
-              <tr><td>maven-plugin-annotations</td></tr>
-              <tr><td>3.13.1</td></tr>
-             </table>
-        >;
-        ]
-        "node68" [ color = "blue", fontcolor = "blue"; label = <
-           <table>
-              <tr><td>javax.inject</td></tr>
-              <tr><td>javax.inject</td></tr>
-              <tr><td>1</td></tr>
-             </table>
-        >;
-        ]
-        "node69" [ color = "blue", fontcolor = "blue"; label = <
-           <table>
-              <tr><td>org.apache.maven.resolver</td></tr>
-              <tr><td>maven-resolver-api</td></tr>
-              <tr><td>1.4.1</td></tr>
-             </table>
-        >;
-        ]
-        "node70" [  label = <
-           <table>
-              <tr><td>org.apache.maven.resolver</td></tr>
-              <tr><td>maven-resolver-util</td></tr>
-              <tr><td>1.4.1</td></tr>
-             </table>
-        >;
-        ]
-        "node71" [  label = <
-           <table>
-              <tr><td>org.sonatype.plexus</td></tr>
-              <tr><td>plexus-build-api</td></tr>
-              <tr><td>0.0.7</td></tr>
-             </table>
-        >;
-        ]
-        "node72" [  label = <
-           <table>
-              <tr><td>org.slf4j</td></tr>
-              <tr><td>slf4j-api</td></tr>
-              <tr><td>1.7.36</td></tr>
-             </table>
-        >;
-        ]
-        "node73" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.apache.maven.resolver</td></tr>
-              <tr><td>maven-resolver-connector-basic</td></tr>
-              <tr><td>1.4.1</td></tr>
-             </table>
-        >;
-        ]
-        "node74" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.apache.maven.resolver</td></tr>
-              <tr><td>maven-resolver-transport-file</td></tr>
-              <tr><td>1.4.1</td></tr>
-             </table>
-        >;
-        ]
-        "node75" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.apache.maven.resolver</td></tr>
-              <tr><td>maven-resolver-transport-http</td></tr>
-              <tr><td>1.4.1</td></tr>
-             </table>
-        >;
-        ]
-    
-          "node76" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-             <table>
-                <tr><td>org.apache.httpcomponents</td></tr>
-                <tr><td>httpclient</td></tr>
-                <tr><td>4.5.6</td></tr>
-               </table>
-          >;
-          ]
-          "node77" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-             <table>
-                <tr><td>org.apache.httpcomponents</td></tr>
-                <tr><td>httpcore</td></tr>
-                <tr><td>4.4.10</td></tr>
-               </table>
-          >;
-          ]
-          "node78" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-             <table>
-                <tr><td>org.slf4j</td></tr>
-                <tr><td>jcl-over-slf4j</td></tr>
-                <tr><td>1.7.25</td></tr>
-               </table>
-          >;
-          ]
-        "node79" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.junit.jupiter</td></tr>
-              <tr><td>junit-jupiter-api</td></tr>
-              <tr><td>5.10.3</td></tr>
-             </table>
-        >;
-        ]
-    
-          "node80" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-             <table>
-                <tr><td>org.opentest4j</td></tr>
-                <tr><td>opentest4j</td></tr>
-                <tr><td>1.3.0</td></tr>
-               </table>
-          >;
-          ]
-          "node81" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-             <table>
-                <tr><td>org.junit.platform</td></tr>
-                <tr><td>junit-platform-commons</td></tr>
-                <tr><td>1.10.3</td></tr>
-               </table>
-          >;
-          ]
-          "node82" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-             <table>
-                <tr><td>org.apiguardian</td></tr>
-                <tr><td>apiguardian-api</td></tr>
-                <tr><td>1.1.2</td></tr>
-               </table>
-          >;
-          ]
-        "node83" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.junit.jupiter</td></tr>
-              <tr><td>junit-jupiter-params</td></tr>
-              <tr><td>5.10.3</td></tr>
-             </table>
-        >;
-        ]
-        "node84" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>jakarta.json</td></tr>
-              <tr><td>jakarta.json-api</td></tr>
-              <tr><td>2.0.2</td></tr>
-             </table>
-        >;
-        ]
-        "node85" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.glassfish</td></tr>
-              <tr><td>jakarta.json</td></tr>
-              <tr><td>2.0.1</td></tr>
-             </table>
-        >;
-        ]
-        "node86" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.junit.vintage</td></tr>
-              <tr><td>junit-vintage-engine</td></tr>
-              <tr><td>5.10.3</td></tr>
-             </table>
-        >;
-        ]
-    
-          "node87" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-             <table>
-                <tr><td>org.junit.platform</td></tr>
-                <tr><td>junit-platform-engine</td></tr>
-                <tr><td>1.10.3</td></tr>
-               </table>
-          >;
-          ]
-        "node88" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>junit</td></tr>
-              <tr><td>junit</td></tr>
-              <tr><td>4.13.2</td></tr>
-             </table>
-        >;
-        ]
-    
-          "node89" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-             <table>
-                <tr><td>org.hamcrest</td></tr>
-                <tr><td>hamcrest-core</td></tr>
-                <tr><td>1.3</td></tr>
-               </table>
-          >;
-          ]
-        "node90" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.apache.maven.plugin-testing</td></tr>
-              <tr><td>maven-plugin-testing-harness</td></tr>
-              <tr><td>3.3.0</td></tr>
-             </table>
-        >;
-        ]
-        "node91" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.mockito</td></tr>
-              <tr><td>mockito-core</td></tr>
-              <tr><td>4.11.0</td></tr>
-             </table>
-        >;
-        ]
-    
-          "node92" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-             <table>
-                <tr><td>net.bytebuddy</td></tr>
-                <tr><td>byte-buddy</td></tr>
-                <tr><td>1.12.19</td></tr>
-               </table>
-          >;
-          ]
-          "node93" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-             <table>
-                <tr><td>net.bytebuddy</td></tr>
-                <tr><td>byte-buddy-agent</td></tr>
-                <tr><td>1.12.19</td></tr>
-               </table>
-          >;
-          ]
-          "node94" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-             <table>
-                <tr><td>org.objenesis</td></tr>
-                <tr><td>objenesis</td></tr>
-                <tr><td>3.3</td></tr>
-               </table>
-          >;
-          ]
-        "node95" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.mockito</td></tr>
-              <tr><td>mockito-junit-jupiter</td></tr>
-              <tr><td>4.11.0</td></tr>
-             </table>
-        >;
-        ]
-        "node96" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.assertj</td></tr>
-              <tr><td>assertj-core</td></tr>
-              <tr><td>3.27.2</td></tr>
-             </table>
-        >;
-        ]
-        "node97" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.apache.maven</td></tr>
-              <tr><td>maven-compat</td></tr>
-              <tr><td>3.6.3</td></tr>
-             </table>
-        >;
-        ]
-    
-          "node98" [  label = <
-             <table>
-                <tr><td>org.codehaus.plexus</td></tr>
-                <tr><td>plexus-interpolation</td></tr>
-                <tr><td>1.25</td></tr>
-               </table>
-          >;
-          ]
-          "node99" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-             <table>
-                <tr><td>org.apache.maven.wagon</td></tr>
-                <tr><td>wagon-provider-api</td></tr>
-                <tr><td>3.3.4</td></tr>
-               </table>
-          >;
-          ]
-        "node100" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.eclipse.jetty</td></tr>
-              <tr><td>jetty-server</td></tr>
-              <tr><td>9.4.57.v20241219</td></tr>
-             </table>
-        >;
-        ]
-    
-          "node101" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-             <table>
-                <tr><td>javax.servlet</td></tr>
-                <tr><td>javax.servlet-api</td></tr>
-                <tr><td>3.1.0</td></tr>
-               </table>
-          >;
-          ]
-          "node102" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-             <table>
-                <tr><td>org.eclipse.jetty</td></tr>
-                <tr><td>jetty-http</td></tr>
-                <tr><td>9.4.57.v20241219</td></tr>
-               </table>
-          >;
-          ]
-          "node103" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-             <table>
-                <tr><td>org.eclipse.jetty</td></tr>
-                <tr><td>jetty-io</td></tr>
-                <tr><td>9.4.57.v20241219</td></tr>
-               </table>
-          >;
-          ]
-        "node104" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.eclipse.jetty</td></tr>
-              <tr><td>jetty-util</td></tr>
-              <tr><td>9.4.57.v20241219</td></tr>
-             </table>
-        >;
-        ]
-        "node105" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.eclipse.jetty</td></tr>
-              <tr><td>jetty-security</td></tr>
-              <tr><td>9.4.57.v20241219</td></tr>
-             </table>
-        >;
-        ]
-        "node106" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
-           <table>
-              <tr><td>org.slf4j</td></tr>
-              <tr><td>slf4j-simple</td></tr>
-              <tr><td>1.7.36</td></tr>
-             </table>
-        >;
-        ]
+        </table>
+    >]
+
+    "node2" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven</td></tr>
+            <tr><td>maven-artifact</td></tr>
+            <tr><td>3.6.3</td></tr>
+        </table>
+    >]
+
+    "node3" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven</td></tr>
+            <tr><td>maven-plugin-api</td></tr>
+            <tr><td>3.6.3</td></tr>
+        </table>
+    >]
+
+    "node4" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.codehaus.plexus</td></tr>
+            <tr><td>plexus-classworlds</td></tr>
+            <tr><td>2.6.0</td></tr>
+        </table>
+    >]
+
+    "node5" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven</td></tr>
+            <tr><td>maven-model</td></tr>
+            <tr><td>3.6.3</td></tr>
+        </table>
+    >]
+
+    "node6" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven</td></tr>
+            <tr><td>maven-core</td></tr>
+            <tr><td>3.6.3</td></tr>
+        </table>
+    >]
+
+    "node7" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven</td></tr>
+            <tr><td>maven-settings-builder</td></tr>
+            <tr><td>3.6.3</td></tr>
+        </table>
+    >]
+
+    "node8" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.sonatype.plexus</td></tr>
+            <tr><td>plexus-sec-dispatcher</td></tr>
+            <tr><td>1.4</td></tr>
+        </table>
+    >]
+
+    "node9" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.sonatype.plexus</td></tr>
+            <tr><td>plexus-cipher</td></tr>
+            <tr><td>1.4</td></tr>
+        </table>
+    >]
+
+    "node10" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven</td></tr>
+            <tr><td>maven-builder-support</td></tr>
+            <tr><td>3.6.3</td></tr>
+        </table>
+    >]
+
+    "node11" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven</td></tr>
+            <tr><td>maven-model-builder</td></tr>
+            <tr><td>3.6.3</td></tr>
+        </table>
+    >]
+
+    "node12" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven.resolver</td></tr>
+            <tr><td>maven-resolver-impl</td></tr>
+            <tr><td>1.4.1</td></tr>
+        </table>
+    >]
+
+    "node13" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven.resolver</td></tr>
+            <tr><td>maven-resolver-spi</td></tr>
+            <tr><td>1.4.1</td></tr>
+        </table>
+    >]
+
+    "node14" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.eclipse.sisu</td></tr>
+            <tr><td>org.eclipse.sisu.inject</td></tr>
+            <tr><td>0.9.0.M3</td></tr>
+        </table>
+    >]
+
+    "node15" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>com.google.inject</td></tr>
+            <tr><td>guice</td></tr>
+            <tr><td>4.2.1</td></tr>
+            <tr><td><b>no_aop</b></td></tr>
+        </table>
+    >]
+
+    "node16" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>aopalliance</td></tr>
+            <tr><td>aopalliance</td></tr>
+            <tr><td>1.0</td></tr>
+        </table>
+    >]
+
+    "node17" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>com.google.guava</td></tr>
+            <tr><td>guava</td></tr>
+            <tr><td>25.1-android</td></tr>
+        </table>
+    >]
+
+    "node18" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>com.google.code.findbugs</td></tr>
+            <tr><td>jsr305</td></tr>
+            <tr><td>3.0.2</td></tr>
+        </table>
+    >]
+
+    "node19" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.checkerframework</td></tr>
+            <tr><td>checker-compat-qual</td></tr>
+            <tr><td>2.0.0</td></tr>
+        </table>
+    >]
+
+    "node20" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>com.google.errorprone</td></tr>
+            <tr><td>error_prone_annotations</td></tr>
+            <tr><td>2.1.3</td></tr>
+        </table>
+    >]
+
+    "node21" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>com.google.j2objc</td></tr>
+            <tr><td>j2objc-annotations</td></tr>
+            <tr><td>1.1</td></tr>
+        </table>
+    >]
+
+    "node22" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.codehaus.mojo</td></tr>
+            <tr><td>animal-sniffer-annotations</td></tr>
+            <tr><td>1.14</td></tr>
+        </table>
+    >]
+
+    "node23" [  label = <
+        <table>
+            <tr><td>org.codehaus.plexus</td></tr>
+            <tr><td>plexus-component-annotations</td></tr>
+            <tr><td>2.1.0</td></tr>
+        </table>
+    >]
+
+    "node24" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven</td></tr>
+            <tr><td>maven-repository-metadata</td></tr>
+            <tr><td>3.6.3</td></tr>
+        </table>
+    >]
+
+    "node25" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven</td></tr>
+            <tr><td>maven-settings</td></tr>
+            <tr><td>3.6.3</td></tr>
+        </table>
+    >]
+
+    "node26" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven</td></tr>
+            <tr><td>maven-resolver-provider</td></tr>
+            <tr><td>3.6.3</td></tr>
+        </table>
+    >]
+
+    "node27" [  label = <
+        <table>
+            <tr><td>org.apache.velocity</td></tr>
+            <tr><td>velocity-engine-core</td></tr>
+            <tr><td>2.4</td></tr>
+        </table>
+    >]
+
+    "node28" [  label = <
+        <table>
+            <tr><td>org.apache.maven.doxia</td></tr>
+            <tr><td>doxia-sink-api</td></tr>
+            <tr><td>2.0.0</td></tr>
+        </table>
+    >]
+
+    "node29" [  label = <
+        <table>
+            <tr><td>org.apache.maven.reporting</td></tr>
+            <tr><td>maven-reporting-api</td></tr>
+            <tr><td>4.0.0</td></tr>
+        </table>
+    >]
+
+    "node30" [  label = <
+        <table>
+            <tr><td>org.apache.maven.reporting</td></tr>
+            <tr><td>maven-reporting-impl</td></tr>
+            <tr><td>4.0.0</td></tr>
+        </table>
+    >]
+
+    "node31" [  label = <
+        <table>
+            <tr><td>org.apache.maven.doxia</td></tr>
+            <tr><td>doxia-site-model</td></tr>
+            <tr><td>2.0.0</td></tr>
+        </table>
+    >]
+
+    "node32" [  label = <
+        <table>
+            <tr><td>org.apache.maven.doxia</td></tr>
+            <tr><td>doxia-core</td></tr>
+            <tr><td>2.0.0</td></tr>
+        </table>
+    >]
+
+    "node33" [  label = <
+        <table>
+            <tr><td>org.apache.commons</td></tr>
+            <tr><td>commons-text</td></tr>
+            <tr><td>1.12.0</td></tr>
+        </table>
+    >]
+
+    "node34" [  label = <
+        <table>
+            <tr><td>org.apache.maven.doxia</td></tr>
+            <tr><td>doxia-integration-tools</td></tr>
+            <tr><td>2.0.0</td></tr>
+        </table>
+    >]
+
+    "node35" [  label = <
+        <table>
+            <tr><td>org.apache.maven.doxia</td></tr>
+            <tr><td>doxia-site-renderer</td></tr>
+            <tr><td>2.0.0</td></tr>
+        </table>
+    >]
+
+    "node36" [  label = <
+        <table>
+            <tr><td>org.apache.maven.doxia</td></tr>
+            <tr><td>doxia-skin-model</td></tr>
+            <tr><td>2.0.0</td></tr>
+        </table>
+    >]
+
+    "node37" [  label = <
+        <table>
+            <tr><td>org.apache.maven.doxia</td></tr>
+            <tr><td>doxia-module-xhtml5</td></tr>
+            <tr><td>2.0.0</td></tr>
+        </table>
+    >]
+
+    "node38" [  label = <
+        <table>
+            <tr><td>org.codehaus.plexus</td></tr>
+            <tr><td>plexus-velocity</td></tr>
+            <tr><td>2.2.0</td></tr>
+        </table>
+    >]
+
+    "node39" [  label = <
+        <table>
+            <tr><td>org.apache.velocity.tools</td></tr>
+            <tr><td>velocity-tools-generic</td></tr>
+            <tr><td>3.1</td></tr>
+        </table>
+    >]
+
+    "node40" [  label = <
+        <table>
+            <tr><td>commons-beanutils</td></tr>
+            <tr><td>commons-beanutils</td></tr>
+            <tr><td>1.9.4</td></tr>
+        </table>
+    >]
+
+    "node41" [  label = <
+        <table>
+            <tr><td>commons-logging</td></tr>
+            <tr><td>commons-logging</td></tr>
+            <tr><td>1.2</td></tr>
+        </table>
+    >]
+
+    "node42" [  label = <
+        <table>
+            <tr><td>commons-collections</td></tr>
+            <tr><td>commons-collections</td></tr>
+            <tr><td>3.2.2</td></tr>
+        </table>
+    >]
+
+    "node43" [  label = <
+        <table>
+            <tr><td>org.apache.commons</td></tr>
+            <tr><td>commons-digester3</td></tr>
+            <tr><td>3.2</td></tr>
+        </table>
+    >]
+
+    "node44" [  label = <
+        <table>
+            <tr><td>com.github.cliftonlabs</td></tr>
+            <tr><td>json-simple</td></tr>
+            <tr><td>3.0.2</td></tr>
+        </table>
+    >]
+
+    "node45" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven.doxia</td></tr>
+            <tr><td>doxia-module-apt</td></tr>
+            <tr><td>2.0.0</td></tr>
+        </table>
+    >]
+
+    "node46" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven.doxia</td></tr>
+            <tr><td>doxia-module-xdoc</td></tr>
+            <tr><td>2.0.0</td></tr>
+        </table>
+    >]
+
+    "node47" [  label = <
+        <table>
+            <tr><td>org.apache.maven</td></tr>
+            <tr><td>maven-archiver</td></tr>
+            <tr><td>3.6.2</td></tr>
+        </table>
+    >]
+
+    "node48" [  label = <
+        <table>
+            <tr><td>org.codehaus.plexus</td></tr>
+            <tr><td>plexus-archiver</td></tr>
+            <tr><td>4.10.0</td></tr>
+        </table>
+    >]
+
+    "node49" [  label = <
+        <table>
+            <tr><td>org.apache.commons</td></tr>
+            <tr><td>commons-compress</td></tr>
+            <tr><td>1.26.2</td></tr>
+        </table>
+    >]
+
+    "node50" [  label = <
+        <table>
+            <tr><td>commons-codec</td></tr>
+            <tr><td>commons-codec</td></tr>
+            <tr><td>1.17.0</td></tr>
+        </table>
+    >]
+
+    "node51" [  label = <
+        <table>
+            <tr><td>io.airlift</td></tr>
+            <tr><td>aircompressor</td></tr>
+            <tr><td>0.27</td></tr>
+        </table>
+    >]
+
+    "node52" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.tukaani</td></tr>
+            <tr><td>xz</td></tr>
+            <tr><td>1.9</td></tr>
+        </table>
+    >]
+
+    "node53" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>com.github.luben</td></tr>
+            <tr><td>zstd-jni</td></tr>
+            <tr><td>1.5.6-3</td></tr>
+        </table>
+    >]
+
+    "node54" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.eclipse.sisu</td></tr>
+            <tr><td>org.eclipse.sisu.plexus</td></tr>
+            <tr><td>0.9.0.M3</td></tr>
+        </table>
+    >]
+
+    "node55" [  label = <
+        <table>
+            <tr><td>org.apache.commons</td></tr>
+            <tr><td>commons-lang3</td></tr>
+            <tr><td>3.17.0</td></tr>
+        </table>
+    >]
+
+    "node56" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>commons-io</td></tr>
+            <tr><td>commons-io</td></tr>
+            <tr><td>2.16.1</td></tr>
+        </table>
+    >]
+
+    "node57" [  label = <
+        <table>
+            <tr><td>org.codehaus.plexus</td></tr>
+            <tr><td>plexus-utils</td></tr>
+            <tr><td>4.0.1</td></tr>
+        </table>
+    >]
+
+    "node58" [  label = <
+        <table>
+            <tr><td>org.codehaus.plexus</td></tr>
+            <tr><td>plexus-xml</td></tr>
+            <tr><td>3.0.1</td></tr>
+        </table>
+    >]
+
+    "node59" [  label = <
+        <table>
+            <tr><td>org.codehaus.plexus</td></tr>
+            <tr><td>plexus-io</td></tr>
+            <tr><td>3.5.1</td></tr>
+        </table>
+    >]
+
+    "node60" [  label = <
+        <table>
+            <tr><td>org.codehaus.plexus</td></tr>
+            <tr><td>plexus-i18n</td></tr>
+            <tr><td>1.0-beta-10</td></tr>
+        </table>
+    >]
+
+    "node61" [  label = <
+        <table>
+            <tr><td>org.apache.maven.shared</td></tr>
+            <tr><td>maven-dependency-analyzer</td></tr>
+            <tr><td>1.15.1</td></tr>
+        </table>
+    >]
+
+    "node62" [  label = <
+        <table>
+            <tr><td>org.ow2.asm</td></tr>
+            <tr><td>asm</td></tr>
+            <tr><td>9.7.1</td></tr>
+        </table>
+    >]
+
+    "node63" [  label = <
+        <table>
+            <tr><td>org.apache.maven.shared</td></tr>
+            <tr><td>maven-dependency-tree</td></tr>
+            <tr><td>3.3.0</td></tr>
+        </table>
+    >]
+
+    "node64" [  label = <
+        <table>
+            <tr><td>org.apache.maven.shared</td></tr>
+            <tr><td>maven-common-artifact-filters</td></tr>
+            <tr><td>3.4.0</td></tr>
+        </table>
+    >]
+
+    "node65" [  label = <
+        <table>
+            <tr><td>org.apache.maven.shared</td></tr>
+            <tr><td>maven-artifact-transfer</td></tr>
+            <tr><td>0.13.1</td></tr>
+        </table>
+    >]
+
+    "node66" [  label = <
+        <table>
+            <tr><td>org.apache.maven.shared</td></tr>
+            <tr><td>maven-shared-utils</td></tr>
+            <tr><td>3.4.2</td></tr>
+        </table>
+    >]
+
+    "node67" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven.plugin-tools</td></tr>
+            <tr><td>maven-plugin-annotations</td></tr>
+            <tr><td>3.13.1</td></tr>
+        </table>
+    >]
+
+    "node68" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>javax.inject</td></tr>
+            <tr><td>javax.inject</td></tr>
+            <tr><td>1</td></tr>
+        </table>
+    >]
+
+    "node69" [ color = "blue", fontcolor = "blue"; label = <
+        <table>
+            <tr><td>org.apache.maven.resolver</td></tr>
+            <tr><td>maven-resolver-api</td></tr>
+            <tr><td>1.4.1</td></tr>
+        </table>
+    >]
+
+    "node70" [  label = <
+        <table>
+            <tr><td>org.apache.maven.resolver</td></tr>
+            <tr><td>maven-resolver-util</td></tr>
+            <tr><td>1.4.1</td></tr>
+        </table>
+    >]
+
+    "node71" [  label = <
+        <table>
+            <tr><td>org.sonatype.plexus</td></tr>
+            <tr><td>plexus-build-api</td></tr>
+            <tr><td>0.0.7</td></tr>
+        </table>
+    >]
+
+    "node72" [  label = <
+        <table>
+            <tr><td>org.slf4j</td></tr>
+            <tr><td>slf4j-api</td></tr>
+            <tr><td>1.7.36</td></tr>
+        </table>
+    >]
+
+    "node73" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.apache.maven.resolver</td></tr>
+            <tr><td>maven-resolver-connector-basic</td></tr>
+            <tr><td>1.4.1</td></tr>
+        </table>
+    >]
+
+    "node74" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.apache.maven.resolver</td></tr>
+            <tr><td>maven-resolver-transport-file</td></tr>
+            <tr><td>1.4.1</td></tr>
+        </table>
+    >]
+
+    "node75" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.apache.maven.resolver</td></tr>
+            <tr><td>maven-resolver-transport-http</td></tr>
+            <tr><td>1.4.1</td></tr>
+        </table>
+    >]
+
+    "node76" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.apache.httpcomponents</td></tr>
+            <tr><td>httpclient</td></tr>
+            <tr><td>4.5.6</td></tr>
+        </table>
+    >]
+
+    "node77" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.apache.httpcomponents</td></tr>
+            <tr><td>httpcore</td></tr>
+            <tr><td>4.4.10</td></tr>
+        </table>
+    >]
+
+    "node78" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.slf4j</td></tr>
+            <tr><td>jcl-over-slf4j</td></tr>
+            <tr><td>1.7.25</td></tr>
+        </table>
+    >]
+
+    "node79" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.junit.jupiter</td></tr>
+            <tr><td>junit-jupiter-api</td></tr>
+            <tr><td>5.10.3</td></tr>
+        </table>
+    >]
+
+    "node80" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.opentest4j</td></tr>
+            <tr><td>opentest4j</td></tr>
+            <tr><td>1.3.0</td></tr>
+        </table>
+    >]
+
+    "node81" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.junit.platform</td></tr>
+            <tr><td>junit-platform-commons</td></tr>
+            <tr><td>1.10.3</td></tr>
+        </table>
+    >]
+
+    "node82" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.apiguardian</td></tr>
+            <tr><td>apiguardian-api</td></tr>
+            <tr><td>1.1.2</td></tr>
+        </table>
+    >]
+
+    "node83" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.junit.jupiter</td></tr>
+            <tr><td>junit-jupiter-params</td></tr>
+            <tr><td>5.10.3</td></tr>
+        </table>
+    >]
+
+    "node84" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>jakarta.json</td></tr>
+            <tr><td>jakarta.json-api</td></tr>
+            <tr><td>2.0.2</td></tr>
+        </table>
+    >]
+
+    "node85" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.glassfish</td></tr>
+            <tr><td>jakarta.json</td></tr>
+            <tr><td>2.0.1</td></tr>
+        </table>
+    >]
+
+    "node86" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.junit.vintage</td></tr>
+            <tr><td>junit-vintage-engine</td></tr>
+            <tr><td>5.10.3</td></tr>
+        </table>
+    >]
+
+    "node87" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.junit.platform</td></tr>
+            <tr><td>junit-platform-engine</td></tr>
+            <tr><td>1.10.3</td></tr>
+        </table>
+    >]
+
+    "node88" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>junit</td></tr>
+            <tr><td>junit</td></tr>
+            <tr><td>4.13.2</td></tr>
+        </table>
+    >]
+
+    "node89" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.hamcrest</td></tr>
+            <tr><td>hamcrest-core</td></tr>
+            <tr><td>1.3</td></tr>
+        </table>
+    >]
+
+    "node90" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.apache.maven.plugin-testing</td></tr>
+            <tr><td>maven-plugin-testing-harness</td></tr>
+            <tr><td>3.3.0</td></tr>
+        </table>
+    >]
+
+    "node91" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.mockito</td></tr>
+            <tr><td>mockito-core</td></tr>
+            <tr><td>4.11.0</td></tr>
+        </table>
+    >]
+
+    "node92" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>net.bytebuddy</td></tr>
+            <tr><td>byte-buddy</td></tr>
+            <tr><td>1.12.19</td></tr>
+        </table>
+    >]
+
+    "node93" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>net.bytebuddy</td></tr>
+            <tr><td>byte-buddy-agent</td></tr>
+            <tr><td>1.12.19</td></tr>
+        </table>
+    >]
+
+    "node94" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.objenesis</td></tr>
+            <tr><td>objenesis</td></tr>
+            <tr><td>3.3</td></tr>
+        </table>
+    >]
+
+    "node95" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.mockito</td></tr>
+            <tr><td>mockito-junit-jupiter</td></tr>
+            <tr><td>4.11.0</td></tr>
+        </table>
+    >]
+
+    "node96" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.assertj</td></tr>
+            <tr><td>assertj-core</td></tr>
+            <tr><td>3.27.2</td></tr>
+        </table>
+    >]
+
+    "node97" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.apache.maven</td></tr>
+            <tr><td>maven-compat</td></tr>
+            <tr><td>3.6.3</td></tr>
+        </table>
+    >]
+
+    "node98" [  label = <
+        <table>
+            <tr><td>org.codehaus.plexus</td></tr>
+            <tr><td>plexus-interpolation</td></tr>
+            <tr><td>1.25</td></tr>
+        </table>
+    >]
+
+    "node99" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.apache.maven.wagon</td></tr>
+            <tr><td>wagon-provider-api</td></tr>
+            <tr><td>3.3.4</td></tr>
+        </table>
+    >]
+
+    "node100" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.eclipse.jetty</td></tr>
+            <tr><td>jetty-server</td></tr>
+            <tr><td>9.4.57.v20241219</td></tr>
+        </table>
+    >]
+
+    "node101" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>javax.servlet</td></tr>
+            <tr><td>javax.servlet-api</td></tr>
+            <tr><td>3.1.0</td></tr>
+        </table>
+    >]
+
+    "node102" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.eclipse.jetty</td></tr>
+            <tr><td>jetty-http</td></tr>
+            <tr><td>9.4.57.v20241219</td></tr>
+        </table>
+    >]
+
+    "node103" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.eclipse.jetty</td></tr>
+            <tr><td>jetty-io</td></tr>
+            <tr><td>9.4.57.v20241219</td></tr>
+        </table>
+    >]
+
+    "node104" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.eclipse.jetty</td></tr>
+            <tr><td>jetty-util</td></tr>
+            <tr><td>9.4.57.v20241219</td></tr>
+        </table>
+    >]
+
+    "node105" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.eclipse.jetty</td></tr>
+            <tr><td>jetty-security</td></tr>
+            <tr><td>9.4.57.v20241219</td></tr>
+        </table>
+    >]
+
+    "node106" [ color = "darkgreen", fontcolor = "darkgreen"; label = <
+        <table>
+            <tr><td>org.slf4j</td></tr>
+            <tr><td>slf4j-simple</td></tr>
+            <tr><td>1.7.36</td></tr>
+        </table>
+    >]
+
 
     "node1" -> "node2" [ color = "blue", fontcolor = "blue" ];
     "node1" -> "node3" [ color = "blue", fontcolor = "blue" ];

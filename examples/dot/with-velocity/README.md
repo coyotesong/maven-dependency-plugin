@@ -1,16 +1,12 @@
-# .DOT Examples When Using Velocity
+# DOT generated files
 
-Note: the actual changes are due to changing what DOTDependencyNodeVisitor
-produces, not the change to a velocity template. However the ability to use
-a template instead of making painstaking changes to the java code made it
-easy to explore different approaches since the template is so close to the
-final document.
-
-## Generated images
-
-Remember the legacy format was unusable - the equivalent images were often
+The lsegacy format was unusable - the equivalent images were often
 around 32k by 600 pixels and could not be opened at all by some common
 viewers.
+
+The new DOT format is 
+
+- [with-velocity.dot](with-velocity.dot)
 
 This format adds an explicit node (html table) for each artifact, makes a
 few human-friendly changes (replace scope with color coding, removes all
@@ -30,79 +26,28 @@ Note: the `svg` format supports interactive elements like "tooltips".
 I haven not included them (yet) but they could provide additional
 information like (potentially) the projects title and/or description.
 
-## .DOT template
+This template isn't quite finished - I can make the HTML table a bit cleaner.
+Unfortunately this is only pseudo-HTML and I need to find the example
+I used in order to get the details.
 
-This is the current template for .DOT output. It looks like many other
-formats can use the same template - so much so that it may be possible
-to generalize this to a single common template plus a few simple macros
-pulled from a separate directory.
 
-```
-#**
-This template produces the .dot format dependency tree
-*#
+## Velocity template and macros
 
-digraph "$root.toNodeString()" {
-    graph [ ranksep=1.5; nodesep=0.2; $style.defaultGraphFormat ]
-    node [ shape="none"; margin=0; $style.defaultNodeFormat ]
-    edge [ $style.defaultEdgeFormat ]
+The current implementation uses a single template with a single macro library
+per output format. This made the individual macros, esp. for the nested formats,
+a bit more complicated but everything now works. I will add documentation explaining
+how each macro implements the designed behavior.
 
-    #walkTreeForNodes($root)
+The dot format also has `src/main/resources/templates/legacy-dependency-tree.dot.vm`.
 
-    #walkTreeForEdges($root)
-}
+## Files
 
-#macro(walkTreeForNodes $parent)
-    #showSimpleDependency($parent)
-    #foreach ($child in $parent.children)
-        #walkTreeForNodes($child)
-    #end
-#end
-#end
-
-#macro (showSimpleDependency $dependency)
-#set ($artifact = $dependency.artifact)
-    "$dependency.alias" [ $dependency.nodeFormat label = <
-       <table>
-           <tr><td>$artifact.groupId</td></tr>
-           <tr><td>$artifact.artifactId</td></tr>
-           <tr><td>$artifact.version</td></tr>
-       #if ($dependency.showType)
-           <tr><td>$artifact.type</td></tr>
-       #end
-       #if ($dependency.showClassifier)
-           <tr><td><b>$artifact.classifier</b></td></tr>
-       #end
-    </table>
-    >;
-]
-
-#end
-
-#macro(walkTreeForEdges $parent)
-    #foreach ($child in $parent.children)
-        "$parent.alias" -> "$child.alias" [ $child.edgeFormat ];
-        #walkTreeForEdges($child)
-    #end
-#end
-```
-
-## Other formats
-
-The other formats will have a similar approach but obviously different
-details in the `showSimpleDependency` macro and the edge macro.
-
-The main difference will be the addition of a (new) Velocity directive -
-`#indent'. This handles proper indentation of nested outputs like json
-or yaml.
-
-```
-#macro(walkTreeForNodes $parent)
-#indent
-    #showSimpleDependency($parent)
-    #foreach ($child in $parent.children)
-        #walkTreeForNodes($child)
-    #end
-#end
-#end
+```shell
+$ file *
+with-velocity.dot: HTML document, ASCII text
+with-velocity.gif: GIF image data, version 87a, 7687 x 1243
+with-velocity.jpg: JPEG image data, JFIF standard 1.01, resolution (DPI), density 96x96, segment length 16, comment: "CREATOR: gd-jpeg v1.0 (using IJG JPEG v80), default quality", baseline, precision 8, 7687x1243, components 3
+with-velocity.pdf: PDF document, version 1.7
+with-velocity.png: PNG image data, 7687 x 1243, 8-bit/color RGBA, non-interlaced
+with-velocity.ps:  PostScript document text conforming DSC level 3.0
 ```

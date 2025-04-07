@@ -18,6 +18,7 @@
  */
 package org.apache.maven.plugins.dependency.tree;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.function.Function;
@@ -25,7 +26,7 @@ import java.util.stream.Collectors;
 
 import org.apache.maven.artifact.Artifact;
 import org.apache.maven.model.Exclusion;
-import org.apache.maven.plugins.dependency.utils.templates.Style;
+import org.apache.maven.plugins.dependency.utils.velocity.Style;
 import org.apache.maven.shared.dependency.graph.DependencyNode;
 import org.apache.maven.shared.dependency.graph.traversal.DependencyNodeVisitor;
 
@@ -81,6 +82,8 @@ public class DecoratedNode implements DependencyNode, Comparable<DecoratedNode> 
 
     private Style style;
 
+    private boolean last = true;
+
     private int rank = 0;
 
     public DecoratedNode(DependencyNode node, Style style) {
@@ -108,10 +111,28 @@ public class DecoratedNode implements DependencyNode, Comparable<DecoratedNode> 
             return n;
         };
 
-        this.children = node.getChildren().stream()
-                .map(child -> new DecoratedNode(child, style))
-                .map(setOtherProperties)
-                .collect(Collectors.toList());
+        if (!node.getChildren().isEmpty()) {
+            this.children = node.getChildren().stream()
+                    .map(child -> new DecoratedNode(child, style))
+                    .map(setOtherProperties)
+                    .collect(Collectors.toList());
+
+            // with the recursive copy this approach is more reliable than
+            // defaulting to 'false' and only setting 'true' in this loop
+            for (int i = 0; i < children.size() - 1; i++) {
+                ((DecoratedNode) this.getChildren().get(i)).last = false;
+            }
+        } else {
+            this.children = Collections.emptyList();
+        }
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNodeString() {
+        return nodeString;
     }
 
     /**
@@ -135,28 +156,40 @@ public class DecoratedNode implements DependencyNode, Comparable<DecoratedNode> 
         return style;
     }
 
+    public boolean isLast() {
+        return last;
+    }
+
+    public boolean hasChildren() {
+        return !children.isEmpty();
+    }
+
     public String getNodeFormat() {
-        if (style instanceof DOTStyle) {
-            return ((DOTStyle) style).getNodeFormat(this);
+        if (style instanceof DOTDependencyNodeVisitor.DOTStyle) {
+            return ((DOTDependencyNodeVisitor.DOTStyle) style).getNodeFormat(this);
         }
 
         return "";
     }
 
     public String getEdgeFormat() {
-        if (style instanceof DOTStyle) {
-            return ((DOTStyle) style).getEdgeFormat(this.parent, this);
+        if (style instanceof DOTDependencyNodeVisitor.DOTStyle) {
+            return ((DOTDependencyNodeVisitor.DOTStyle) style).getEdgeFormat(this.parent, this);
         }
 
         return "";
     }
 
     public boolean getShowType() {
-        if (style instanceof DOTStyle) {
-            return ((DOTStyle) style).getShowType(this);
+        if (style instanceof DOTDependencyNodeVisitor.DOTStyle) {
+            return ((DOTDependencyNodeVisitor.DOTStyle) style).getShowType(this);
         }
 
         return true;
+    }
+
+    public boolean hasScope() {
+        return artifact.getScope() != null;
     }
 
     public boolean getShowClassifier() {

@@ -1,0 +1,212 @@
+1 org.apache.maven.plugins:maven-dependency-plugin:maven-plugin:3.8.2-SNAPSHOT
+2 org.apache.maven:maven-artifact:jar:3.6.3:provided
+3 org.apache.maven:maven-plugin-api:jar:3.6.3:provided
+4 org.codehaus.plexus:plexus-classworlds:jar:2.6.0:provided
+5 org.apache.maven:maven-model:jar:3.6.3:provided
+6 org.apache.maven:maven-core:jar:3.6.3:provided
+7 org.apache.maven:maven-settings-builder:jar:3.6.3:provided
+8 org.sonatype.plexus:plexus-sec-dispatcher:jar:1.4:provided
+9 org.sonatype.plexus:plexus-cipher:jar:1.4:provided
+10 org.apache.maven:maven-builder-support:jar:3.6.3:provided
+11 org.apache.maven:maven-model-builder:jar:3.6.3:provided
+12 org.apache.maven.resolver:maven-resolver-impl:jar:1.4.1:provided
+13 org.apache.maven.resolver:maven-resolver-spi:jar:1.4.1:provided
+14 org.eclipse.sisu:org.eclipse.sisu.inject:jar:0.9.0.M3:provided
+15 com.google.inject:guice:jar:no_aop:4.2.1:provided
+16 aopalliance:aopalliance:jar:1.0:provided
+17 com.google.guava:guava:jar:25.1-android:provided
+18 com.google.code.findbugs:jsr305:jar:3.0.2:provided
+19 org.checkerframework:checker-compat-qual:jar:2.0.0:provided
+20 com.google.errorprone:error_prone_annotations:jar:2.1.3:provided
+21 com.google.j2objc:j2objc-annotations:jar:1.1:provided
+22 org.codehaus.mojo:animal-sniffer-annotations:jar:1.14:provided
+23 org.codehaus.plexus:plexus-component-annotations:jar:2.1.0:compile
+24 org.apache.maven:maven-repository-metadata:jar:3.6.3:provided
+25 org.apache.maven:maven-settings:jar:3.6.3:provided
+26 org.apache.maven:maven-resolver-provider:jar:3.6.3:provided
+27 org.apache.velocity:velocity-engine-core:jar:2.4:compile
+28 org.apache.maven.doxia:doxia-sink-api:jar:2.0.0:compile
+29 org.apache.maven.reporting:maven-reporting-api:jar:4.0.0:compile
+30 org.apache.maven.reporting:maven-reporting-impl:jar:4.0.0:compile
+31 org.apache.maven.doxia:doxia-site-model:jar:2.0.0:compile
+32 org.apache.maven.doxia:doxia-core:jar:2.0.0:compile
+33 org.apache.commons:commons-text:jar:1.12.0:compile
+34 org.apache.maven.doxia:doxia-integration-tools:jar:2.0.0:compile
+35 org.apache.maven.doxia:doxia-site-renderer:jar:2.0.0:compile
+36 org.apache.maven.doxia:doxia-skin-model:jar:2.0.0:compile
+37 org.apache.maven.doxia:doxia-module-xhtml5:jar:2.0.0:compile
+38 org.codehaus.plexus:plexus-velocity:jar:2.2.0:compile
+39 org.apache.velocity.tools:velocity-tools-generic:jar:3.1:compile
+40 commons-beanutils:commons-beanutils:jar:1.9.4:compile
+41 commons-logging:commons-logging:jar:1.2:compile
+42 commons-collections:commons-collections:jar:3.2.2:compile
+43 org.apache.commons:commons-digester3:jar:3.2:compile
+44 com.github.cliftonlabs:json-simple:jar:3.0.2:compile
+45 org.apache.maven.doxia:doxia-module-apt:jar:2.0.0:runtime
+46 org.apache.maven.doxia:doxia-module-xdoc:jar:2.0.0:runtime
+47 org.apache.maven:maven-archiver:jar:3.6.2:compile
+48 org.codehaus.plexus:plexus-archiver:jar:4.10.0:compile
+49 org.apache.commons:commons-compress:jar:1.26.2:compile
+50 commons-codec:commons-codec:jar:1.17.0:compile
+51 io.airlift:aircompressor:jar:0.27:compile
+52 org.tukaani:xz:jar:1.9:runtime
+53 com.github.luben:zstd-jni:jar:1.5.6-3:runtime
+54 org.eclipse.sisu:org.eclipse.sisu.plexus:jar:0.9.0.M3:provided
+55 org.apache.commons:commons-lang3:jar:3.17.0:compile
+56 commons-io:commons-io:jar:2.16.1:test
+57 org.codehaus.plexus:plexus-utils:jar:4.0.1:compile
+58 org.codehaus.plexus:plexus-xml:jar:3.0.1:compile
+59 org.codehaus.plexus:plexus-io:jar:3.5.1:compile
+60 org.codehaus.plexus:plexus-i18n:jar:1.0-beta-10:compile
+61 org.apache.maven.shared:maven-dependency-analyzer:jar:1.15.1:compile
+62 org.ow2.asm:asm:jar:9.7.1:compile
+63 org.apache.maven.shared:maven-dependency-tree:jar:3.3.0:compile
+64 org.apache.maven.shared:maven-common-artifact-filters:jar:3.4.0:compile
+65 org.apache.maven.shared:maven-artifact-transfer:jar:0.13.1:compile
+66 org.apache.maven.shared:maven-shared-utils:jar:3.4.2:compile
+67 org.apache.maven.plugin-tools:maven-plugin-annotations:jar:3.13.1:provided
+68 javax.inject:javax.inject:jar:1:provided
+69 org.apache.maven.resolver:maven-resolver-api:jar:1.4.1:provided
+70 org.apache.maven.resolver:maven-resolver-util:jar:1.4.1:compile
+71 org.sonatype.plexus:plexus-build-api:jar:0.0.7:compile
+72 org.slf4j:slf4j-api:jar:1.7.36:compile
+73 org.apache.maven.resolver:maven-resolver-connector-basic:jar:1.4.1:test
+74 org.apache.maven.resolver:maven-resolver-transport-file:jar:1.4.1:test
+75 org.apache.maven.resolver:maven-resolver-transport-http:jar:1.4.1:test
+76 org.apache.httpcomponents:httpclient:jar:4.5.6:test
+77 org.apache.httpcomponents:httpcore:jar:4.4.10:test
+78 org.slf4j:jcl-over-slf4j:jar:1.7.25:test
+79 org.junit.jupiter:junit-jupiter-api:jar:5.10.3:test
+80 org.opentest4j:opentest4j:jar:1.3.0:test
+81 org.junit.platform:junit-platform-commons:jar:1.10.3:test
+82 org.apiguardian:apiguardian-api:jar:1.1.2:test
+83 org.junit.jupiter:junit-jupiter-params:jar:5.10.3:test
+84 jakarta.json:jakarta.json-api:jar:2.0.2:test
+85 org.glassfish:jakarta.json:jar:2.0.1:test
+86 org.junit.vintage:junit-vintage-engine:jar:5.10.3:test
+87 org.junit.platform:junit-platform-engine:jar:1.10.3:test
+88 junit:junit:jar:4.13.2:test
+89 org.hamcrest:hamcrest-core:jar:1.3:test
+90 org.apache.maven.plugin-testing:maven-plugin-testing-harness:jar:3.3.0:test
+91 org.mockito:mockito-core:jar:4.11.0:test
+92 net.bytebuddy:byte-buddy:jar:1.12.19:test
+93 net.bytebuddy:byte-buddy-agent:jar:1.12.19:test
+94 org.objenesis:objenesis:jar:3.3:test
+95 org.mockito:mockito-junit-jupiter:jar:4.11.0:test
+96 org.assertj:assertj-core:jar:3.27.2:test
+97 org.apache.maven:maven-compat:jar:3.6.3:test
+98 org.codehaus.plexus:plexus-interpolation:jar:1.25:compile
+99 org.apache.maven.wagon:wagon-provider-api:jar:3.3.4:test
+100 org.eclipse.jetty:jetty-server:jar:9.4.57.v20241219:test
+101 javax.servlet:javax.servlet-api:jar:3.1.0:test
+102 org.eclipse.jetty:jetty-http:jar:9.4.57.v20241219:test
+103 org.eclipse.jetty:jetty-io:jar:9.4.57.v20241219:test
+104 org.eclipse.jetty:jetty-util:jar:9.4.57.v20241219:test
+105 org.eclipse.jetty:jetty-security:jar:9.4.57.v20241219:test
+106 org.slf4j:slf4j-simple:jar:1.7.36:test
+
+1 2 provided
+1 3 provided
+3 4 provided
+1 5 provided
+1 6 provided
+6 7 provided
+7 8 provided
+8 9 provided
+6 10 provided
+6 11 provided
+6 12 provided
+6 13 provided
+6 14 provided
+6 15 provided
+15 16 provided
+15 17 provided
+17 18 provided
+17 19 provided
+17 20 provided
+17 21 provided
+17 22 provided
+6 23 compile
+1 24 provided
+1 25 provided
+1 26 provided
+1 27 compile
+1 28 compile
+1 29 compile
+1 30 compile
+30 31 compile
+30 32 compile
+32 33 compile
+30 34 compile
+30 35 compile
+35 36 compile
+35 37 compile
+35 38 compile
+35 39 compile
+39 40 compile
+40 41 compile
+40 42 compile
+39 43 compile
+39 44 compile
+30 45 runtime
+30 46 runtime
+30 47 compile
+1 48 compile
+48 49 compile
+49 50 compile
+48 51 compile
+48 52 runtime
+48 53 runtime
+1 54 provided
+1 55 compile
+1 56 test
+1 57 compile
+1 58 compile
+1 59 compile
+1 60 compile
+1 61 compile
+61 62 compile
+1 63 compile
+1 64 compile
+1 65 compile
+1 66 compile
+1 67 provided
+1 68 provided
+1 69 provided
+1 70 compile
+1 71 compile
+1 72 compile
+1 73 test
+1 74 test
+1 75 test
+75 76 test
+75 77 test
+75 78 test
+1 79 test
+79 80 test
+79 81 test
+79 82 test
+1 83 test
+1 84 test
+1 85 test
+1 86 test
+86 87 test
+1 88 test
+88 89 test
+1 90 test
+1 91 test
+91 92 test
+91 93 test
+91 94 test
+1 95 test
+1 96 test
+1 97 test
+97 98 compile
+97 99 test
+1 100 test
+100 101 test
+100 102 test
+100 103 test
+1 104 test
+1 105 test
+1 106 test

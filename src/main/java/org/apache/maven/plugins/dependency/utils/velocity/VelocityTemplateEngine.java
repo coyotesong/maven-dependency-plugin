@@ -16,16 +16,17 @@
  * specific language governing permissions and limitations
  * under the License.
  */
-package org.apache.maven.plugins.dependency.utils.templates;
+package org.apache.maven.plugins.dependency.utils.velocity;
 
 import java.io.IOException;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.Collections;
 import java.util.List;
 
+import org.apache.maven.plugins.dependency.utils.velocity.runtime.directive.Collapse;
+import org.apache.maven.plugins.dependency.utils.velocity.runtime.directive.Indent;
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;
 import org.apache.velocity.app.VelocityEngine;
@@ -36,6 +37,7 @@ import org.apache.velocity.exception.ParseErrorException;
 import org.apache.velocity.exception.ResourceNotFoundException;
 import org.apache.velocity.runtime.ParserPoolImpl;
 import org.apache.velocity.runtime.RuntimeConstants;
+import org.apache.velocity.runtime.directive.contrib.For;
 import org.apache.velocity.runtime.resource.ResourceManagerImpl;
 import org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader;
 import org.apache.velocity.util.introspection.UberspectImpl;
@@ -44,15 +46,17 @@ import org.slf4j.LoggerFactory;
 import org.slf4j.MDC;
 
 /**
- * Implementation of TemplateEngine using Velocity
+ * Wrapper for Velocity Engine
  *
  * {@see https://velocity.apache.org/engine/developer-guide.html#orgapachevelocityappeventinvalidreferenceevennthandler}
  *
  * @author <a href="mailto:bgiles@coyotesong.com">Bear Giles</a>
- * @since 3.8.2
+ * @since 3.9
  */
-public class VelocityTemplateEngine implements TemplateEngine {
+public class VelocityTemplateEngine {
     private static final Logger LOG = LoggerFactory.getLogger(VelocityTemplateEngine.class);
+
+    private static final String NEWLINE = "\n";
 
     // these could/should be loaded from a ResourceBundle
     static final String MESSAGE_NO_TEMPLATE_SPECIFIED = "No template was specified";
@@ -67,6 +71,9 @@ public class VelocityTemplateEngine implements TemplateEngine {
     private String templateName;
     private Template template;
 
+    private static final List<String> STANDARD_DIRECTIVES =
+            Arrays.asList(For.class.getName(), Collapse.class.getName(), Indent.class.getName());
+
     /**
      * Default constructor
      *
@@ -74,7 +81,7 @@ public class VelocityTemplateEngine implements TemplateEngine {
      * @throws ParseErrorException
      */
     public VelocityTemplateEngine() throws ResourceNotFoundException, ParseErrorException {
-        this(Collections.emptyList());
+        this(STANDARD_DIRECTIVES);
     }
 
     /**
@@ -114,14 +121,14 @@ public class VelocityTemplateEngine implements TemplateEngine {
     }
 
     /**
-     * {@inheritDoc}
+     * Does the specified resource exist?
      */
     public boolean resourceExists(String resourceName) {
         return engine.resourceExists(resourceName);
     }
 
     /**
-     * {@inheritDoc}
+     * Use a string, not file, as the template
      */
     public VelocityTemplateEngine withDynamicTemplate(String template) throws ResourceNotFoundException {
         this.input = template;
@@ -129,7 +136,7 @@ public class VelocityTemplateEngine implements TemplateEngine {
     }
 
     /**
-     * {@inheritDoc}
+     * Use a file as the template
      */
     public VelocityTemplateEngine withTemplateName(String templateName) throws ResourceNotFoundException {
         final MDC.MDCCloseable mdc = MDC.putCloseable("templateName", templateName);
@@ -148,22 +155,22 @@ public class VelocityTemplateEngine implements TemplateEngine {
     }
 
     /**
-     * {@inheritDoc}
+     * Add one or more macro libraries
      */
     public VelocityTemplateEngine withMacro(String... library) {
         return withMacros(Arrays.asList(library));
     }
 
     /**
-     * {@inheritDoc}
+     * Add a collection of macro libraries
      */
-    public VelocityTemplateEngine withMacros(List<String> libraries) {
+    public VelocityTemplateEngine withMacros(Collection<String> libraries) {
         this.macroList.addAll(libraries);
         return this;
     }
 
     /**
-     * {@inheritDoc}
+     * Use a specific style
      */
     public VelocityTemplateEngine withStyle(Style style) {
         this.style = style;
@@ -171,7 +178,7 @@ public class VelocityTemplateEngine implements TemplateEngine {
     }
 
     /**
-     * {@inheritDoc}
+     * Add a property to the Velocity context
      */
     public VelocityTemplateEngine put(String name, Object value) {
         context.put(name, value);
@@ -179,24 +186,25 @@ public class VelocityTemplateEngine implements TemplateEngine {
     }
 
     /**
-     * Clean up string - trim it, use proper line separators, etc.
+     * Clean up a string - trim it, use proper line separators, etc.
      *
      * @param dirty output from Velocity engine
      * @return cleaned up content
      */
     String cleanup(String dirty) {
         String clean = dirty.trim();
-        if (clean.indexOf("\n") > 0) {
-            clean = clean + "\n";
+        if (clean.indexOf(NEWLINE) > 0) {
+            clean = clean + NEWLINE;
         }
-        if (!"\n".equals(System.lineSeparator())) {
-            clean = clean.replace("\n", System.lineSeparator());
+        if (NEWLINE.equals(System.lineSeparator())) {
+            return clean;
         }
-        return clean;
+
+        return clean.replace(NEWLINE, System.lineSeparator());
     }
 
     /**
-     * {@inheritDoc}
+     * Merge template and DependencyNode
      */
     public String evaluate() throws ResourceNotFoundException, ParseErrorException {
         if ((template == null) && (input == null)) {

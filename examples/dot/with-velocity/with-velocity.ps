@@ -1,0 +1,7743 @@
+%!PS-Adobe-3.0
+%%Creator: graphviz version 2.42.4 (0)
+%%Title: org.apache.maven.plugins:maven-dependency-plugin:maven-plugin:3.8.2-SNAPSHOT
+%%Pages: (atend)
+%%BoundingBox: (atend)
+%%EndComments
+save
+%%BeginProlog
+/DotDict 200 dict def
+DotDict begin
+
+/setupLatin1 {
+mark
+/EncodingVector 256 array def
+ EncodingVector 0
+
+ISOLatin1Encoding 0 255 getinterval putinterval
+EncodingVector 45 /hyphen put
+
+% Set up ISO Latin 1 character encoding
+/starnetISO {
+        dup dup findfont dup length dict begin
+        { 1 index /FID ne { def }{ pop pop } ifelse
+        } forall
+        /Encoding EncodingVector def
+        currentdict end definefont
+} def
+/Times-Roman starnetISO def
+/Times-Italic starnetISO def
+/Times-Bold starnetISO def
+/Times-BoldItalic starnetISO def
+/Helvetica starnetISO def
+/Helvetica-Oblique starnetISO def
+/Helvetica-Bold starnetISO def
+/Helvetica-BoldOblique starnetISO def
+/Courier starnetISO def
+/Courier-Oblique starnetISO def
+/Courier-Bold starnetISO def
+/Courier-BoldOblique starnetISO def
+cleartomark
+} bind def
+
+%%BeginResource: procset graphviz 0 0
+/coord-font-family /Times-Roman def
+/default-font-family /Times-Roman def
+/coordfont coord-font-family findfont 8 scalefont def
+
+/InvScaleFactor 1.0 def
+/set_scale {
+       dup 1 exch div /InvScaleFactor exch def
+       scale
+} bind def
+
+% styles
+/solid { [] 0 setdash } bind def
+/dashed { [9 InvScaleFactor mul dup ] 0 setdash } bind def
+/dotted { [1 InvScaleFactor mul 6 InvScaleFactor mul] 0 setdash } bind def
+/invis {/fill {newpath} def /stroke {newpath} def /show {pop newpath} def} bind def
+/bold { 2 setlinewidth } bind def
+/filled { } bind def
+/unfilled { } bind def
+/rounded { } bind def
+/diagonals { } bind def
+/tapered { } bind def
+
+% hooks for setting color 
+/nodecolor { sethsbcolor } bind def
+/edgecolor { sethsbcolor } bind def
+/graphcolor { sethsbcolor } bind def
+/nopcolor {pop pop pop} bind def
+
+/beginpage {	% i j npages
+	/npages exch def
+	/j exch def
+	/i exch def
+	/str 10 string def
+	npages 1 gt {
+		gsave
+			coordfont setfont
+			0 0 moveto
+			(\() show i str cvs show (,) show j str cvs show (\)) show
+		grestore
+	} if
+} bind def
+
+/set_font {
+	findfont exch
+	scalefont setfont
+} def
+
+% draw text fitted to its expected width
+/alignedtext {			% width text
+	/text exch def
+	/width exch def
+	gsave
+		width 0 gt {
+			[] 0 setdash
+			text stringwidth pop width exch sub text length div 0 text ashow
+		} if
+	grestore
+} def
+
+/boxprim {				% xcorner ycorner xsize ysize
+		4 2 roll
+		moveto
+		2 copy
+		exch 0 rlineto
+		0 exch rlineto
+		pop neg 0 rlineto
+		closepath
+} bind def
+
+/ellipse_path {
+	/ry exch def
+	/rx exch def
+	/y exch def
+	/x exch def
+	matrix currentmatrix
+	newpath
+	x y translate
+	rx ry scale
+	0 0 1 0 360 arc
+	setmatrix
+} bind def
+
+/endpage { showpage } bind def
+/showpage { } def
+
+/layercolorseq
+	[	% layer color sequence - darkest to lightest
+		[0 0 0]
+		[.2 .8 .8]
+		[.4 .8 .8]
+		[.6 .8 .8]
+		[.8 .8 .8]
+	]
+def
+
+/layerlen layercolorseq length def
+
+/setlayer {/maxlayer exch def /curlayer exch def
+	layercolorseq curlayer 1 sub layerlen mod get
+	aload pop sethsbcolor
+	/nodecolor {nopcolor} def
+	/edgecolor {nopcolor} def
+	/graphcolor {nopcolor} def
+} bind def
+
+/onlayer { curlayer ne {invis} if } def
+
+/onlayers {
+	/myupper exch def
+	/mylower exch def
+	curlayer mylower lt
+	curlayer myupper gt
+	or
+	{invis} if
+} def
+
+/curlayer 0 def
+
+%%EndResource
+%%EndProlog
+%%BeginSetup
+14 default-font-family set_font
+% /arrowlength 10 def
+% /arrowwidth 5 def
+
+% make sure pdfmark is harmless for PS-interpreters other than Distiller
+/pdfmark where {pop} {userdict /pdfmark /cleartomark load put} ifelse
+% make '<<' and '>>' safe on PS Level 1 devices
+/languagelevel where {pop languagelevel}{1} ifelse
+2 lt {
+    userdict (<<) cvn ([) cvn load put
+    userdict (>>) cvn ([) cvn load put
+} if
+
+%%EndSetup
+setupLatin1
+%%Page: 1 1
+%%PageBoundingBox: 36 36 5801 968
+%%PageOrientation: Portrait
+0 0 1 beginpage
+gsave
+36 36 5765 932 boxprim clip newpath
+1 1 set_scale 0 rotate 40 40 translate
+% node1
+gsave
+0 0 1 nodecolor
+newpath 3277.5 924 moveto
+3155.5 924 lineto
+3155.5 848 lineto
+3277.5 848 lineto
+closepath fill
+1 setlinewidth
+solid
+0 1 1 nodecolor
+newpath 3158.5 905 moveto
+3158.5 921 lineto
+3274.5 921 lineto
+3274.5 905 lineto
+closepath stroke
+0 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3163 910.8 moveto 107 (org.apache.maven.plugins) alignedtext
+1 setlinewidth
+solid
+0 1 1 nodecolor
+newpath 3158.5 887 moveto
+3158.5 903 lineto
+3274.5 903 lineto
+3274.5 887 lineto
+closepath stroke
+0 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3161.5 892.8 moveto 110 (maven-dependency-plugin) alignedtext
+1 setlinewidth
+solid
+0 1 1 nodecolor
+newpath 3158.5 869 moveto
+3158.5 885 lineto
+3274.5 885 lineto
+3274.5 869 lineto
+closepath stroke
+0 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3180 874.8 moveto 73 (3.8.2-SNAPSHOT) alignedtext
+1 setlinewidth
+solid
+0 1 1 nodecolor
+newpath 3158.5 851 moveto
+3158.5 867 lineto
+3274.5 867 lineto
+3274.5 851 lineto
+closepath stroke
+0 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3188.5 856.8 moveto 56 (maven-plugin) alignedtext
+1 setlinewidth
+solid
+0 1 1 nodecolor
+newpath 3155.5 848 moveto
+3155.5 924 lineto
+3277.5 924 lineto
+3277.5 848 lineto
+closepath stroke
+grestore
+% node2
+gsave
+0 0 1 nodecolor
+newpath 465 740 moveto
+378 740 lineto
+378 682 lineto
+465 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 381.5 721 moveto
+381.5 737 lineto
+462.5 737 lineto
+462.5 721 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+384.5 726.8 moveto 75 (org.apache.maven) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 381.5 703 moveto
+381.5 719 lineto
+462.5 719 lineto
+462.5 703 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+393 708.8 moveto 58 (maven-artifact) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 381.5 685 moveto
+381.5 701 lineto
+462.5 701 lineto
+462.5 685 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+411.5 690.8 moveto 21 (3.6.3) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 378 682 moveto
+378 740 lineto
+465 740 lineto
+465 682 lineto
+closepath stroke
+grestore
+% node1->node2
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 3155.349 883.436 moveto
+2778.9691 873.592 782.8678 818.1709 475.0171 740.544 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 475.7522 737.1173 moveto
+465.1856 737.8904 lineto
+473.928 743.8754 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 475.7522 737.1173 moveto
+465.1856 737.8904 lineto
+473.928 743.8754 lineto
+closepath stroke
+grestore
+% node3
+gsave
+0 0 1 nodecolor
+newpath 566 740 moveto
+479 740 lineto
+479 682 lineto
+566 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 482.5 721 moveto
+482.5 737 lineto
+563.5 737 lineto
+563.5 721 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+485.5 726.8 moveto 75 (org.apache.maven) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 482.5 703 moveto
+482.5 719 lineto
+563.5 719 lineto
+563.5 703 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+487 708.8 moveto 72 (maven-plugin-api) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 482.5 685 moveto
+482.5 701 lineto
+563.5 701 lineto
+563.5 685 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+512.5 690.8 moveto 21 (3.6.3) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 479 682 moveto
+479 740 lineto
+566 740 lineto
+566 682 lineto
+closepath stroke
+grestore
+% node1->node3
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 3155.3668 885.382 moveto
+2810.1621 886.9819 1101.8054 887.357 576.1163 740.7135 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 576.7634 737.2587 moveto
+566.1871 737.8851 lineto
+574.8456 743.9909 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 576.7634 737.2587 moveto
+566.1871 737.8851 lineto
+574.8456 743.9909 lineto
+closepath stroke
+grestore
+% node5
+gsave
+0 0 1 nodecolor
+newpath 667 740 moveto
+580 740 lineto
+580 682 lineto
+667 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 583.5 721 moveto
+583.5 737 lineto
+664.5 737 lineto
+664.5 721 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+586.5 726.8 moveto 75 (org.apache.maven) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 583.5 703 moveto
+583.5 719 lineto
+664.5 719 lineto
+664.5 703 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+596 708.8 moveto 56 (maven-model) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 583.5 685 moveto
+583.5 701 lineto
+664.5 701 lineto
+664.5 685 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+613.5 690.8 moveto 21 (3.6.3) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 580 682 moveto
+580 740 lineto
+667 740 lineto
+667 682 lineto
+closepath stroke
+grestore
+% node1->node5
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 3155.4998 885.2279 moveto
+2818.5547 885.9335 1182.1575 882.0222 677.0928 740.7106 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 677.7657 737.2628 moveto
+667.1888 737.8794 lineto
+675.8416 743.9932 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 677.7657 737.2628 moveto
+667.1888 737.8794 lineto
+675.8416 743.9932 lineto
+closepath stroke
+grestore
+% node6
+gsave
+0 0 1 nodecolor
+newpath 768 740 moveto
+681 740 lineto
+681 682 lineto
+768 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 684.5 721 moveto
+684.5 737 lineto
+765.5 737 lineto
+765.5 721 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+687.5 726.8 moveto 75 (org.apache.maven) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 684.5 703 moveto
+684.5 719 lineto
+765.5 719 lineto
+765.5 703 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+700.5 708.8 moveto 49 (maven-core) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 684.5 685 moveto
+684.5 701 lineto
+765.5 701 lineto
+765.5 685 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+714.5 690.8 moveto 21 (3.6.3) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 681 682 moveto
+681 740 lineto
+768 740 lineto
+768 682 lineto
+closepath stroke
+grestore
+% node1->node6
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 3155.2731 884.9935 moveto
+2826.0825 884.4155 1263.62 874.6534 778.0811 740.3335 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 778.7841 736.8951 moveto
+768.2091 737.5422 lineto
+776.8795 743.6311 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 778.7841 736.8951 moveto
+768.2091 737.5422 lineto
+776.8795 743.6311 lineto
+closepath stroke
+grestore
+% node24
+gsave
+0 0 1 nodecolor
+newpath 906.5 740 moveto
+782.5 740 lineto
+782.5 682 lineto
+906.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 785.5 721 moveto
+785.5 737 lineto
+903.5 737 lineto
+903.5 721 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+807 726.8 moveto 75 (org.apache.maven) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 785.5 703 moveto
+785.5 719 lineto
+903.5 719 lineto
+903.5 703 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+788.5 708.8 moveto 112 (maven-repository-metadata) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 785.5 685 moveto
+785.5 701 lineto
+903.5 701 lineto
+903.5 685 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+834 690.8 moveto 21 (3.6.3) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 782.5 682 moveto
+782.5 740 lineto
+906.5 740 lineto
+906.5 682 lineto
+closepath stroke
+grestore
+% node1->node24
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 3155.3311 883.8085 moveto
+2838.3905 877.2352 1380.1129 841.9972 916.7351 740.5198 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 917.1645 737.0294 moveto
+906.6417 738.2628 lineto
+915.6369 743.8607 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 917.1645 737.0294 moveto
+906.6417 738.2628 lineto
+915.6369 743.8607 lineto
+closepath stroke
+grestore
+% node25
+gsave
+0 0 1 nodecolor
+newpath 1008 740 moveto
+921 740 lineto
+921 682 lineto
+1008 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 924.5 721 moveto
+924.5 737 lineto
+1005.5 737 lineto
+1005.5 721 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+927.5 726.8 moveto 75 (org.apache.maven) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 924.5 703 moveto
+924.5 719 lineto
+1005.5 719 lineto
+1005.5 703 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+933.5 708.8 moveto 63 (maven-settings) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 924.5 685 moveto
+924.5 701 lineto
+1005.5 701 lineto
+1005.5 685 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+954.5 690.8 moveto 21 (3.6.3) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 921 682 moveto
+921 740 lineto
+1008 740 lineto
+1008 682 lineto
+closepath stroke
+grestore
+% node1->node25
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 3155.47 884.6068 moveto
+2846.5613 882.0733 1453.3035 864.0072 1017.9868 740.6958 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 1018.7747 737.2802 moveto
+1008.1956 737.8563 lineto
+1016.825 744.0031 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1018.7747 737.2802 moveto
+1008.1956 737.8563 lineto
+1016.825 744.0031 lineto
+closepath stroke
+grestore
+% node26
+gsave
+0 0 1 nodecolor
+newpath 1133 740 moveto
+1022 740 lineto
+1022 682 lineto
+1133 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1025.5 721 moveto
+1025.5 737 lineto
+1130.5 737 lineto
+1130.5 721 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1040.5 726.8 moveto 75 (org.apache.maven) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1025.5 703 moveto
+1025.5 719 lineto
+1130.5 719 lineto
+1130.5 703 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1028.5 708.8 moveto 99 (maven-resolver-provider) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1025.5 685 moveto
+1025.5 701 lineto
+1130.5 701 lineto
+1130.5 685 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1067.5 690.8 moveto 21 (3.6.3) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1022 682 moveto
+1022 740 lineto
+1133 740 lineto
+1133 682 lineto
+closepath stroke
+grestore
+% node1->node26
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 3155.4322 883.642 moveto
+2857.8398 876.5867 1557.4151 840.5977 1143.195 740.7034 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 1143.8257 737.2541 moveto
+1133.2784 738.2567 lineto
+1142.1488 744.0503 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1143.8257 737.2541 moveto
+1133.2784 738.2567 lineto
+1142.1488 744.0503 lineto
+closepath stroke
+grestore
+% node27
+gsave
+0 0 1 nodecolor
+newpath 1244 740 moveto
+1147 740 lineto
+1147 682 lineto
+1244 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1150.5 721 moveto
+1150.5 737 lineto
+1241.5 737 lineto
+1241.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1156.5 726.8 moveto 79 (org.apache.velocity) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1150.5 703 moveto
+1150.5 719 lineto
+1241.5 719 lineto
+1241.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1153.5 708.8 moveto 85 (velocity-engine-core) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1150.5 685 moveto
+1150.5 701 lineto
+1241.5 701 lineto
+1241.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1189.5 690.8 moveto 13 (2.4) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1147 682 moveto
+1147 740 lineto
+1244 740 lineto
+1244 682 lineto
+closepath stroke
+grestore
+% node1->node27
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3155.2574 883.7346 moveto
+2866.9917 877.2885 1643.3314 844.3363 1254.1583 740.7392 curveto
+stroke
+0 0 0 edgecolor
+newpath 1254.8517 737.3005 moveto
+1244.283 738.0448 lineto
+1253.0091 744.0536 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1254.8517 737.3005 moveto
+1244.283 738.0448 lineto
+1253.0091 744.0536 lineto
+closepath stroke
+grestore
+% node28
+gsave
+0 0 1 nodecolor
+newpath 1369 740 moveto
+1258 740 lineto
+1258 682 lineto
+1369 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1261.5 721 moveto
+1261.5 737 lineto
+1366.5 737 lineto
+1366.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1264.5 726.8 moveto 99 (org.apache.maven.doxia) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1261.5 703 moveto
+1261.5 719 lineto
+1366.5 719 lineto
+1366.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1285.5 708.8 moveto 57 (doxia-sink-api) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1261.5 685 moveto
+1261.5 701 lineto
+1366.5 701 lineto
+1366.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1303.5 690.8 moveto 21 (2.0.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1258 682 moveto
+1258 740 lineto
+1369 740 lineto
+1369 682 lineto
+closepath stroke
+grestore
+% node1->node28
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3155.1505 882.9551 moveto
+2878.5837 873.3148 1745.6764 829.1999 1378.9745 740.3443 curveto
+stroke
+0 0 0 edgecolor
+newpath 1379.6873 736.9151 moveto
+1369.1387 737.9033 lineto
+1378.0012 743.709 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1379.6873 736.9151 moveto
+1369.1387 737.9033 lineto
+1378.0012 743.709 lineto
+closepath stroke
+grestore
+% node29
+gsave
+0 0 1 nodecolor
+newpath 1509.5 740 moveto
+1383.5 740 lineto
+1383.5 682 lineto
+1509.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1386.5 721 moveto
+1386.5 737 lineto
+1506.5 737 lineto
+1506.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1389.5 726.8 moveto 114 (org.apache.maven.reporting) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1386.5 703 moveto
+1386.5 719 lineto
+1506.5 719 lineto
+1506.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1405 708.8 moveto 83 (maven-reporting-api) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1386.5 685 moveto
+1386.5 701 lineto
+1506.5 701 lineto
+1506.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1436 690.8 moveto 21 (4.0.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1383.5 682 moveto
+1383.5 740 lineto
+1509.5 740 lineto
+1509.5 682 lineto
+closepath stroke
+grestore
+% node1->node29
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3155.0573 882.1912 moveto
+2891.9145 869.7928 1858.3268 817.235 1519.3899 740.4729 curveto
+stroke
+0 0 0 edgecolor
+newpath 1520.0984 737.0444 moveto
+1509.5662 738.1948 lineto
+1518.517 743.8635 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1520.0984 737.0444 moveto
+1509.5662 738.1948 lineto
+1518.517 743.8635 lineto
+closepath stroke
+grestore
+% node30
+gsave
+0 0 1 nodecolor
+newpath 1649.5 740 moveto
+1523.5 740 lineto
+1523.5 682 lineto
+1649.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1526.5 721 moveto
+1526.5 737 lineto
+1646.5 737 lineto
+1646.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1529.5 726.8 moveto 114 (org.apache.maven.reporting) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1526.5 703 moveto
+1526.5 719 lineto
+1646.5 719 lineto
+1646.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1542.5 708.8 moveto 88 (maven-reporting-impl) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1526.5 685 moveto
+1526.5 701 lineto
+1646.5 701 lineto
+1646.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1576 690.8 moveto 21 (4.0.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1523.5 682 moveto
+1523.5 740 lineto
+1649.5 740 lineto
+1649.5 682 lineto
+closepath stroke
+grestore
+% node1->node30
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3155.244 885.5748 moveto
+2945.0967 886.2385 2235.0287 877.649 1659.3118 740.5079 curveto
+stroke
+0 0 0 edgecolor
+newpath 1660.1121 737.1006 moveto
+1649.5716 738.1723 lineto
+1658.4798 743.9077 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1660.1121 737.1006 moveto
+1649.5716 738.1723 lineto
+1658.4798 743.9077 lineto
+closepath stroke
+grestore
+% node48
+gsave
+0 0 1 nodecolor
+newpath 1761 740 moveto
+1664 740 lineto
+1664 682 lineto
+1761 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1667.5 721 moveto
+1667.5 737 lineto
+1758.5 737 lineto
+1758.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1670.5 726.8 moveto 85 (org.codehaus.plexus) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1667.5 703 moveto
+1667.5 719 lineto
+1758.5 719 lineto
+1758.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1681.5 708.8 moveto 63 (plexus-archiver) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1667.5 685 moveto
+1667.5 701 lineto
+1758.5 701 lineto
+1758.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1700 690.8 moveto 26 (4.10.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1664 682 moveto
+1664 740 lineto
+1761 740 lineto
+1761 682 lineto
+closepath stroke
+grestore
+% node1->node48
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3155.2488 881.8912 moveto
+2917.4933 869.3648 2055.1987 819.5499 1771.1608 740.7901 curveto
+stroke
+0 0 0 edgecolor
+newpath 1771.8793 737.3555 moveto
+1761.3027 737.9762 lineto
+1769.9579 744.0866 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1771.8793 737.3555 moveto
+1761.3027 737.9762 lineto
+1769.9579 744.0866 lineto
+closepath stroke
+grestore
+% node54
+gsave
+0 0 1 nodecolor
+newpath 1878 740 moveto
+1775 740 lineto
+1775 682 lineto
+1878 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1778.5 721 moveto
+1778.5 737 lineto
+1875.5 737 lineto
+1875.5 721 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1795.5 726.8 moveto 63 (org.eclipse.sisu) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1778.5 703 moveto
+1778.5 719 lineto
+1875.5 719 lineto
+1875.5 703 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1781.5 708.8 moveto 91 (org.eclipse.sisu.plexus) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1778.5 685 moveto
+1778.5 701 lineto
+1875.5 701 lineto
+1875.5 685 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1809 690.8 moveto 36 (0.9.0.M3) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1775 682 moveto
+1775 740 lineto
+1878 740 lineto
+1878 682 lineto
+closepath stroke
+grestore
+% node1->node54
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 3155.4371 885.5144 moveto
+2965.4254 885.6218 2369.0039 874.6639 1888.164 740.5004 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 1888.826 737.0509 moveto
+1878.2518 737.7126 lineto
+1886.9306 743.7894 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1888.826 737.0509 moveto
+1878.2518 737.7126 lineto
+1886.9306 743.7894 lineto
+closepath stroke
+grestore
+% node55
+gsave
+0 0 1 nodecolor
+newpath 1992.5 740 moveto
+1892.5 740 lineto
+1892.5 682 lineto
+1992.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1895.5 721 moveto
+1895.5 737 lineto
+1989.5 737 lineto
+1989.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1898.5 726.8 moveto 88 (org.apache.commons) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1895.5 703 moveto
+1895.5 719 lineto
+1989.5 719 lineto
+1989.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1909 708.8 moveto 67 (commons-lang3) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1895.5 685 moveto
+1895.5 701 lineto
+1989.5 701 lineto
+1989.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1929.5 690.8 moveto 26 (3.17.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1892.5 682 moveto
+1892.5 740 lineto
+1992.5 740 lineto
+1992.5 682 lineto
+closepath stroke
+grestore
+% node1->node55
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3155.214 884.9236 moveto
+2975.6904 883.1919 2436.7219 867.207 2002.3959 740.6254 curveto
+stroke
+0 0 0 edgecolor
+newpath 2003.3807 737.2668 moveto
+1992.7995 737.8054 lineto
+2001.4071 743.9829 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2003.3807 737.2668 moveto
+1992.7995 737.8054 lineto
+2001.4071 743.9829 lineto
+closepath stroke
+grestore
+% node56
+gsave
+0 0 1 nodecolor
+newpath 2070 740 moveto
+2007 740 lineto
+2007 682 lineto
+2070 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 2010.5 721 moveto
+2010.5 737 lineto
+2067.5 737 lineto
+2067.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2013.5 726.8 moveto 51 (commons-io) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 2010.5 703 moveto
+2010.5 719 lineto
+2067.5 719 lineto
+2067.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2013.5 708.8 moveto 51 (commons-io) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 2010.5 685 moveto
+2010.5 701 lineto
+2067.5 701 lineto
+2067.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2026 690.8 moveto 26 (2.16.1) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 2007 682 moveto
+2007 740 lineto
+2070 740 lineto
+2070 682 lineto
+closepath stroke
+grestore
+% node1->node56
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3155.2769 881.2826 moveto
+2951.2879 868.2776 2295.782 821.3411 2079.5175 740.6599 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 2080.7557 737.3861 moveto
+2070.1666 737.0392 lineto
+2078.2282 743.9139 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 2080.7557 737.3861 moveto
+2070.1666 737.0392 lineto
+2078.2282 743.9139 lineto
+closepath stroke
+grestore
+% node57
+gsave
+0 0 1 nodecolor
+newpath 2181 740 moveto
+2084 740 lineto
+2084 682 lineto
+2181 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2087.5 721 moveto
+2087.5 737 lineto
+2178.5 737 lineto
+2178.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2090.5 726.8 moveto 85 (org.codehaus.plexus) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2087.5 703 moveto
+2087.5 719 lineto
+2178.5 719 lineto
+2178.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2110 708.8 moveto 46 (plexus-utils) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2087.5 685 moveto
+2087.5 701 lineto
+2178.5 701 lineto
+2178.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2122.5 690.8 moveto 21 (4.0.1) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2084 682 moveto
+2084 740 lineto
+2181 740 lineto
+2181 682 lineto
+closepath stroke
+grestore
+% node1->node57
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3155.2264 883.3777 moveto
+2994.7707 877.66 2550.2792 852.3459 2190.5737 740.7442 curveto
+stroke
+0 0 0 edgecolor
+newpath 2191.6144 737.4026 moveto
+2181.0254 737.7551 lineto
+2189.5231 744.0829 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2191.6144 737.4026 moveto
+2181.0254 737.7551 lineto
+2189.5231 744.0829 lineto
+closepath stroke
+grestore
+% node58
+gsave
+0 0 1 nodecolor
+newpath 2292 740 moveto
+2195 740 lineto
+2195 682 lineto
+2292 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2198.5 721 moveto
+2198.5 737 lineto
+2289.5 737 lineto
+2289.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2201.5 726.8 moveto 85 (org.codehaus.plexus) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2198.5 703 moveto
+2198.5 719 lineto
+2289.5 719 lineto
+2289.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2222.5 708.8 moveto 43 (plexus-xml) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2198.5 685 moveto
+2198.5 701 lineto
+2289.5 701 lineto
+2289.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2233.5 690.8 moveto 21 (3.0.1) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2195 682 moveto
+2195 740 lineto
+2292 740 lineto
+2292 682 lineto
+closepath stroke
+grestore
+% node1->node58
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3155.3647 881.9608 moveto
+3007.2458 873.2055 2618.5141 841.8728 2301.8581 740.8716 curveto
+stroke
+0 0 0 edgecolor
+newpath 2302.6314 737.4437 moveto
+2292.0399 737.71 lineto
+2300.4857 744.1067 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2302.6314 737.4437 moveto
+2292.0399 737.71 lineto
+2300.4857 744.1067 lineto
+closepath stroke
+grestore
+% node59
+gsave
+0 0 1 nodecolor
+newpath 2403 740 moveto
+2306 740 lineto
+2306 682 lineto
+2403 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2309.5 721 moveto
+2309.5 737 lineto
+2400.5 737 lineto
+2400.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2312.5 726.8 moveto 85 (org.codehaus.plexus) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2309.5 703 moveto
+2309.5 719 lineto
+2400.5 719 lineto
+2400.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2336.5 708.8 moveto 37 (plexus-io) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2309.5 685 moveto
+2309.5 701 lineto
+2400.5 701 lineto
+2400.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2344.5 690.8 moveto 21 (3.5.1) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2306 682 moveto
+2306 740 lineto
+2403 740 lineto
+2403 682 lineto
+closepath stroke
+grestore
+% node1->node59
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3155.2594 880.1536 moveto
+3020.0143 868.1487 2686.6121 831.3757 2412.7744 740.8943 curveto
+stroke
+0 0 0 edgecolor
+newpath 2413.6524 737.4977 moveto
+2403.0587 737.6529 lineto
+2411.437 744.1379 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2413.6524 737.4977 moveto
+2403.0587 737.6529 lineto
+2411.437 744.1379 lineto
+closepath stroke
+grestore
+% node60
+gsave
+0 0 1 nodecolor
+newpath 2514 740 moveto
+2417 740 lineto
+2417 682 lineto
+2514 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2420.5 721 moveto
+2420.5 737 lineto
+2511.5 737 lineto
+2511.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2423.5 726.8 moveto 85 (org.codehaus.plexus) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2420.5 703 moveto
+2420.5 719 lineto
+2511.5 719 lineto
+2511.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2442 708.8 moveto 48 (plexus-i18n) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2420.5 685 moveto
+2420.5 701 lineto
+2511.5 701 lineto
+2511.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2442 690.8 moveto 48 (1.0-beta-10) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2417 682 moveto
+2417 740 lineto
+2514 740 lineto
+2514 682 lineto
+closepath stroke
+grestore
+% node1->node60
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3155.1198 877.6106 moveto
+3033.8892 861.8617 2755.962 820.0086 2523.6772 740.5237 curveto
+stroke
+0 0 0 edgecolor
+newpath 2524.6395 737.1532 moveto
+2514.0447 737.1967 lineto
+2522.3541 743.7697 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2524.6395 737.1532 moveto
+2514.0447 737.1967 lineto
+2522.3541 743.7697 lineto
+closepath stroke
+grestore
+% node61
+gsave
+0 0 1 nodecolor
+newpath 2660.5 740 moveto
+2528.5 740 lineto
+2528.5 682 lineto
+2660.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2531.5 721 moveto
+2531.5 737 lineto
+2657.5 737 lineto
+2657.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2541.5 726.8 moveto 106 (org.apache.maven.shared) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2531.5 703 moveto
+2531.5 719 lineto
+2657.5 719 lineto
+2657.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2534.5 708.8 moveto 120 (maven-dependency-analyzer) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2531.5 685 moveto
+2531.5 701 lineto
+2657.5 701 lineto
+2657.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2581.5 690.8 moveto 26 (1.15.1) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2528.5 682 moveto
+2528.5 740 lineto
+2660.5 740 lineto
+2660.5 682 lineto
+closepath stroke
+grestore
+% node1->node61
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3155.3563 871.1344 moveto
+3055.1005 847.9008 2849.6162 798.1894 2670.4274 740.8761 curveto
+stroke
+0 0 0 edgecolor
+newpath 2671.4263 737.5209 moveto
+2660.835 737.7925 lineto
+2669.284 744.185 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2671.4263 737.5209 moveto
+2660.835 737.7925 lineto
+2669.284 744.185 lineto
+closepath stroke
+grestore
+% node63
+gsave
+0 0 1 nodecolor
+newpath 2792.5 740 moveto
+2674.5 740 lineto
+2674.5 682 lineto
+2792.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2677.5 721 moveto
+2677.5 737 lineto
+2789.5 737 lineto
+2789.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2680.5 726.8 moveto 106 (org.apache.maven.shared) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2677.5 703 moveto
+2677.5 719 lineto
+2789.5 719 lineto
+2789.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2683.5 708.8 moveto 100 (maven-dependency-tree) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2677.5 685 moveto
+2677.5 701 lineto
+2789.5 701 lineto
+2789.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2723 690.8 moveto 21 (3.3.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2674.5 682 moveto
+2674.5 740 lineto
+2792.5 740 lineto
+2792.5 682 lineto
+closepath stroke
+grestore
+% node1->node63
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3155.2661 865.1273 moveto
+3075.5593 838.9448 2931.887 790.6762 2802.477 741.0973 curveto
+stroke
+0 0 0 edgecolor
+newpath 2803.3796 737.6946 moveto
+2792.7896 737.373 lineto
+2800.8676 744.2284 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2803.3796 737.6946 moveto
+2792.7896 737.373 lineto
+2800.8676 744.2284 lineto
+closepath stroke
+grestore
+% node64
+gsave
+0 0 1 nodecolor
+newpath 2940 740 moveto
+2807 740 lineto
+2807 682 lineto
+2940 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2810.5 721 moveto
+2810.5 737 lineto
+2937.5 737 lineto
+2937.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2821 726.8 moveto 106 (org.apache.maven.shared) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2810.5 703 moveto
+2810.5 719 lineto
+2937.5 719 lineto
+2937.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2813.5 708.8 moveto 121 (maven-common-artifact-filters) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2810.5 685 moveto
+2810.5 701 lineto
+2937.5 701 lineto
+2937.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2863.5 690.8 moveto 21 (3.4.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2807 682 moveto
+2807 740 lineto
+2940 740 lineto
+2940 682 lineto
+closepath stroke
+grestore
+% node1->node64
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3155.1785 854.0711 moveto
+3094.0194 823.2241 3000.4423 776.0263 2938.1414 744.6034 curveto
+stroke
+0 0 0 edgecolor
+newpath 2939.6888 741.4639 moveto
+2929.184 740.0855 lineto
+2936.5365 747.714 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2939.6888 741.4639 moveto
+2929.184 740.0855 lineto
+2936.5365 747.714 lineto
+closepath stroke
+grestore
+% node65
+gsave
+0 0 1 nodecolor
+newpath 3072.5 740 moveto
+2954.5 740 lineto
+2954.5 682 lineto
+3072.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2957.5 721 moveto
+2957.5 737 lineto
+3069.5 737 lineto
+3069.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2960.5 726.8 moveto 106 (org.apache.maven.shared) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2957.5 703 moveto
+2957.5 719 lineto
+3069.5 719 lineto
+3069.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2968 708.8 moveto 91 (maven-artifact-transfer) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2957.5 685 moveto
+2957.5 701 lineto
+3069.5 701 lineto
+3069.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3000.5 690.8 moveto 26 (0.13.1) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2954.5 682 moveto
+2954.5 740 lineto
+3072.5 740 lineto
+3072.5 682 lineto
+closepath stroke
+grestore
+% node1->node65
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3172.9514 847.8872 moveto
+3137.899 818.0149 3088.9794 776.3248 3054.5958 747.0225 curveto
+stroke
+0 0 0 edgecolor
+newpath 3056.5025 744.0489 moveto
+3046.6212 740.2265 lineto
+3051.9621 749.3767 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3056.5025 744.0489 moveto
+3046.6212 740.2265 lineto
+3051.9621 749.3767 lineto
+closepath stroke
+grestore
+% node66
+gsave
+0 0 1 nodecolor
+newpath 3204.5 740 moveto
+3086.5 740 lineto
+3086.5 682 lineto
+3204.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3089.5 721 moveto
+3089.5 737 lineto
+3201.5 737 lineto
+3201.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3092.5 726.8 moveto 106 (org.apache.maven.shared) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3089.5 703 moveto
+3089.5 719 lineto
+3201.5 719 lineto
+3201.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3106 708.8 moveto 79 (maven-shared-utils) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3089.5 685 moveto
+3089.5 701 lineto
+3201.5 701 lineto
+3201.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3135 690.8 moveto 21 (3.4.2) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3086.5 682 moveto
+3086.5 740 lineto
+3204.5 740 lineto
+3204.5 682 lineto
+closepath stroke
+grestore
+% node1->node66
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3201.2687 847.8872 moveto
+3189.3711 818.8972 3172.9057 778.7772 3160.952 749.6507 curveto
+stroke
+0 0 0 edgecolor
+newpath 3164.119 748.1488 moveto
+3157.0843 740.2265 lineto
+3157.6431 750.8066 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3164.119 748.1488 moveto
+3157.0843 740.2265 lineto
+3157.6431 750.8066 lineto
+closepath stroke
+grestore
+% node67
+gsave
+0 0 1 nodecolor
+newpath 3356 740 moveto
+3219 740 lineto
+3219 682 lineto
+3356 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 3222.5 721 moveto
+3222.5 737 lineto
+3353.5 737 lineto
+3353.5 721 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3225.5 726.8 moveto 125 (org.apache.maven.plugin-tools) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 3222.5 703 moveto
+3222.5 719 lineto
+3353.5 719 lineto
+3353.5 703 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3234.5 708.8 moveto 107 (maven-plugin-annotations) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 3222.5 685 moveto
+3222.5 701 lineto
+3353.5 701 lineto
+3353.5 685 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3275 690.8 moveto 26 (3.13.1) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 3219 682 moveto
+3219 740 lineto
+3356 740 lineto
+3356 682 lineto
+closepath stroke
+grestore
+% node1->node67
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 3231.7313 847.8872 moveto
+3243.6289 818.8972 3260.0943 778.7772 3272.048 749.6507 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 3275.3569 750.8066 moveto
+3275.9157 740.2265 lineto
+3268.881 748.1488 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 3275.3569 750.8066 moveto
+3275.9157 740.2265 lineto
+3268.881 748.1488 lineto
+closepath stroke
+grestore
+% node68
+gsave
+0 0 1 nodecolor
+newpath 3428.5 740 moveto
+3370.5 740 lineto
+3370.5 682 lineto
+3428.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 3373.5 721 moveto
+3373.5 737 lineto
+3425.5 737 lineto
+3425.5 721 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3376.5 726.8 moveto 46 (javax.inject) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 3373.5 703 moveto
+3373.5 719 lineto
+3425.5 719 lineto
+3425.5 703 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3376.5 708.8 moveto 46 (javax.inject) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 3373.5 685 moveto
+3373.5 701 lineto
+3425.5 701 lineto
+3425.5 685 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3396.5 690.8 moveto 6 (1) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 3370.5 682 moveto
+3370.5 740 lineto
+3428.5 740 lineto
+3428.5 682 lineto
+closepath stroke
+grestore
+% node1->node68
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 3255.7581 847.8872 moveto
+3287.5142 817.8663 3331.8959 775.9099 3362.9144 746.5863 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 3365.6344 748.8315 moveto
+3370.4968 739.4183 lineto
+3360.8255 743.7447 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 3365.6344 748.8315 moveto
+3370.4968 739.4183 lineto
+3360.8255 743.7447 lineto
+closepath stroke
+grestore
+% node69
+gsave
+0 0 1 nodecolor
+newpath 3564.5 740 moveto
+3442.5 740 lineto
+3442.5 682 lineto
+3564.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 3445.5 721 moveto
+3445.5 737 lineto
+3561.5 737 lineto
+3561.5 721 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3448.5 726.8 moveto 110 (org.apache.maven.resolver) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 3445.5 703 moveto
+3445.5 719 lineto
+3561.5 719 lineto
+3561.5 703 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3464 708.8 moveto 79 (maven-resolver-api) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 3445.5 685 moveto
+3445.5 701 lineto
+3561.5 701 lineto
+3561.5 685 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3493 690.8 moveto 21 (1.4.1) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 3442.5 682 moveto
+3442.5 740 lineto
+3564.5 740 lineto
+3564.5 682 lineto
+closepath stroke
+grestore
+% node1->node69
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 3277.7167 848.0994 moveto
+3328.2403 817.6444 3399.3176 774.7999 3448.1555 745.361 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 3450.2484 748.1862 moveto
+3457.0059 740.0261 lineto
+3446.6346 742.1911 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 3450.2484 748.1862 moveto
+3457.0059 740.0261 lineto
+3446.6346 742.1911 lineto
+closepath stroke
+grestore
+% node70
+gsave
+0 0 1 nodecolor
+newpath 3700.5 740 moveto
+3578.5 740 lineto
+3578.5 682 lineto
+3700.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3581.5 721 moveto
+3581.5 737 lineto
+3697.5 737 lineto
+3697.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3584.5 726.8 moveto 110 (org.apache.maven.resolver) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3581.5 703 moveto
+3581.5 719 lineto
+3697.5 719 lineto
+3697.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3600.5 708.8 moveto 78 (maven-resolver-util) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3581.5 685 moveto
+3581.5 701 lineto
+3697.5 701 lineto
+3697.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3629 690.8 moveto 21 (1.4.1) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3578.5 682 moveto
+3578.5 740 lineto
+3700.5 740 lineto
+3700.5 682 lineto
+closepath stroke
+grestore
+% node1->node70
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3277.7711 860.0353 moveto
+3346.5423 832.0008 3461.7267 785.0046 3568.9823 741.0303 curveto
+stroke
+0 0 0 edgecolor
+newpath 3570.4144 744.2259 moveto
+3578.3389 737.1936 lineto
+3567.7586 737.7493 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3570.4144 744.2259 moveto
+3578.3389 737.1936 lineto
+3567.7586 737.7493 lineto
+closepath stroke
+grestore
+% node71
+gsave
+0 0 1 nodecolor
+newpath 3808.5 740 moveto
+3714.5 740 lineto
+3714.5 682 lineto
+3808.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3717.5 721 moveto
+3717.5 737 lineto
+3805.5 737 lineto
+3805.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3720.5 726.8 moveto 82 (org.sonatype.plexus) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3717.5 703 moveto
+3717.5 719 lineto
+3805.5 719 lineto
+3805.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3728.5 708.8 moveto 66 (plexus-build-api) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3717.5 685 moveto
+3717.5 701 lineto
+3805.5 701 lineto
+3805.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3751 690.8 moveto 21 (0.0.7) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3714.5 682 moveto
+3714.5 740 lineto
+3808.5 740 lineto
+3808.5 682 lineto
+closepath stroke
+grestore
+% node1->node71
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3277.857 870.8945 moveto
+3370.139 848.8092 3549.6769 802.4506 3704.6293 740.9885 curveto
+stroke
+0 0 0 edgecolor
+newpath 3706.3441 744.0722 moveto
+3714.3287 737.1082 lineto
+3703.7441 737.573 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3706.3441 744.0722 moveto
+3714.3287 737.1082 lineto
+3703.7441 737.573 lineto
+closepath stroke
+grestore
+% node72
+gsave
+0 0 1 nodecolor
+newpath 3876.5 740 moveto
+3822.5 740 lineto
+3822.5 682 lineto
+3876.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3830.5 721 moveto
+3830.5 737 lineto
+3869.5 737 lineto
+3869.5 721 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3834 726.8 moveto 32 (org.slf4j) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3830.5 703 moveto
+3830.5 719 lineto
+3869.5 719 lineto
+3869.5 703 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3833.5 708.8 moveto 33 (slf4j-api) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3830.5 685 moveto
+3830.5 701 lineto
+3869.5 701 lineto
+3869.5 685 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3837 690.8 moveto 26 (1.7.36) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 3827 682 moveto
+3827 740 lineto
+3872 740 lineto
+3872 682 lineto
+closepath stroke
+grestore
+% node1->node72
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3277.8197 879.3156 moveto
+3388.0527 867.1907 3625.1126 832.3426 3813.1871 740.5829 curveto
+stroke
+0 0 0 edgecolor
+newpath 3814.978 743.6018 moveto
+3822.3873 736.0287 lineto
+3811.8725 737.3283 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 3814.978 743.6018 moveto
+3822.3873 736.0287 lineto
+3811.8725 737.3283 lineto
+closepath stroke
+grestore
+% node73
+gsave
+0 0 1 nodecolor
+newpath 4032.5 740 moveto
+3890.5 740 lineto
+3890.5 682 lineto
+4032.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 3893.5 721 moveto
+3893.5 737 lineto
+4029.5 737 lineto
+4029.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3906.5 726.8 moveto 110 (org.apache.maven.resolver) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 3893.5 703 moveto
+3893.5 719 lineto
+4029.5 719 lineto
+4029.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3896.5 708.8 moveto 130 (maven-resolver-connector-basic) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 3893.5 685 moveto
+3893.5 701 lineto
+4029.5 701 lineto
+4029.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3951 690.8 moveto 21 (1.4.1) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 3890.5 682 moveto
+3890.5 740 lineto
+4032.5 740 lineto
+4032.5 682 lineto
+closepath stroke
+grestore
+% node1->node73
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.8601 874.4354 moveto
+3394.5136 853.7506 3656.1101 804.4848 3880.5622 740.7665 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 3881.5556 744.1228 moveto
+3890.2105 738.0119 lineto
+3879.6338 737.3917 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3881.5556 744.1228 moveto
+3890.2105 738.0119 lineto
+3879.6338 737.3917 lineto
+closepath stroke
+grestore
+% node74
+gsave
+0 0 1 nodecolor
+newpath 4176 740 moveto
+4047 740 lineto
+4047 682 lineto
+4176 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4050.5 721 moveto
+4050.5 737 lineto
+4173.5 737 lineto
+4173.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4057 726.8 moveto 110 (org.apache.maven.resolver) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4050.5 703 moveto
+4050.5 719 lineto
+4173.5 719 lineto
+4173.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4053.5 708.8 moveto 117 (maven-resolver-transport-file) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4050.5 685 moveto
+4050.5 701 lineto
+4173.5 701 lineto
+4173.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4101.5 690.8 moveto 21 (1.4.1) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4047 682 moveto
+4047 740 lineto
+4176 740 lineto
+4176 682 lineto
+closepath stroke
+grestore
+% node1->node74
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.5583 878.4072 moveto
+3413.8064 862.8066 3752.5074 819.0831 4037.2597 740.4874 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4038.244 743.8466 moveto
+4046.9411 737.7958 lineto
+4036.369 737.1024 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4038.244 743.8466 moveto
+4046.9411 737.7958 lineto
+4036.369 737.1024 lineto
+closepath stroke
+grestore
+% node75
+gsave
+0 0 1 nodecolor
+newpath 4323 740 moveto
+4190 740 lineto
+4190 682 lineto
+4323 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4193.5 721 moveto
+4193.5 737 lineto
+4320.5 737 lineto
+4320.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4202 726.8 moveto 110 (org.apache.maven.resolver) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4193.5 703 moveto
+4193.5 719 lineto
+4320.5 719 lineto
+4320.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4196.5 708.8 moveto 121 (maven-resolver-transport-http) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4193.5 685 moveto
+4193.5 701 lineto
+4320.5 701 lineto
+4320.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4246.5 690.8 moveto 21 (1.4.1) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4190 682 moveto
+4190 740 lineto
+4323 740 lineto
+4323 682 lineto
+closepath stroke
+grestore
+% node1->node75
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.5949 880.369 moveto
+3430.1019 867.8453 3839.2554 828.3101 4179.9434 740.5297 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4180.9492 743.8847 moveto
+4189.7493 737.9848 lineto
+4179.1907 737.1091 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4180.9492 743.8847 moveto
+4189.7493 737.9848 lineto
+4179.1907 737.1091 lineto
+closepath stroke
+grestore
+% node79
+gsave
+0 0 1 nodecolor
+newpath 4410 740 moveto
+4337 740 lineto
+4337 682 lineto
+4410 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4340.5 721 moveto
+4340.5 737 lineto
+4407.5 737 lineto
+4407.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4343.5 726.8 moveto 61 (org.junit.jupiter) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4340.5 703 moveto
+4340.5 719 lineto
+4407.5 719 lineto
+4407.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4343.5 708.8 moveto 61 (junit-jupiter-api) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4340.5 685 moveto
+4340.5 701 lineto
+4407.5 701 lineto
+4407.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4361 690.8 moveto 26 (5.10.3) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4337 682 moveto
+4337 740 lineto
+4410 740 lineto
+4410 682 lineto
+closepath stroke
+grestore
+% node1->node79
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.8488 880.5326 moveto
+3478.3057 865.397 4112.9784 813.0797 4327.3069 740.2624 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4328.6172 743.5118 moveto
+4336.8882 736.8905 lineto
+4326.2933 736.9087 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4328.6172 743.5118 moveto
+4336.8882 736.8905 lineto
+4326.2933 736.9087 lineto
+closepath stroke
+grestore
+% node83
+gsave
+0 0 1 nodecolor
+newpath 4515 740 moveto
+4424 740 lineto
+4424 682 lineto
+4515 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4427.5 721 moveto
+4427.5 737 lineto
+4512.5 737 lineto
+4512.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4439.5 726.8 moveto 61 (org.junit.jupiter) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4427.5 703 moveto
+4427.5 719 lineto
+4512.5 719 lineto
+4512.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4430.5 708.8 moveto 79 (junit-jupiter-params) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4427.5 685 moveto
+4427.5 701 lineto
+4512.5 701 lineto
+4512.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4457 690.8 moveto 26 (5.10.3) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4424 682 moveto
+4424 740 lineto
+4515 740 lineto
+4515 682 lineto
+closepath stroke
+grestore
+% node1->node83
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.7513 885.3808 moveto
+3455.857 884.8686 3987.5312 871.8302 4414.239 740.382 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4415.472 743.664 moveto
+4423.9828 737.354 lineto
+4413.3946 736.9794 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4415.472 743.664 moveto
+4423.9828 737.354 lineto
+4413.3946 736.9794 lineto
+closepath stroke
+grestore
+% node84
+gsave
+0 0 1 nodecolor
+newpath 4605.5 740 moveto
+4529.5 740 lineto
+4529.5 682 lineto
+4605.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4532.5 721 moveto
+4532.5 737 lineto
+4602.5 737 lineto
+4602.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4543.5 726.8 moveto 48 (jakarta.json) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4532.5 703 moveto
+4532.5 719 lineto
+4602.5 719 lineto
+4602.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4535.5 708.8 moveto 64 (jakarta.json-api) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4532.5 685 moveto
+4532.5 701 lineto
+4602.5 701 lineto
+4602.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4557 690.8 moveto 21 (2.0.2) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4529.5 682 moveto
+4529.5 740 lineto
+4605.5 740 lineto
+4605.5 682 lineto
+closepath stroke
+grestore
+% node1->node84
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.5159 881.7314 moveto
+3499.8055 869.2896 4266.1294 821.5863 4519.9201 739.9842 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4521.0656 743.2918 moveto
+4529.4537 736.8195 lineto
+4518.8603 736.6482 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4521.0656 743.2918 moveto
+4529.4537 736.8195 lineto
+4518.8603 736.6482 lineto
+closepath stroke
+grestore
+% node85
+gsave
+0 0 1 nodecolor
+newpath 4683.5 740 moveto
+4619.5 740 lineto
+4619.5 682 lineto
+4683.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4622.5 721 moveto
+4622.5 737 lineto
+4680.5 737 lineto
+4680.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4625.5 726.8 moveto 52 (org.glassfish) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4622.5 703 moveto
+4622.5 719 lineto
+4680.5 719 lineto
+4680.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4627.5 708.8 moveto 48 (jakarta.json) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4622.5 685 moveto
+4622.5 701 lineto
+4680.5 701 lineto
+4680.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4641 690.8 moveto 21 (2.0.1) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4619.5 682 moveto
+4619.5 740 lineto
+4683.5 740 lineto
+4683.5 682 lineto
+closepath stroke
+grestore
+% node1->node85
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.8942 882.8054 moveto
+3511.0668 873.8383 4341.7475 835.9718 4609.7699 740.4287 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4611.2753 743.6041 moveto
+4619.4465 736.8601 lineto
+4608.8532 737.0365 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4611.2753 743.6041 moveto
+4619.4465 736.8601 lineto
+4608.8532 737.0365 lineto
+closepath stroke
+grestore
+% node86
+gsave
+0 0 1 nodecolor
+newpath 4791.5 740 moveto
+4697.5 740 lineto
+4697.5 682 lineto
+4791.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4700.5 721 moveto
+4700.5 737 lineto
+4788.5 737 lineto
+4788.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4712 726.8 moveto 65 (org.junit.vintage) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4700.5 703 moveto
+4700.5 719 lineto
+4788.5 719 lineto
+4788.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4703.5 708.8 moveto 82 (junit-vintage-engine) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4700.5 685 moveto
+4700.5 701 lineto
+4788.5 701 lineto
+4788.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4731.5 690.8 moveto 26 (5.10.3) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4697.5 682 moveto
+4697.5 740 lineto
+4791.5 740 lineto
+4791.5 682 lineto
+closepath stroke
+grestore
+% node1->node86
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.5795 882.0774 moveto
+3517.8311 870.1131 4398.4569 821.7275 4687.5898 740.5391 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4688.5751 743.8977 moveto
+4697.2111 737.76 lineto
+4686.6325 737.1726 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4688.5751 743.8977 moveto
+4697.2111 737.76 lineto
+4686.6325 737.1726 lineto
+closepath stroke
+grestore
+% node88
+gsave
+0 0 1 nodecolor
+newpath 4859.5 740 moveto
+4805.5 740 lineto
+4805.5 682 lineto
+4859.5 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4816.5 721 moveto
+4816.5 737 lineto
+4848.5 737 lineto
+4848.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4823.5 726.8 moveto 18 (junit) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4816.5 703 moveto
+4816.5 719 lineto
+4848.5 719 lineto
+4848.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4823.5 708.8 moveto 18 (junit) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4816.5 685 moveto
+4816.5 701 lineto
+4848.5 701 lineto
+4848.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4819.5 690.8 moveto 26 (4.13.2) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4813.5 682 moveto
+4813.5 740 lineto
+4851.5 740 lineto
+4851.5 682 lineto
+closepath stroke
+grestore
+% node1->node88
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.8204 884.1679 moveto
+3530.8582 880.0159 4494.3563 856.9412 4795.5821 740.4861 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4797.1716 743.6201 moveto
+4805.1589 736.6592 lineto
+4794.5741 737.1198 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4797.1716 743.6201 moveto
+4805.1589 736.6592 lineto
+4794.5741 737.1198 lineto
+closepath stroke
+grestore
+% node90
+gsave
+0 0 1 nodecolor
+newpath 5019 740 moveto
+4874 740 lineto
+4874 682 lineto
+5019 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4877.5 721 moveto
+4877.5 737 lineto
+5016.5 737 lineto
+5016.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4880.5 726.8 moveto 133 (org.apache.maven.plugin-testing) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4877.5 703 moveto
+4877.5 719 lineto
+5016.5 719 lineto
+5016.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4886 708.8 moveto 122 (maven-plugin-testing-harness) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4877.5 685 moveto
+4877.5 701 lineto
+5016.5 701 lineto
+5016.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4936.5 690.8 moveto 21 (3.3.0) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4874 682 moveto
+4874 740 lineto
+5019 740 lineto
+5019 682 lineto
+closepath stroke
+grestore
+% node1->node90
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.6188 885.0771 moveto
+3494.7796 884.2119 4248.6752 871.464 4863.9505 740.4022 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4864.8614 743.7865 moveto
+4873.9059 738.2686 lineto
+4863.3944 736.942 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4864.8614 743.7865 moveto
+4873.9059 738.2686 lineto
+4863.3944 736.942 lineto
+closepath stroke
+grestore
+% node91
+gsave
+0 0 1 nodecolor
+newpath 5098 740 moveto
+5033 740 lineto
+5033 682 lineto
+5098 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5036.5 721 moveto
+5036.5 737 lineto
+5095.5 737 lineto
+5095.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5042.5 726.8 moveto 47 (org.mockito) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5036.5 703 moveto
+5036.5 719 lineto
+5095.5 719 lineto
+5095.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5039.5 708.8 moveto 53 (mockito-core) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5036.5 685 moveto
+5036.5 701 lineto
+5095.5 701 lineto
+5095.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5053 690.8 moveto 26 (4.11.0) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5033 682 moveto
+5033 740 lineto
+5098 740 lineto
+5098 682 lineto
+closepath stroke
+grestore
+% node1->node91
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.7357 884.3808 moveto
+3552.3654 880.9604 4672.0429 859.9877 5022.9593 740.3118 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 5024.337 743.5376 moveto
+5032.6139 736.9237 lineto
+5022.0191 736.9325 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5024.337 743.5376 moveto
+5032.6139 736.9237 lineto
+5022.0191 736.9325 lineto
+closepath stroke
+grestore
+% node95
+gsave
+0 0 1 nodecolor
+newpath 5205 740 moveto
+5112 740 lineto
+5112 682 lineto
+5205 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5115.5 721 moveto
+5115.5 737 lineto
+5202.5 737 lineto
+5202.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5135.5 726.8 moveto 47 (org.mockito) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5115.5 703 moveto
+5115.5 719 lineto
+5202.5 719 lineto
+5202.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5118.5 708.8 moveto 81 (mockito-junit-jupiter) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5115.5 685 moveto
+5115.5 701 lineto
+5202.5 701 lineto
+5202.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5146 690.8 moveto 26 (4.11.0) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5112 682 moveto
+5112 740 lineto
+5205 740 lineto
+5205 682 lineto
+closepath stroke
+grestore
+% node1->node95
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.6752 883.5816 moveto
+3558.7504 876.57 4728.2016 841.8789 5102.0838 740.3146 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 5103.1464 743.652 moveto
+5111.8406 737.5971 lineto
+5101.2681 736.9086 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5103.1464 743.652 moveto
+5111.8406 737.5971 lineto
+5101.2681 736.9086 lineto
+closepath stroke
+grestore
+% node96
+gsave
+0 0 1 nodecolor
+newpath 5280 740 moveto
+5219 740 lineto
+5219 682 lineto
+5280 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5222.5 721 moveto
+5222.5 737 lineto
+5277.5 737 lineto
+5277.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5228.5 726.8 moveto 43 (org.assertj) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5222.5 703 moveto
+5222.5 719 lineto
+5277.5 719 lineto
+5277.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5225.5 708.8 moveto 49 (assertj-core) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5222.5 685 moveto
+5222.5 701 lineto
+5277.5 701 lineto
+5277.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5237 690.8 moveto 26 (3.27.2) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5219 682 moveto
+5219 740 lineto
+5280 740 lineto
+5280 682 lineto
+closepath stroke
+grestore
+% node1->node96
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.5922 885.0936 moveto
+3569.371 884.8631 4822.5484 876.027 5209.2556 740.1489 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 5210.5651 743.3973 moveto
+5218.7829 736.7101 lineto
+5208.1886 736.8131 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5210.5651 743.3973 moveto
+5218.7829 736.7101 lineto
+5208.1886 736.8131 lineto
+closepath stroke
+grestore
+% node97
+gsave
+0 0 1 nodecolor
+newpath 5381 740 moveto
+5294 740 lineto
+5294 682 lineto
+5381 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5297.5 721 moveto
+5297.5 737 lineto
+5378.5 737 lineto
+5378.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5300.5 726.8 moveto 75 (org.apache.maven) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5297.5 703 moveto
+5297.5 719 lineto
+5378.5 719 lineto
+5378.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5307.5 708.8 moveto 61 (maven-compat) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5297.5 685 moveto
+5297.5 701 lineto
+5378.5 701 lineto
+5378.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5327.5 690.8 moveto 21 (3.6.3) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5294 682 moveto
+5294 740 lineto
+5381 740 lineto
+5381 682 lineto
+closepath stroke
+grestore
+% node1->node97
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.5303 884.2459 moveto
+3574.9142 880.0423 4874.1297 855.4429 5283.9725 740.3336 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 5285.1397 743.6398 moveto
+5293.7818 737.5108 lineto
+5283.2039 736.9128 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5285.1397 743.6398 moveto
+5293.7818 737.5108 lineto
+5283.2039 736.9128 lineto
+closepath stroke
+grestore
+% node100
+gsave
+0 0 1 nodecolor
+newpath 5482 740 moveto
+5395 740 lineto
+5395 682 lineto
+5482 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5398.5 721 moveto
+5398.5 737 lineto
+5479.5 737 lineto
+5479.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5407 726.8 moveto 64 (org.eclipse.jetty) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5398.5 703 moveto
+5398.5 719 lineto
+5479.5 719 lineto
+5479.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5415.5 708.8 moveto 47 (jetty-server) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5398.5 685 moveto
+5398.5 701 lineto
+5479.5 701 lineto
+5479.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5401.5 690.8 moveto 75 (9.4.57.v20241219) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5395 682 moveto
+5395 740 lineto
+5482 740 lineto
+5482 682 lineto
+closepath stroke
+grestore
+% node1->node100
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.7166 884.5412 moveto
+3584.4529 881.6983 4956.197 862.3997 5385.1553 740.657 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 5386.1773 744.0049 moveto
+5394.8037 737.8539 lineto
+5384.2243 737.2829 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5386.1773 744.0049 moveto
+5394.8037 737.8539 lineto
+5384.2243 737.2829 lineto
+closepath stroke
+grestore
+% node104
+gsave
+0 0 1 nodecolor
+newpath 5583 740 moveto
+5496 740 lineto
+5496 682 lineto
+5583 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5499.5 721 moveto
+5499.5 737 lineto
+5580.5 737 lineto
+5580.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5508 726.8 moveto 64 (org.eclipse.jetty) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5499.5 703 moveto
+5499.5 719 lineto
+5580.5 719 lineto
+5580.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5523 708.8 moveto 34 (jetty-util) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5499.5 685 moveto
+5499.5 701 lineto
+5580.5 701 lineto
+5580.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5502.5 690.8 moveto 75 (9.4.57.v20241219) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5496 682 moveto
+5496 740 lineto
+5583 740 lineto
+5583 682 lineto
+closepath stroke
+grestore
+% node1->node104
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.6525 884.7506 moveto
+3592.8416 882.9185 5036.2839 867.7317 5486.0145 740.6919 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 5487.1712 744.0009 moveto
+5495.806 737.8616 lineto
+5485.2274 737.2762 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5487.1712 744.0009 moveto
+5495.806 737.8616 lineto
+5485.2274 737.2762 lineto
+closepath stroke
+grestore
+% node105
+gsave
+0 0 1 nodecolor
+newpath 5684 740 moveto
+5597 740 lineto
+5597 682 lineto
+5684 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5600.5 721 moveto
+5600.5 737 lineto
+5681.5 737 lineto
+5681.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5609 726.8 moveto 64 (org.eclipse.jetty) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5600.5 703 moveto
+5600.5 719 lineto
+5681.5 719 lineto
+5681.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5614 708.8 moveto 54 (jetty-security) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5600.5 685 moveto
+5600.5 701 lineto
+5681.5 701 lineto
+5681.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5603.5 690.8 moveto 75 (9.4.57.v20241219) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5597 682 moveto
+5597 740 lineto
+5684 740 lineto
+5684 682 lineto
+closepath stroke
+grestore
+% node1->node105
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.6631 884.9419 moveto
+3601.2717 884.084 5116.446 873.0618 5586.9044 740.7184 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 5588.1658 743.9975 moveto
+5596.8081 737.8688 lineto
+5586.2302 737.2704 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5588.1658 743.9975 moveto
+5596.8081 737.8688 lineto
+5586.2302 737.2704 lineto
+closepath stroke
+grestore
+% node106
+gsave
+0 0 1 nodecolor
+newpath 5757 740 moveto
+5698 740 lineto
+5698 682 lineto
+5757 682 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5701.5 721 moveto
+5701.5 737 lineto
+5754.5 737 lineto
+5754.5 721 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5712 726.8 moveto 32 (org.slf4j) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5701.5 703 moveto
+5701.5 719 lineto
+5754.5 719 lineto
+5754.5 703 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5704.5 708.8 moveto 47 (slf4j-simple) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5701.5 685 moveto
+5701.5 701 lineto
+5754.5 701 lineto
+5754.5 685 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5715 690.8 moveto 26 (1.7.36) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5698 682 moveto
+5698 740 lineto
+5757 740 lineto
+5757 682 lineto
+closepath stroke
+grestore
+% node1->node106
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 3277.7836 883.5838 moveto
+3632.2277 875.1093 5413.1857 828.5748 5687.7958 740.6243 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 5689.335 743.795 moveto
+5697.6357 737.211 lineto
+5687.0409 737.1816 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5689.335 743.795 moveto
+5697.6357 737.211 lineto
+5687.0409 737.1816 lineto
+closepath stroke
+grestore
+% node4
+gsave
+0 0 1 nodecolor
+newpath 97 565 moveto
+0 565 lineto
+0 507 lineto
+97 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 3.5 546 moveto
+3.5 562 lineto
+94.5 562 lineto
+94.5 546 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+6.5 551.8 moveto 85 (org.codehaus.plexus) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 3.5 528 moveto
+3.5 544 lineto
+94.5 544 lineto
+94.5 528 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+10 533.8 moveto 78 (plexus-classworlds) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 3.5 510 moveto
+3.5 526 lineto
+94.5 526 lineto
+94.5 510 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+38.5 515.8 moveto 21 (2.6.0) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 0 507 moveto
+0 565 lineto
+97 565 lineto
+97 507 lineto
+closepath stroke
+grestore
+% node3->node4
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 478.8442 685.2478 moveto
+476.3839 684.0994 473.9252 683.0076 471.5 682 curveto
+314.0918 616.6006 257.8034 646.4216 103.5 574 curveto
+100.9118 572.7853 98.308 571.4578 95.716 570.051 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 97.3983 566.9808 moveto
+86.9882 565.0104 lineto
+93.8974 573.0425 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 97.3983 566.9808 moveto
+86.9882 565.0104 lineto
+93.8974 573.0425 lineto
+closepath stroke
+grestore
+% node7
+gsave
+0 0 1 nodecolor
+newpath 216.5 565 moveto
+110.5 565 lineto
+110.5 507 lineto
+216.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 113.5 546 moveto
+113.5 562 lineto
+213.5 562 lineto
+213.5 546 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+126 551.8 moveto 75 (org.apache.maven) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 113.5 528 moveto
+113.5 544 lineto
+213.5 544 lineto
+213.5 528 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+116.5 533.8 moveto 94 (maven-settings-builder) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 113.5 510 moveto
+113.5 526 lineto
+213.5 526 lineto
+213.5 510 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+153 515.8 moveto 21 (3.6.3) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 110.5 507 moveto
+110.5 565 lineto
+216.5 565 lineto
+216.5 507 lineto
+closepath stroke
+grestore
+% node6->node7
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 680.9032 685.1005 moveto
+678.4277 683.9901 675.9496 682.9468 673.5 682 curveto
+481.6517 607.85 413.4153 652.9695 223.5 574 curveto
+220.449 572.7313 217.3741 571.3187 214.3144 569.8066 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 215.6983 566.5798 moveto
+205.2195 565.0163 lineto
+212.4362 572.7732 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 215.6983 566.5798 moveto
+205.2195 565.0163 lineto
+212.4362 572.7732 lineto
+closepath stroke
+grestore
+% node10
+gsave
+0 0 1 nodecolor
+newpath 334.5 565 moveto
+230.5 565 lineto
+230.5 507 lineto
+334.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 233.5 546 moveto
+233.5 562 lineto
+331.5 562 lineto
+331.5 546 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+245 551.8 moveto 75 (org.apache.maven) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 233.5 528 moveto
+233.5 544 lineto
+331.5 544 lineto
+331.5 528 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+236.5 533.8 moveto 92 (maven-builder-support) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 233.5 510 moveto
+233.5 526 lineto
+331.5 526 lineto
+331.5 510 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+272 515.8 moveto 21 (3.6.3) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 230.5 507 moveto
+230.5 565 lineto
+334.5 565 lineto
+334.5 507 lineto
+closepath stroke
+grestore
+% node6->node10
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 680.8081 685.3328 moveto
+678.3571 684.1625 675.9103 683.0427 673.5 682 curveto
+531.0885 620.3916 482.0642 639.7141 341.5 574 curveto
+338.8816 572.7759 336.2377 571.4577 333.5959 570.0738 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 335.1105 566.9123 moveto
+324.6622 565.156 lineto
+331.7348 573.0446 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 335.1105 566.9123 moveto
+324.6622 565.156 lineto
+331.7348 573.0446 lineto
+closepath stroke
+grestore
+% node11
+gsave
+0 0 1 nodecolor
+newpath 448.5 565 moveto
+348.5 565 lineto
+348.5 507 lineto
+448.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 351.5 546 moveto
+351.5 562 lineto
+445.5 562 lineto
+445.5 546 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+361 551.8 moveto 75 (org.apache.maven) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 351.5 528 moveto
+351.5 544 lineto
+445.5 544 lineto
+445.5 528 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+354.5 533.8 moveto 88 (maven-model-builder) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 351.5 510 moveto
+351.5 526 lineto
+445.5 526 lineto
+445.5 510 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+388 515.8 moveto 21 (3.6.3) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 348.5 507 moveto
+348.5 565 lineto
+448.5 565 lineto
+448.5 507 lineto
+closepath stroke
+grestore
+% node6->node11
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 680.8862 685.8979 moveto
+678.3928 684.569 675.9177 683.2619 673.5 682 curveto
+577.6434 631.9704 549.4492 627.5257 455.5 574 curveto
+453.5011 572.8611 451.4759 571.6811 449.4402 570.4728 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 450.8578 567.2385 moveto
+440.495 565.0335 lineto
+447.2209 573.2196 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 450.8578 567.2385 moveto
+440.495 565.0335 lineto
+447.2209 573.2196 lineto
+closepath stroke
+grestore
+% node12
+gsave
+0 0 1 nodecolor
+newpath 584.5 565 moveto
+462.5 565 lineto
+462.5 507 lineto
+584.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 465.5 546 moveto
+465.5 562 lineto
+581.5 562 lineto
+581.5 546 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+468.5 551.8 moveto 110 (org.apache.maven.resolver) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 465.5 528 moveto
+465.5 544 lineto
+581.5 544 lineto
+581.5 528 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+482 533.8 moveto 83 (maven-resolver-impl) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 465.5 510 moveto
+465.5 526 lineto
+581.5 526 lineto
+581.5 510 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+513 515.8 moveto 21 (1.4.1) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 462.5 507 moveto
+462.5 565 lineto
+584.5 565 lineto
+584.5 507 lineto
+closepath stroke
+grestore
+% node6->node12
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 691.7585 681.8195 moveto
+656.8634 651.7854 601.5683 604.1931 563.9685 571.8311 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 566.0899 569.0391 moveto
+556.2275 565.1684 lineto
+561.5235 574.3446 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 566.0899 569.0391 moveto
+556.2275 565.1684 lineto
+561.5235 574.3446 lineto
+closepath stroke
+grestore
+% node13
+gsave
+0 0 1 nodecolor
+newpath 720.5 565 moveto
+598.5 565 lineto
+598.5 507 lineto
+720.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 601.5 546 moveto
+601.5 562 lineto
+717.5 562 lineto
+717.5 546 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+604.5 551.8 moveto 110 (org.apache.maven.resolver) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 601.5 528 moveto
+601.5 544 lineto
+717.5 544 lineto
+717.5 528 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+620.5 533.8 moveto 78 (maven-resolver-spi) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 601.5 510 moveto
+601.5 526 lineto
+717.5 526 lineto
+717.5 510 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+649 515.8 moveto 21 (1.4.1) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 598.5 507 moveto
+598.5 565 lineto
+720.5 565 lineto
+720.5 507 lineto
+closepath stroke
+grestore
+% node6->node13
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 713.912 681.8195 moveto
+702.958 652.6651 685.7878 606.9659 673.6696 574.713 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 676.8771 573.2985 moveto
+670.0835 565.1684 lineto
+670.3244 575.7605 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 676.8771 573.2985 moveto
+670.0835 565.1684 lineto
+670.3244 575.7605 lineto
+closepath stroke
+grestore
+% node14
+gsave
+0 0 1 nodecolor
+newpath 832.5 565 moveto
+734.5 565 lineto
+734.5 507 lineto
+832.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 737.5 546 moveto
+737.5 562 lineto
+829.5 562 lineto
+829.5 546 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+752 551.8 moveto 63 (org.eclipse.sisu) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 737.5 528 moveto
+737.5 544 lineto
+829.5 544 lineto
+829.5 528 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+740.5 533.8 moveto 86 (org.eclipse.sisu.inject) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 737.5 510 moveto
+737.5 526 lineto
+829.5 526 lineto
+829.5 510 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+765.5 515.8 moveto 36 (0.9.0.M3) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 734.5 507 moveto
+734.5 565 lineto
+832.5 565 lineto
+832.5 507 lineto
+closepath stroke
+grestore
+% node6->node14
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 734.1107 681.8195 moveto
+744.0535 652.6651 759.6388 606.9659 770.6383 574.713 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 773.9782 575.7629 moveto
+773.8934 565.1684 lineto
+767.3529 573.5034 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 773.9782 575.7629 moveto
+773.8934 565.1684 lineto
+767.3529 573.5034 lineto
+closepath stroke
+grestore
+% node15
+gsave
+0 0 1 nodecolor
+newpath 930.5 574 moveto
+846.5 574 lineto
+846.5 498 lineto
+930.5 498 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 849.5 555 moveto
+849.5 571 lineto
+927.5 571 lineto
+927.5 555 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+852.5 560.8 moveto 72 (com.google.inject) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 849.5 537 moveto
+849.5 553 lineto
+927.5 553 lineto
+927.5 537 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+877 542.8 moveto 23 (guice) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 849.5 519 moveto
+849.5 535 lineto
+927.5 535 lineto
+927.5 519 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+878 524.8 moveto 21 (4.2.1) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 849.5 501 moveto
+849.5 517 lineto
+927.5 517 lineto
+927.5 501 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+872.5 507.8 moveto 32 (no_aop) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 846.5 498 moveto
+846.5 574 lineto
+930.5 574 lineto
+930.5 498 lineto
+closepath stroke
+grestore
+% node6->node15
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 751.2144 681.8195 moveto
+776.927 654.6959 816.2146 613.2522 846.1836 581.6386 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 848.8601 583.9026 moveto
+853.1998 574.2374 lineto
+843.78 579.0868 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 848.8601 583.9026 moveto
+853.1998 574.2374 lineto
+843.78 579.0868 lineto
+closepath stroke
+grestore
+% node23
+gsave
+0 0 1 nodecolor
+newpath 1084 565 moveto
+945 565 lineto
+945 507 lineto
+1084 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 948.5 546 moveto
+948.5 562 lineto
+1081.5 562 lineto
+1081.5 546 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+972.5 551.8 moveto 85 (org.codehaus.plexus) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 948.5 528 moveto
+948.5 544 lineto
+1081.5 544 lineto
+1081.5 528 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+951.5 533.8 moveto 127 (plexus-component-annotations) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 948.5 510 moveto
+948.5 526 lineto
+1081.5 526 lineto
+1081.5 510 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1004.5 515.8 moveto 21 (2.1.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 945 507 moveto
+945 565 lineto
+1084 565 lineto
+1084 507 lineto
+closepath stroke
+grestore
+% node6->node23
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 768.2299 683.9128 moveto
+819.1462 653.5386 903.3377 603.3141 958.8666 570.1882 curveto
+stroke
+0 0 0 edgecolor
+newpath 960.7282 573.1532 moveto
+967.523 565.0242 lineto
+957.1419 567.1416 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 960.7282 573.1532 moveto
+967.523 565.0242 lineto
+957.1419 567.1416 lineto
+closepath stroke
+grestore
+% node8
+gsave
+0 0 1 nodecolor
+newpath 214.5 390 moveto
+112.5 390 lineto
+112.5 332 lineto
+214.5 332 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 115.5 371 moveto
+115.5 387 lineto
+211.5 387 lineto
+211.5 371 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+122.5 376.8 moveto 82 (org.sonatype.plexus) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 115.5 353 moveto
+115.5 369 lineto
+211.5 369 lineto
+211.5 353 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+118.5 358.8 moveto 90 (plexus-sec-dispatcher) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 115.5 335 moveto
+115.5 351 lineto
+211.5 351 lineto
+211.5 335 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+157 340.8 moveto 13 (1.4) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 112.5 332 moveto
+112.5 390 lineto
+214.5 390 lineto
+214.5 332 lineto
+closepath stroke
+grestore
+% node7->node8
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 163.5 506.8195 moveto
+163.5 477.9164 163.5 432.7526 163.5 400.5501 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 167.0001 400.1684 moveto
+163.5 390.1684 lineto
+160.0001 400.1684 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 167.0001 400.1684 moveto
+163.5 390.1684 lineto
+160.0001 400.1684 lineto
+closepath stroke
+grestore
+% node9
+gsave
+0 0 1 nodecolor
+newpath 210.5 224 moveto
+116.5 224 lineto
+116.5 166 lineto
+210.5 166 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 119.5 205 moveto
+119.5 221 lineto
+207.5 221 lineto
+207.5 205 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+122.5 210.8 moveto 82 (org.sonatype.plexus) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 119.5 187 moveto
+119.5 203 lineto
+207.5 203 lineto
+207.5 187 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+136 192.8 moveto 55 (plexus-cipher) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 119.5 169 moveto
+119.5 185 lineto
+207.5 185 lineto
+207.5 169 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+157 174.8 moveto 13 (1.4) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 116.5 166 moveto
+116.5 224 lineto
+210.5 224 lineto
+210.5 166 lineto
+closepath stroke
+grestore
+% node8->node9
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 163.5 331.8074 moveto
+163.5 304.8547 163.5 264.0161 163.5 234.1602 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 167.0001 234.0986 moveto
+163.5 224.0987 lineto
+160.0001 234.0987 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 167.0001 234.0986 moveto
+163.5 224.0987 lineto
+160.0001 234.0987 lineto
+closepath stroke
+grestore
+% node16
+gsave
+0 0 1 nodecolor
+newpath 875 390 moveto
+814 390 lineto
+814 332 lineto
+875 332 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 817.5 371 moveto
+817.5 387 lineto
+872.5 387 lineto
+872.5 371 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+820.5 376.8 moveto 49 (aopalliance) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 817.5 353 moveto
+817.5 369 lineto
+872.5 369 lineto
+872.5 353 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+820.5 358.8 moveto 49 (aopalliance) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 817.5 335 moveto
+817.5 351 lineto
+872.5 351 lineto
+872.5 335 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+838.5 340.8 moveto 13 (1.0) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 814 332 moveto
+814 390 lineto
+875 390 lineto
+875 332 lineto
+closepath stroke
+grestore
+% node15->node16
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 879.0609 497.8872 moveto
+871.7198 469.0232 861.5725 429.1259 854.1727 400.0313 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 857.536 399.0552 moveto
+851.679 390.2265 lineto
+850.7519 400.7807 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 857.536 399.0552 moveto
+851.679 390.2265 lineto
+850.7519 400.7807 lineto
+closepath stroke
+grestore
+% node17
+gsave
+0 0 1 nodecolor
+newpath 976 390 moveto
+889 390 lineto
+889 332 lineto
+976 332 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 892.5 371 moveto
+892.5 387 lineto
+973.5 387 lineto
+973.5 371 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+895.5 376.8 moveto 75 (com.google.guava) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 892.5 353 moveto
+892.5 369 lineto
+973.5 369 lineto
+973.5 353 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+920.5 358.8 moveto 25 (guava) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 892.5 335 moveto
+892.5 351 lineto
+973.5 351 lineto
+973.5 335 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+906.5 340.8 moveto 53 (25.1-android) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 889 332 moveto
+889 390 lineto
+976 390 lineto
+976 332 lineto
+closepath stroke
+grestore
+% node15->node17
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 897.9391 497.8872 moveto
+905.2802 469.0232 915.4275 429.1259 922.8273 400.0313 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 926.2481 400.7807 moveto
+925.321 390.2265 lineto
+919.464 399.0552 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 926.2481 400.7807 moveto
+925.321 390.2265 lineto
+919.464 399.0552 lineto
+closepath stroke
+grestore
+% node18
+gsave
+0 0 1 nodecolor
+newpath 744 224 moveto
+625 224 lineto
+625 166 lineto
+744 166 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 628.5 205 moveto
+628.5 221 lineto
+741.5 221 lineto
+741.5 205 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+631.5 210.8 moveto 107 (com.google.code.findbugs) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 628.5 187 moveto
+628.5 203 lineto
+741.5 203 lineto
+741.5 187 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+672 192.8 moveto 26 (jsr305) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 628.5 169 moveto
+628.5 185 lineto
+741.5 185 lineto
+741.5 169 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+674.5 174.8 moveto 21 (3.0.2) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 625 166 moveto
+625 224 lineto
+744 224 lineto
+744 166 lineto
+closepath stroke
+grestore
+% node17->node18
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 890.1491 331.9937 moveto
+847.3899 303.7175 781.3132 260.0216 735.6535 229.8273 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 737.3631 226.7618 moveto
+727.0914 224.1653 lineto
+733.502 232.6006 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 737.3631 226.7618 moveto
+727.0914 224.1653 lineto
+733.502 232.6006 lineto
+closepath stroke
+grestore
+% node19
+gsave
+0 0 1 nodecolor
+newpath 861 224 moveto
+758 224 lineto
+758 166 lineto
+861 166 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 761.5 205 moveto
+761.5 221 lineto
+858.5 221 lineto
+858.5 205 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+764.5 210.8 moveto 91 (org.checkerframework) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 761.5 187 moveto
+761.5 203 lineto
+858.5 203 lineto
+858.5 187 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+767 192.8 moveto 86 (checker-compat-qual) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 761.5 169 moveto
+761.5 185 lineto
+858.5 185 lineto
+858.5 169 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+799.5 174.8 moveto 21 (2.0.0) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 758 166 moveto
+758 224 lineto
+861 224 lineto
+861 166 lineto
+closepath stroke
+grestore
+% node17->node19
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 911.3555 331.8074 moveto
+890.6997 304.2662 859.1696 262.2261 836.6654 232.2206 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 839.374 229.9987 moveto
+830.574 224.0987 lineto
+833.774 234.1987 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 839.374 229.9987 moveto
+830.574 224.0987 lineto
+833.774 234.1987 lineto
+closepath stroke
+grestore
+% node20
+gsave
+0 0 1 nodecolor
+newpath 990 224 moveto
+875 224 lineto
+875 166 lineto
+990 166 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 878.5 205 moveto
+878.5 221 lineto
+987.5 221 lineto
+987.5 205 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+886 210.8 moveto 94 (com.google.errorprone) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 878.5 187 moveto
+878.5 203 lineto
+987.5 203 lineto
+987.5 187 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+881.5 192.8 moveto 103 (error_prone_annotations) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 878.5 169 moveto
+878.5 185 lineto
+987.5 185 lineto
+987.5 169 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+922.5 174.8 moveto 21 (2.1.3) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 875 166 moveto
+875 224 lineto
+990 224 lineto
+990 166 lineto
+closepath stroke
+grestore
+% node17->node20
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 932.5 331.8074 moveto
+932.5 304.8547 932.5 264.0161 932.5 234.1602 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 936.0001 234.0986 moveto
+932.5 224.0987 lineto
+929.0001 234.0987 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 936.0001 234.0986 moveto
+932.5 224.0987 lineto
+929.0001 234.0987 lineto
+closepath stroke
+grestore
+% node21
+gsave
+0 0 1 nodecolor
+newpath 1092.5 224 moveto
+1004.5 224 lineto
+1004.5 166 lineto
+1092.5 166 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1007.5 205 moveto
+1007.5 221 lineto
+1089.5 221 lineto
+1089.5 205 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1011 210.8 moveto 75 (com.google.j2objc) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1007.5 187 moveto
+1007.5 203 lineto
+1089.5 203 lineto
+1089.5 187 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1010.5 192.8 moveto 76 (j2objc-annotations) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1007.5 169 moveto
+1007.5 185 lineto
+1089.5 185 lineto
+1089.5 169 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1042 174.8 moveto 13 (1.1) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1004.5 166 moveto
+1004.5 224 lineto
+1092.5 224 lineto
+1092.5 166 lineto
+closepath stroke
+grestore
+% node17->node21
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 952.4411 331.8074 moveto
+971.8382 304.3839 1001.4031 262.5852 1022.608 232.6059 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 1025.7081 234.284 moveto
+1028.6253 224.0987 lineto
+1019.9932 230.2417 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1025.7081 234.284 moveto
+1028.6253 224.0987 lineto
+1019.9932 230.2417 lineto
+closepath stroke
+grestore
+% node22
+gsave
+0 0 1 nodecolor
+newpath 1226 224 moveto
+1107 224 lineto
+1107 166 lineto
+1226 166 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1110.5 205 moveto
+1110.5 221 lineto
+1223.5 221 lineto
+1223.5 205 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1127.5 210.8 moveto 79 (org.codehaus.mojo) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1110.5 187 moveto
+1110.5 203 lineto
+1223.5 203 lineto
+1223.5 187 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1113.5 192.8 moveto 107 (animal-sniffer-annotations) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1110.5 169 moveto
+1110.5 185 lineto
+1223.5 185 lineto
+1223.5 169 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1157.5 174.8 moveto 19 (1.14) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1107 166 moveto
+1107 224 lineto
+1226 224 lineto
+1226 166 lineto
+closepath stroke
+grestore
+% node17->node22
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 972.4602 331.9937 moveto
+1012.7216 303.7763 1074.893 260.2032 1117.9653 230.0158 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 1120.1327 232.7708 moveto
+1126.313 224.1653 lineto
+1116.1151 227.0385 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1120.1327 232.7708 moveto
+1126.313 224.1653 lineto
+1116.1151 227.0385 lineto
+closepath stroke
+grestore
+% node31
+gsave
+0 0 1 nodecolor
+newpath 1209 565 moveto
+1098 565 lineto
+1098 507 lineto
+1209 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1101.5 546 moveto
+1101.5 562 lineto
+1206.5 562 lineto
+1206.5 546 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1104.5 551.8 moveto 99 (org.apache.maven.doxia) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1101.5 528 moveto
+1101.5 544 lineto
+1206.5 544 lineto
+1206.5 528 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1120 533.8 moveto 68 (doxia-site-model) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1101.5 510 moveto
+1101.5 526 lineto
+1206.5 526 lineto
+1206.5 510 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1143.5 515.8 moveto 21 (2.0.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1098 507 moveto
+1098 565 lineto
+1209 565 lineto
+1209 507 lineto
+closepath stroke
+grestore
+% node30->node31
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1523.2016 684.5622 moveto
+1520.9421 683.6919 1518.7029 682.8355 1516.5 682 curveto
+1383.6081 631.5992 1344.0139 634.7014 1215.5 574 curveto
+1212.755 572.7034 1209.9745 571.3211 1207.1897 569.8807 curveto
+stroke
+0 0 0 edgecolor
+newpath 1208.7857 566.7651 moveto
+1198.3198 565.1172 lineto
+1205.4738 572.932 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1208.7857 566.7651 moveto
+1198.3198 565.1172 lineto
+1205.4738 572.932 lineto
+closepath stroke
+grestore
+% node32
+gsave
+0 0 1 nodecolor
+newpath 1334 565 moveto
+1223 565 lineto
+1223 507 lineto
+1334 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1226.5 546 moveto
+1226.5 562 lineto
+1331.5 562 lineto
+1331.5 546 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1229.5 551.8 moveto 99 (org.apache.maven.doxia) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1226.5 528 moveto
+1226.5 544 lineto
+1331.5 544 lineto
+1331.5 528 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1257.5 533.8 moveto 43 (doxia-core) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1226.5 510 moveto
+1226.5 526 lineto
+1331.5 526 lineto
+1331.5 510 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1268.5 515.8 moveto 21 (2.0.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1223 507 moveto
+1223 565 lineto
+1334 565 lineto
+1334 507 lineto
+closepath stroke
+grestore
+% node30->node32
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1534.3901 681.8397 moveto
+1484.4042 654.6746 1406.931 612.1713 1340.5 574 curveto
+1338.3127 572.7432 1336.0862 571.4553 1333.8401 570.149 curveto
+stroke
+0 0 0 edgecolor
+newpath 1335.5197 567.0767 moveto
+1325.1212 565.0461 lineto
+1331.9838 573.1181 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1335.5197 567.0767 moveto
+1325.1212 565.0461 lineto
+1331.9838 573.1181 lineto
+closepath stroke
+grestore
+% node34
+gsave
+0 0 1 nodecolor
+newpath 1459 565 moveto
+1348 565 lineto
+1348 507 lineto
+1459 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1351.5 546 moveto
+1351.5 562 lineto
+1456.5 562 lineto
+1456.5 546 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1354.5 551.8 moveto 99 (org.apache.maven.doxia) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1351.5 528 moveto
+1351.5 544 lineto
+1456.5 544 lineto
+1456.5 528 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1358.5 533.8 moveto 91 (doxia-integration-tools) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1351.5 510 moveto
+1351.5 526 lineto
+1456.5 526 lineto
+1456.5 510 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1393.5 515.8 moveto 21 (2.0.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1348 507 moveto
+1348 565 lineto
+1459 565 lineto
+1459 507 lineto
+closepath stroke
+grestore
+% node30->node34
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1556.6906 681.8195 moveto
+1525.0533 651.9111 1474.998 604.591 1440.775 572.2381 curveto
+stroke
+0 0 0 edgecolor
+newpath 1442.9679 569.4948 moveto
+1433.2966 565.1684 lineto
+1438.1591 574.5816 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1442.9679 569.4948 moveto
+1433.2966 565.1684 lineto
+1438.1591 574.5816 lineto
+closepath stroke
+grestore
+% node35
+gsave
+0 0 1 nodecolor
+newpath 1584 565 moveto
+1473 565 lineto
+1473 507 lineto
+1584 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1476.5 546 moveto
+1476.5 562 lineto
+1581.5 562 lineto
+1581.5 546 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1479.5 551.8 moveto 99 (org.apache.maven.doxia) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1476.5 528 moveto
+1476.5 544 lineto
+1581.5 544 lineto
+1581.5 528 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1490 533.8 moveto 78 (doxia-site-renderer) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1476.5 510 moveto
+1476.5 526 lineto
+1581.5 526 lineto
+1581.5 510 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1518.5 515.8 moveto 21 (2.0.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1473 507 moveto
+1473 565 lineto
+1584 565 lineto
+1584 507 lineto
+closepath stroke
+grestore
+% node30->node35
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1577.0522 681.8195 moveto
+1567.2779 652.6651 1551.9568 606.9659 1541.1437 574.713 curveto
+stroke
+0 0 0 edgecolor
+newpath 1544.441 573.5372 moveto
+1537.9437 565.1684 lineto
+1537.8041 575.7623 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1544.441 573.5372 moveto
+1537.9437 565.1684 lineto
+1537.8041 575.7623 lineto
+closepath stroke
+grestore
+% node45
+gsave
+0 0 1 nodecolor
+newpath 1709 565 moveto
+1598 565 lineto
+1598 507 lineto
+1709 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1601.5 546 moveto
+1601.5 562 lineto
+1706.5 562 lineto
+1706.5 546 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1604.5 551.8 moveto 99 (org.apache.maven.doxia) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1601.5 528 moveto
+1601.5 544 lineto
+1706.5 544 lineto
+1706.5 528 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1618 533.8 moveto 72 (doxia-module-apt) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1601.5 510 moveto
+1601.5 526 lineto
+1706.5 526 lineto
+1706.5 510 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1643.5 515.8 moveto 21 (2.0.0) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1598 507 moveto
+1598 565 lineto
+1709 565 lineto
+1709 507 lineto
+closepath stroke
+grestore
+% node30->node45
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1597.4138 681.8195 moveto
+1608.7049 652.6651 1626.4034 606.9659 1638.8944 574.713 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 1642.2431 575.7575 moveto
+1642.5908 565.1684 lineto
+1635.7155 573.2295 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1642.2431 575.7575 moveto
+1642.5908 565.1684 lineto
+1635.7155 573.2295 lineto
+closepath stroke
+grestore
+% node46
+gsave
+0 0 1 nodecolor
+newpath 1834 565 moveto
+1723 565 lineto
+1723 507 lineto
+1834 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1726.5 546 moveto
+1726.5 562 lineto
+1831.5 562 lineto
+1831.5 546 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1729.5 551.8 moveto 99 (org.apache.maven.doxia) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1726.5 528 moveto
+1726.5 544 lineto
+1831.5 544 lineto
+1831.5 528 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1740 533.8 moveto 78 (doxia-module-xdoc) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1726.5 510 moveto
+1726.5 526 lineto
+1831.5 526 lineto
+1831.5 510 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1768.5 515.8 moveto 21 (2.0.0) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 1723 507 moveto
+1723 565 lineto
+1834 565 lineto
+1834 507 lineto
+closepath stroke
+grestore
+% node30->node46
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1617.7754 681.8195 moveto
+1650.9686 651.9111 1703.4857 604.591 1739.3918 572.2381 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 1742.1517 574.4626 moveto
+1747.238 565.1684 lineto
+1737.466 569.2622 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1742.1517 574.4626 moveto
+1747.238 565.1684 lineto
+1737.466 569.2622 lineto
+closepath stroke
+grestore
+% node47
+gsave
+0 0 1 nodecolor
+newpath 1935 565 moveto
+1848 565 lineto
+1848 507 lineto
+1935 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1851.5 546 moveto
+1851.5 562 lineto
+1932.5 562 lineto
+1932.5 546 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1854.5 551.8 moveto 75 (org.apache.maven) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1851.5 528 moveto
+1851.5 544 lineto
+1932.5 544 lineto
+1932.5 528 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1860 533.8 moveto 64 (maven-archiver) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1851.5 510 moveto
+1851.5 526 lineto
+1932.5 526 lineto
+1932.5 510 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1881.5 515.8 moveto 21 (3.6.2) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1848 507 moveto
+1848 565 lineto
+1935 565 lineto
+1935 507 lineto
+closepath stroke
+grestore
+% node30->node47
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1644.2462 681.9092 moveto
+1696.5621 655.8017 1775.2187 614.8926 1840.5 574 curveto
+1842.1687 572.9547 1843.8548 571.8736 1845.5477 570.7667 curveto
+stroke
+0 0 0 edgecolor
+newpath 1847.6772 573.5523 moveto
+1854.0191 565.0652 lineto
+1843.7688 567.7451 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1847.6772 573.5523 moveto
+1854.0191 565.0652 lineto
+1843.7688 567.7451 lineto
+closepath stroke
+grestore
+% node33
+gsave
+0 0 1 nodecolor
+newpath 1328.5 390 moveto
+1228.5 390 lineto
+1228.5 332 lineto
+1328.5 332 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1231.5 371 moveto
+1231.5 387 lineto
+1325.5 387 lineto
+1325.5 371 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1234.5 376.8 moveto 88 (org.apache.commons) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1231.5 353 moveto
+1231.5 369 lineto
+1325.5 369 lineto
+1325.5 353 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1250 358.8 moveto 57 (commons-text) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1231.5 335 moveto
+1231.5 351 lineto
+1325.5 351 lineto
+1325.5 335 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1265.5 340.8 moveto 26 (1.12.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1228.5 332 moveto
+1228.5 390 lineto
+1328.5 390 lineto
+1328.5 332 lineto
+closepath stroke
+grestore
+% node32->node33
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1278.5 506.8195 moveto
+1278.5 477.9164 1278.5 432.7526 1278.5 400.5501 curveto
+stroke
+0 0 0 edgecolor
+newpath 1282.0001 400.1684 moveto
+1278.5 390.1684 lineto
+1275.0001 400.1684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1282.0001 400.1684 moveto
+1278.5 390.1684 lineto
+1275.0001 400.1684 lineto
+closepath stroke
+grestore
+% node36
+gsave
+0 0 1 nodecolor
+newpath 1457 390 moveto
+1346 390 lineto
+1346 332 lineto
+1457 332 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1349.5 371 moveto
+1349.5 387 lineto
+1454.5 387 lineto
+1454.5 371 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1352.5 376.8 moveto 99 (org.apache.maven.doxia) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1349.5 353 moveto
+1349.5 369 lineto
+1454.5 369 lineto
+1454.5 353 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1367 358.8 moveto 70 (doxia-skin-model) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1349.5 335 moveto
+1349.5 351 lineto
+1454.5 351 lineto
+1454.5 335 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1391.5 340.8 moveto 21 (2.0.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1346 332 moveto
+1346 390 lineto
+1457 390 lineto
+1457 332 lineto
+closepath stroke
+grestore
+% node35->node36
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1507.8126 506.8195 moveto
+1486.1335 477.2881 1451.9926 430.7812 1428.2718 398.4686 curveto
+stroke
+0 0 0 edgecolor
+newpath 1430.9176 396.1583 moveto
+1422.1785 390.1684 lineto
+1425.2749 400.3007 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1430.9176 396.1583 moveto
+1422.1785 390.1684 lineto
+1425.2749 400.3007 lineto
+closepath stroke
+grestore
+% node37
+gsave
+0 0 1 nodecolor
+newpath 1582 390 moveto
+1471 390 lineto
+1471 332 lineto
+1582 332 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1474.5 371 moveto
+1474.5 387 lineto
+1579.5 387 lineto
+1579.5 371 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1477.5 376.8 moveto 99 (org.apache.maven.doxia) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1474.5 353 moveto
+1474.5 369 lineto
+1579.5 369 lineto
+1579.5 353 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1484.5 358.8 moveto 85 (doxia-module-xhtml5) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1474.5 335 moveto
+1474.5 351 lineto
+1579.5 351 lineto
+1579.5 335 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1516.5 340.8 moveto 21 (2.0.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1471 332 moveto
+1471 390 lineto
+1582 390 lineto
+1582 332 lineto
+closepath stroke
+grestore
+% node35->node37
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1528.1742 506.8195 moveto
+1527.8401 477.9164 1527.3179 432.7526 1526.9457 400.5501 curveto
+stroke
+0 0 0 edgecolor
+newpath 1530.4411 400.1272 moveto
+1526.8256 390.1684 lineto
+1523.4416 400.2082 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1530.4411 400.1272 moveto
+1526.8256 390.1684 lineto
+1523.4416 400.2082 lineto
+closepath stroke
+grestore
+% node38
+gsave
+0 0 1 nodecolor
+newpath 1693 390 moveto
+1596 390 lineto
+1596 332 lineto
+1693 332 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1599.5 371 moveto
+1599.5 387 lineto
+1690.5 387 lineto
+1690.5 371 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1602.5 376.8 moveto 85 (org.codehaus.plexus) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1599.5 353 moveto
+1599.5 369 lineto
+1690.5 369 lineto
+1690.5 353 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1614.5 358.8 moveto 61 (plexus-velocity) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1599.5 335 moveto
+1599.5 351 lineto
+1690.5 351 lineto
+1690.5 335 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1634.5 340.8 moveto 21 (2.2.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1596 332 moveto
+1596 390 lineto
+1693 390 lineto
+1693 332 lineto
+closepath stroke
+grestore
+% node35->node38
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1547.3956 506.8195 moveto
+1567.1127 477.4138 1598.1156 431.1767 1619.7699 398.8819 curveto
+stroke
+0 0 0 edgecolor
+newpath 1622.9503 400.4233 moveto
+1625.6125 390.1684 lineto
+1617.1363 396.5249 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1622.9503 400.4233 moveto
+1625.6125 390.1684 lineto
+1617.1363 396.5249 lineto
+closepath stroke
+grestore
+% node39
+gsave
+0 0 1 nodecolor
+newpath 1818.5 390 moveto
+1706.5 390 lineto
+1706.5 332 lineto
+1818.5 332 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1709.5 371 moveto
+1709.5 387 lineto
+1815.5 387 lineto
+1815.5 371 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1712.5 376.8 moveto 100 (org.apache.velocity.tools) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1709.5 353 moveto
+1709.5 369 lineto
+1815.5 369 lineto
+1815.5 353 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1718.5 358.8 moveto 88 (velocity-tools-generic) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1709.5 335 moveto
+1709.5 351 lineto
+1815.5 351 lineto
+1815.5 335 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1756 340.8 moveto 13 (3.1) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1706.5 332 moveto
+1706.5 390 lineto
+1818.5 390 lineto
+1818.5 332 lineto
+closepath stroke
+grestore
+% node35->node39
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1566.6169 506.8195 moveto
+1607.4961 476.5969 1672.4235 428.595 1716.2091 396.2236 curveto
+stroke
+0 0 0 edgecolor
+newpath 1718.439 398.9277 moveto
+1724.3994 390.1684 lineto
+1714.2776 393.299 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1718.439 398.9277 moveto
+1724.3994 390.1684 lineto
+1714.2776 393.299 lineto
+closepath stroke
+grestore
+% node40
+gsave
+0 0 1 nodecolor
+newpath 1698 224 moveto
+1605 224 lineto
+1605 166 lineto
+1698 166 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1608.5 205 moveto
+1608.5 221 lineto
+1695.5 221 lineto
+1695.5 205 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1611.5 210.8 moveto 81 (commons-beanutils) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1608.5 187 moveto
+1608.5 203 lineto
+1695.5 203 lineto
+1695.5 187 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1611.5 192.8 moveto 81 (commons-beanutils) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1608.5 169 moveto
+1608.5 185 lineto
+1695.5 185 lineto
+1695.5 169 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1641.5 174.8 moveto 21 (1.9.4) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1605 166 moveto
+1605 224 lineto
+1698 224 lineto
+1698 166 lineto
+closepath stroke
+grestore
+% node39->node40
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1743.4184 331.8074 moveto
+1724.8574 304.3839 1696.5668 262.5852 1676.276 232.6059 curveto
+stroke
+0 0 0 edgecolor
+newpath 1679.0217 230.4183 moveto
+1670.518 224.0987 lineto
+1673.2246 234.3419 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1679.0217 230.4183 moveto
+1670.518 224.0987 lineto
+1673.2246 234.3419 lineto
+closepath stroke
+grestore
+% node43
+gsave
+0 0 1 nodecolor
+newpath 1812.5 224 moveto
+1712.5 224 lineto
+1712.5 166 lineto
+1812.5 166 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1715.5 205 moveto
+1715.5 221 lineto
+1809.5 221 lineto
+1809.5 205 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1718.5 210.8 moveto 88 (org.apache.commons) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1715.5 187 moveto
+1715.5 203 lineto
+1809.5 203 lineto
+1809.5 187 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1721.5 192.8 moveto 82 (commons-digester3) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1715.5 169 moveto
+1715.5 185 lineto
+1809.5 185 lineto
+1809.5 169 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1756 174.8 moveto 13 (3.2) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1712.5 166 moveto
+1712.5 224 lineto
+1812.5 224 lineto
+1812.5 166 lineto
+closepath stroke
+grestore
+% node39->node43
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1762.5 331.8074 moveto
+1762.5 304.8547 1762.5 264.0161 1762.5 234.1602 curveto
+stroke
+0 0 0 edgecolor
+newpath 1766.0001 234.0986 moveto
+1762.5 224.0987 lineto
+1759.0001 234.0987 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1766.0001 234.0986 moveto
+1762.5 224.0987 lineto
+1759.0001 234.0987 lineto
+closepath stroke
+grestore
+% node44
+gsave
+0 0 1 nodecolor
+newpath 1928 224 moveto
+1827 224 lineto
+1827 166 lineto
+1928 166 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1830.5 205 moveto
+1830.5 221 lineto
+1925.5 221 lineto
+1925.5 205 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1833.5 210.8 moveto 89 (com.github.cliftonlabs) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1830.5 187 moveto
+1830.5 203 lineto
+1925.5 203 lineto
+1925.5 187 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1854 192.8 moveto 48 (json-simple) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1830.5 169 moveto
+1830.5 185 lineto
+1925.5 185 lineto
+1925.5 169 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1867.5 174.8 moveto 21 (3.0.2) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1827 166 moveto
+1827 224 lineto
+1928 224 lineto
+1928 166 lineto
+closepath stroke
+grestore
+% node39->node44
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1782.2692 331.8074 moveto
+1801.4991 304.3839 1830.8092 262.5852 1851.8312 232.6059 curveto
+stroke
+0 0 0 edgecolor
+newpath 1854.921 234.2958 moveto
+1857.7967 224.0987 lineto
+1849.1896 230.2768 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1854.921 234.2958 moveto
+1857.7967 224.0987 lineto
+1849.1896 230.2768 lineto
+closepath stroke
+grestore
+% node41
+gsave
+0 0 1 nodecolor
+newpath 1641.5 58 moveto
+1555.5 58 lineto
+1555.5 0 lineto
+1641.5 0 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1558.5 39 moveto
+1558.5 55 lineto
+1638.5 55 lineto
+1638.5 39 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1561.5 44.8 moveto 74 (commons-logging) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1558.5 21 moveto
+1558.5 37 lineto
+1638.5 37 lineto
+1638.5 21 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1561.5 26.8 moveto 74 (commons-logging) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1558.5 3 moveto
+1558.5 19 lineto
+1638.5 19 lineto
+1638.5 3 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1592 8.8 moveto 13 (1.2) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1555.5 0 moveto
+1555.5 58 lineto
+1641.5 58 lineto
+1641.5 0 lineto
+closepath stroke
+grestore
+% node40->node41
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1642.389 165.8074 moveto
+1633.6406 138.737 1620.3655 97.6592 1610.7061 67.7697 curveto
+stroke
+0 0 0 edgecolor
+newpath 1613.9862 66.5378 moveto
+1607.5807 58.0987 lineto
+1607.3254 68.6904 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1613.9862 66.5378 moveto
+1607.5807 58.0987 lineto
+1607.3254 68.6904 lineto
+closepath stroke
+grestore
+% node42
+gsave
+0 0 1 nodecolor
+newpath 1755 58 moveto
+1656 58 lineto
+1656 0 lineto
+1755 0 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1659.5 39 moveto
+1659.5 55 lineto
+1752.5 55 lineto
+1752.5 39 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1662.5 44.8 moveto 87 (commons-collections) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1659.5 21 moveto
+1659.5 37 lineto
+1752.5 37 lineto
+1752.5 21 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1662.5 26.8 moveto 87 (commons-collections) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1659.5 3 moveto
+1659.5 19 lineto
+1752.5 19 lineto
+1752.5 3 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1695.5 8.8 moveto 21 (3.2.2) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1656 0 moveto
+1656 58 lineto
+1755 58 lineto
+1755 0 lineto
+closepath stroke
+grestore
+% node40->node42
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1660.7829 165.8074 moveto
+1669.6963 138.737 1683.222 97.6592 1693.0636 67.7697 curveto
+stroke
+0 0 0 edgecolor
+newpath 1696.4449 68.6917 moveto
+1696.248 58.0987 lineto
+1689.796 66.5024 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1696.4449 68.6917 moveto
+1696.248 58.0987 lineto
+1689.796 66.5024 lineto
+closepath stroke
+grestore
+% node49
+gsave
+0 0 1 nodecolor
+newpath 2049.5 565 moveto
+1949.5 565 lineto
+1949.5 507 lineto
+2049.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1952.5 546 moveto
+1952.5 562 lineto
+2046.5 562 lineto
+2046.5 546 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1955.5 551.8 moveto 88 (org.apache.commons) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1952.5 528 moveto
+1952.5 544 lineto
+2046.5 544 lineto
+2046.5 528 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1958 533.8 moveto 83 (commons-compress) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1952.5 510 moveto
+1952.5 526 lineto
+2046.5 526 lineto
+2046.5 510 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1986.5 515.8 moveto 26 (1.26.2) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1949.5 507 moveto
+1949.5 565 lineto
+2049.5 565 lineto
+2049.5 507 lineto
+closepath stroke
+grestore
+% node48->node49
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1761.0185 681.7903 moveto
+1807.5571 654.5895 1879.6814 612.0612 1941.5 574 curveto
+1943.4007 572.8298 1945.3329 571.6333 1947.282 570.4205 curveto
+stroke
+0 0 0 edgecolor
+newpath 1949.2719 573.3041 moveto
+1955.8898 565.0304 lineto
+1945.5568 567.3712 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1949.2719 573.3041 moveto
+1955.8898 565.0304 lineto
+1945.5568 567.3712 lineto
+closepath stroke
+grestore
+% node51
+gsave
+0 0 1 nodecolor
+newpath 2135 565 moveto
+2064 565 lineto
+2064 507 lineto
+2135 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2067.5 546 moveto
+2067.5 562 lineto
+2132.5 562 lineto
+2132.5 546 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2085 551.8 moveto 30 (io.airlift) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2067.5 528 moveto
+2067.5 544 lineto
+2132.5 544 lineto
+2132.5 528 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2070.5 533.8 moveto 59 (aircompressor) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2067.5 510 moveto
+2067.5 526 lineto
+2132.5 526 lineto
+2132.5 510 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2090.5 515.8 moveto 19 (0.27) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2064 507 moveto
+2064 565 lineto
+2135 565 lineto
+2135 507 lineto
+closepath stroke
+grestore
+% node48->node51
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1761.2433 684.8239 moveto
+1763.3483 683.8512 1765.4402 682.9057 1767.5 682 curveto
+1893.0217 626.8069 1938.4758 643.8016 2056.5 574 curveto
+2058.0153 573.1039 2059.5286 572.1525 2061.0328 571.1579 curveto
+stroke
+0 0 0 edgecolor
+newpath 2063.4209 573.7518 moveto
+2069.4992 565.074 lineto
+2059.3359 568.0673 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2063.4209 573.7518 moveto
+2069.4992 565.074 lineto
+2059.3359 568.0673 lineto
+closepath stroke
+grestore
+% node52
+gsave
+0 0 1 nodecolor
+newpath 2207.5 565 moveto
+2149.5 565 lineto
+2149.5 507 lineto
+2207.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 2152.5 546 moveto
+2152.5 562 lineto
+2204.5 562 lineto
+2204.5 546 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2155.5 551.8 moveto 46 (org.tukaani) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 2152.5 528 moveto
+2152.5 544 lineto
+2204.5 544 lineto
+2204.5 528 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2173.5 533.8 moveto 10 (xz) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 2152.5 510 moveto
+2152.5 526 lineto
+2204.5 526 lineto
+2204.5 510 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2172 515.8 moveto 13 (1.9) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 2149.5 507 moveto
+2149.5 565 lineto
+2207.5 565 lineto
+2207.5 507 lineto
+closepath stroke
+grestore
+% node48->node52
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1761.1595 684.6231 moveto
+1763.2875 683.7054 1765.4071 682.8263 1767.5 682 curveto
+1928.4268 618.4675 1992.5083 661.9506 2141.5 574 curveto
+2142.8201 573.2207 2144.127 572.3834 2145.4166 571.4991 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 2147.8965 574.0039 moveto
+2153.635 565.0977 lineto
+2143.595 568.4815 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 2147.8965 574.0039 moveto
+2153.635 565.0977 lineto
+2143.595 568.4815 lineto
+closepath stroke
+grestore
+% node53
+gsave
+0 0 1 nodecolor
+newpath 2303.5 565 moveto
+2221.5 565 lineto
+2221.5 507 lineto
+2303.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 2224.5 546 moveto
+2224.5 562 lineto
+2300.5 562 lineto
+2300.5 546 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2227.5 551.8 moveto 70 (com.github.luben) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 2224.5 528 moveto
+2224.5 544 lineto
+2300.5 544 lineto
+2300.5 528 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2247.5 533.8 moveto 30 (zstd-jni) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 2224.5 510 moveto
+2224.5 526 lineto
+2300.5 526 lineto
+2300.5 510 lineto
+closepath stroke
+0.66667 1 1 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2248 515.8 moveto 29 (1.5.6-3) alignedtext
+1 setlinewidth
+solid
+0.66667 1 1 nodecolor
+newpath 2221.5 507 moveto
+2221.5 565 lineto
+2303.5 565 lineto
+2303.5 507 lineto
+closepath stroke
+grestore
+% node48->node53
+gsave
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 1761.1148 684.5061 moveto
+1763.255 683.6204 1765.3894 682.78 1767.5 682 curveto
+1959.2114 611.1538 2030.1878 662.3258 2214.5 574 curveto
+2216.5815 573.0025 2218.6588 571.9042 2220.7173 570.7298 curveto
+stroke
+0.66667 1 1 edgecolor
+newpath 2222.9674 573.4499 moveto
+2229.5767 565.1693 lineto
+2219.2462 567.5209 lineto
+closepath fill
+1 setlinewidth
+solid
+0.66667 1 1 edgecolor
+newpath 2222.9674 573.4499 moveto
+2229.5767 565.1693 lineto
+2219.2462 567.5209 lineto
+closepath stroke
+grestore
+% node50
+gsave
+0 0 1 nodecolor
+newpath 2039.5 390 moveto
+1959.5 390 lineto
+1959.5 332 lineto
+2039.5 332 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1962.5 371 moveto
+1962.5 387 lineto
+2036.5 387 lineto
+2036.5 371 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1965.5 376.8 moveto 68 (commons-codec) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1962.5 353 moveto
+1962.5 369 lineto
+2036.5 369 lineto
+2036.5 353 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1965.5 358.8 moveto 68 (commons-codec) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1962.5 335 moveto
+1962.5 351 lineto
+2036.5 351 lineto
+2036.5 335 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+1986.5 340.8 moveto 26 (1.17.0) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 1959.5 332 moveto
+1959.5 390 lineto
+2039.5 390 lineto
+2039.5 332 lineto
+closepath stroke
+grestore
+% node49->node50
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 1999.5 506.8195 moveto
+1999.5 477.9164 1999.5 432.7526 1999.5 400.5501 curveto
+stroke
+0 0 0 edgecolor
+newpath 2003.0001 400.1684 moveto
+1999.5 390.1684 lineto
+1996.0001 400.1684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2003.0001 400.1684 moveto
+1999.5 390.1684 lineto
+1996.0001 400.1684 lineto
+closepath stroke
+grestore
+% node62
+gsave
+0 0 1 nodecolor
+newpath 2626.5 565 moveto
+2562.5 565 lineto
+2562.5 507 lineto
+2626.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2565.5 546 moveto
+2565.5 562 lineto
+2623.5 562 lineto
+2623.5 546 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2568.5 551.8 moveto 52 (org.ow2.asm) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2565.5 528 moveto
+2565.5 544 lineto
+2623.5 544 lineto
+2623.5 528 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2585.5 533.8 moveto 18 (asm) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2565.5 510 moveto
+2565.5 526 lineto
+2623.5 526 lineto
+2623.5 510 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+2584 515.8 moveto 21 (9.7.1) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 2562.5 507 moveto
+2562.5 565 lineto
+2626.5 565 lineto
+2626.5 507 lineto
+closepath stroke
+grestore
+% node61->node62
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2594.5 681.8195 moveto
+2594.5 652.9164 2594.5 607.7526 2594.5 575.5501 curveto
+stroke
+0 0 0 edgecolor
+newpath 2598.0001 575.1684 moveto
+2594.5 565.1684 lineto
+2591.0001 575.1684 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 2598.0001 575.1684 moveto
+2594.5 565.1684 lineto
+2591.0001 575.1684 lineto
+closepath stroke
+grestore
+% node76
+gsave
+0 0 1 nodecolor
+newpath 4090.5 565 moveto
+3964.5 565 lineto
+3964.5 507 lineto
+4090.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 3967.5 546 moveto
+3967.5 562 lineto
+4087.5 562 lineto
+4087.5 546 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+3970.5 551.8 moveto 114 (org.apache.httpcomponents) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 3967.5 528 moveto
+3967.5 544 lineto
+4087.5 544 lineto
+4087.5 528 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4008.5 533.8 moveto 38 (httpclient) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 3967.5 510 moveto
+3967.5 526 lineto
+4087.5 526 lineto
+4087.5 510 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4017 515.8 moveto 21 (4.5.6) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 3964.5 507 moveto
+3964.5 565 lineto
+4090.5 565 lineto
+4090.5 507 lineto
+closepath stroke
+grestore
+% node75->node76
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4219.1975 681.8195 moveto
+4179.1919 651.5969 4115.6518 603.595 4072.8018 571.2236 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4074.8753 568.4036 moveto
+4064.7865 565.1684 lineto
+4070.6558 573.989 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4074.8753 568.4036 moveto
+4064.7865 565.1684 lineto
+4070.6558 573.989 lineto
+closepath stroke
+grestore
+% node77
+gsave
+0 0 1 nodecolor
+newpath 4230.5 565 moveto
+4104.5 565 lineto
+4104.5 507 lineto
+4230.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4107.5 546 moveto
+4107.5 562 lineto
+4227.5 562 lineto
+4227.5 546 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4110.5 551.8 moveto 114 (org.apache.httpcomponents) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4107.5 528 moveto
+4107.5 544 lineto
+4227.5 544 lineto
+4227.5 528 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4150.5 533.8 moveto 34 (httpcore) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4107.5 510 moveto
+4107.5 526 lineto
+4227.5 526 lineto
+4227.5 510 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4154.5 515.8 moveto 26 (4.4.10) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4104.5 507 moveto
+4104.5 565 lineto
+4230.5 565 lineto
+4230.5 507 lineto
+closepath stroke
+grestore
+% node75->node77
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4242.0025 681.8195 moveto
+4226.9394 652.5394 4203.2912 606.5716 4186.6873 574.2967 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4189.6783 572.4596 moveto
+4181.9913 565.1684 lineto
+4183.4537 575.6618 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4189.6783 572.4596 moveto
+4181.9913 565.1684 lineto
+4183.4537 575.6618 lineto
+closepath stroke
+grestore
+% node78
+gsave
+0 0 1 nodecolor
+newpath 4306 565 moveto
+4245 565 lineto
+4245 507 lineto
+4306 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4248.5 546 moveto
+4248.5 562 lineto
+4303.5 562 lineto
+4303.5 546 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4260 551.8 moveto 32 (org.slf4j) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4248.5 528 moveto
+4248.5 544 lineto
+4303.5 544 lineto
+4303.5 528 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4251.5 533.8 moveto 49 (jcl-over-slf4j) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4248.5 510 moveto
+4248.5 526 lineto
+4303.5 526 lineto
+4303.5 510 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4263 515.8 moveto 26 (1.7.25) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4245 507 moveto
+4245 565 lineto
+4306 565 lineto
+4306 507 lineto
+closepath stroke
+grestore
+% node75->node78
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4259.595 681.8195 moveto
+4262.7831 652.7907 4267.7727 607.3595 4271.3122 575.1308 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4274.7937 575.4908 moveto
+4272.4064 565.1684 lineto
+4267.8355 574.7265 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4274.7937 575.4908 moveto
+4272.4064 565.1684 lineto
+4267.8355 574.7265 lineto
+closepath stroke
+grestore
+% node80
+gsave
+0 0 1 nodecolor
+newpath 4390.5 565 moveto
+4320.5 565 lineto
+4320.5 507 lineto
+4390.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4323.5 546 moveto
+4323.5 562 lineto
+4387.5 562 lineto
+4387.5 546 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4326.5 551.8 moveto 58 (org.opentest4j) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4323.5 528 moveto
+4323.5 544 lineto
+4387.5 544 lineto
+4387.5 528 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4334 533.8 moveto 43 (opentest4j) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4323.5 510 moveto
+4323.5 526 lineto
+4387.5 526 lineto
+4387.5 510 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4345 515.8 moveto 21 (1.3.0) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4320.5 507 moveto
+4320.5 565 lineto
+4390.5 565 lineto
+4390.5 507 lineto
+closepath stroke
+grestore
+% node79->node80
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4370.5679 681.8195 moveto
+4367.5476 652.7907 4362.8206 607.3595 4359.4674 575.1308 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4362.947 574.7525 moveto
+4358.4308 565.1684 lineto
+4355.9846 575.477 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4362.947 574.7525 moveto
+4358.4308 565.1684 lineto
+4355.9846 575.477 lineto
+closepath stroke
+grestore
+% node81
+gsave
+0 0 1 nodecolor
+newpath 4514 565 moveto
+4405 565 lineto
+4405 507 lineto
+4514 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4408.5 546 moveto
+4408.5 562 lineto
+4511.5 562 lineto
+4511.5 546 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4426 551.8 moveto 68 (org.junit.platform) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4408.5 528 moveto
+4408.5 544 lineto
+4511.5 544 lineto
+4511.5 528 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4411.5 533.8 moveto 97 (junit-platform-commons) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4408.5 510 moveto
+4408.5 526 lineto
+4511.5 526 lineto
+4511.5 510 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4447 515.8 moveto 26 (1.10.3) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4405 507 moveto
+4405 565 lineto
+4514 565 lineto
+4514 507 lineto
+closepath stroke
+grestore
+% node79->node81
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4387.5088 681.8195 moveto
+4402.0642 652.5394 4424.9153 606.5716 4440.9594 574.2967 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4444.1798 575.681 moveto
+4445.4972 565.1684 lineto
+4437.9116 572.565 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4444.1798 575.681 moveto
+4445.4972 565.1684 lineto
+4437.9116 572.565 lineto
+closepath stroke
+grestore
+% node82
+gsave
+0 0 1 nodecolor
+newpath 4606.5 565 moveto
+4528.5 565 lineto
+4528.5 507 lineto
+4606.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4531.5 546 moveto
+4531.5 562 lineto
+4603.5 562 lineto
+4603.5 546 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4535 551.8 moveto 65 (org.apiguardian) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4531.5 528 moveto
+4531.5 544 lineto
+4603.5 544 lineto
+4603.5 528 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4534.5 533.8 moveto 66 (apiguardian-api) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4531.5 510 moveto
+4531.5 526 lineto
+4603.5 526 lineto
+4603.5 510 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4557 515.8 moveto 21 (1.1.2) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4528.5 507 moveto
+4528.5 565 lineto
+4606.5 565 lineto
+4606.5 507 lineto
+closepath stroke
+grestore
+% node79->node82
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4405.1012 681.8195 moveto
+4438.7811 651.7854 4492.1505 604.1931 4528.4408 571.8311 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4530.7783 574.4362 moveto
+4535.9123 565.1684 lineto
+4526.1193 569.2118 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4530.7783 574.4362 moveto
+4535.9123 565.1684 lineto
+4526.1193 569.2118 lineto
+closepath stroke
+grestore
+% node87
+gsave
+0 0 1 nodecolor
+newpath 4788 565 moveto
+4691 565 lineto
+4691 507 lineto
+4788 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4694.5 546 moveto
+4694.5 562 lineto
+4785.5 562 lineto
+4785.5 546 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4706 551.8 moveto 68 (org.junit.platform) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4694.5 528 moveto
+4694.5 544 lineto
+4785.5 544 lineto
+4785.5 528 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4697.5 533.8 moveto 85 (junit-platform-engine) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4694.5 510 moveto
+4694.5 526 lineto
+4785.5 526 lineto
+4785.5 510 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4727 515.8 moveto 26 (1.10.3) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4691 507 moveto
+4691 565 lineto
+4788 565 lineto
+4788 507 lineto
+closepath stroke
+grestore
+% node86->node87
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4743.6855 681.8195 moveto
+4742.8502 652.9164 4741.5449 607.7526 4740.6142 575.5501 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4744.1016 575.0631 moveto
+4740.3141 565.1684 lineto
+4737.1046 575.2654 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4744.1016 575.0631 moveto
+4740.3141 565.1684 lineto
+4737.1046 575.2654 lineto
+closepath stroke
+grestore
+% node89
+gsave
+0 0 1 nodecolor
+newpath 4873 565 moveto
+4802 565 lineto
+4802 507 lineto
+4873 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4805.5 546 moveto
+4805.5 562 lineto
+4870.5 562 lineto
+4870.5 546 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4811.5 551.8 moveto 53 (org.hamcrest) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4805.5 528 moveto
+4805.5 544 lineto
+4870.5 544 lineto
+4870.5 528 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4808.5 533.8 moveto 59 (hamcrest-core) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4805.5 510 moveto
+4805.5 526 lineto
+4870.5 526 lineto
+4870.5 510 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4831.5 515.8 moveto 13 (1.3) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4802 507 moveto
+4802 565 lineto
+4873 565 lineto
+4873 507 lineto
+closepath stroke
+grestore
+% node88->node89
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4833.3145 681.8195 moveto
+4834.1498 652.9164 4835.4551 607.7526 4836.3858 575.5501 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4839.8954 575.2654 moveto
+4836.6859 565.1684 lineto
+4832.8984 575.0631 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4839.8954 575.2654 moveto
+4836.6859 565.1684 lineto
+4832.8984 575.0631 lineto
+closepath stroke
+grestore
+% node92
+gsave
+0 0 1 nodecolor
+newpath 4969.5 565 moveto
+4899.5 565 lineto
+4899.5 507 lineto
+4969.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4902.5 546 moveto
+4902.5 562 lineto
+4966.5 562 lineto
+4966.5 546 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4905.5 551.8 moveto 58 (net.bytebuddy) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4902.5 528 moveto
+4902.5 544 lineto
+4966.5 544 lineto
+4966.5 528 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4911.5 533.8 moveto 46 (byte-buddy) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4902.5 510 moveto
+4902.5 526 lineto
+4966.5 526 lineto
+4966.5 510 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4919 515.8 moveto 31 (1.12.19) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4899.5 507 moveto
+4899.5 565 lineto
+4969.5 565 lineto
+4969.5 507 lineto
+closepath stroke
+grestore
+% node91->node92
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5044.161 681.8195 moveto
+5021.7991 652.2881 4986.5829 605.7812 4962.115 573.4686 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 4964.657 571.0278 moveto
+4955.8298 565.1684 lineto
+4959.0764 575.2536 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 4964.657 571.0278 moveto
+4955.8298 565.1684 lineto
+4959.0764 575.2536 lineto
+closepath stroke
+grestore
+% node93
+gsave
+0 0 1 nodecolor
+newpath 5067.5 565 moveto
+4983.5 565 lineto
+4983.5 507 lineto
+5067.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4986.5 546 moveto
+4986.5 562 lineto
+5064.5 562 lineto
+5064.5 546 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4996.5 551.8 moveto 58 (net.bytebuddy) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4986.5 528 moveto
+4986.5 544 lineto
+5064.5 544 lineto
+5064.5 528 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+4989.5 533.8 moveto 72 (byte-buddy-agent) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4986.5 510 moveto
+4986.5 526 lineto
+5064.5 526 lineto
+5064.5 510 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5010 515.8 moveto 31 (1.12.19) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 4983.5 507 moveto
+4983.5 565 lineto
+5067.5 565 lineto
+5067.5 507 lineto
+closepath stroke
+grestore
+% node91->node93
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5058.9843 681.8195 moveto
+5052.2724 652.7907 5041.7681 607.3595 5034.3164 575.1308 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 5037.6757 574.1229 moveto
+5032.0129 565.1684 lineto
+5030.8557 575.6998 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5037.6757 574.1229 moveto
+5032.0129 565.1684 lineto
+5030.8557 575.6998 lineto
+closepath stroke
+grestore
+% node94
+gsave
+0 0 1 nodecolor
+newpath 5149 565 moveto
+5082 565 lineto
+5082 507 lineto
+5149 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5085.5 546 moveto
+5085.5 562 lineto
+5146.5 562 lineto
+5146.5 546 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5088.5 551.8 moveto 55 (org.objenesis) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5085.5 528 moveto
+5085.5 544 lineto
+5146.5 544 lineto
+5146.5 528 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5096 533.8 moveto 40 (objenesis) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5085.5 510 moveto
+5085.5 526 lineto
+5146.5 526 lineto
+5146.5 510 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5109.5 515.8 moveto 13 (3.3) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5082 507 moveto
+5082 565 lineto
+5149 565 lineto
+5149 507 lineto
+closepath stroke
+grestore
+% node91->node94
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5073.6446 681.8195 moveto
+5082.0345 652.7907 5095.1649 607.3595 5104.4795 575.1308 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 5107.9446 575.747 moveto
+5107.3588 565.1684 lineto
+5101.2199 573.8034 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5107.9446 575.747 moveto
+5107.3588 565.1684 lineto
+5101.2199 573.8034 lineto
+closepath stroke
+grestore
+% node98
+gsave
+0 0 1 nodecolor
+newpath 5260 565 moveto
+5163 565 lineto
+5163 507 lineto
+5260 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 5166.5 546 moveto
+5166.5 562 lineto
+5257.5 562 lineto
+5257.5 546 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5169.5 551.8 moveto 85 (org.codehaus.plexus) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 5166.5 528 moveto
+5166.5 544 lineto
+5257.5 544 lineto
+5257.5 528 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5171.5 533.8 moveto 81 (plexus-interpolation) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 5166.5 510 moveto
+5166.5 526 lineto
+5257.5 526 lineto
+5257.5 510 lineto
+closepath stroke
+0 0 0 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5202.5 515.8 moveto 19 (1.25) alignedtext
+1 setlinewidth
+solid
+0 0 0 nodecolor
+newpath 5163 507 moveto
+5163 565 lineto
+5260 565 lineto
+5260 507 lineto
+closepath stroke
+grestore
+% node97->node98
+gsave
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5316.9755 681.8195 moveto
+5295.467 652.2881 5261.595 605.7812 5238.061 573.4686 curveto
+stroke
+0 0 0 edgecolor
+newpath 5240.7322 571.1912 moveto
+5232.0157 565.1684 lineto
+5235.0739 575.3123 lineto
+closepath fill
+1 setlinewidth
+solid
+0 0 0 edgecolor
+newpath 5240.7322 571.1912 moveto
+5232.0157 565.1684 lineto
+5235.0739 575.3123 lineto
+closepath stroke
+grestore
+% node99
+gsave
+0 0 1 nodecolor
+newpath 5389.5 565 moveto
+5273.5 565 lineto
+5273.5 507 lineto
+5389.5 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5276.5 546 moveto
+5276.5 562 lineto
+5386.5 562 lineto
+5386.5 546 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5279.5 551.8 moveto 104 (org.apache.maven.wagon) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5276.5 528 moveto
+5276.5 544 lineto
+5386.5 544 lineto
+5386.5 528 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5292 533.8 moveto 79 (wagon-provider-api) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5276.5 510 moveto
+5276.5 526 lineto
+5386.5 526 lineto
+5386.5 510 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5321 515.8 moveto 21 (3.3.4) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5273.5 507 moveto
+5273.5 565 lineto
+5389.5 565 lineto
+5389.5 507 lineto
+closepath stroke
+grestore
+% node97->node99
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5336.5226 681.8195 moveto
+5335.5202 652.9164 5333.9538 607.7526 5332.837 575.5501 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 5336.3215 575.0411 moveto
+5332.4769 565.1684 lineto
+5329.3257 575.2837 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5336.3215 575.0411 moveto
+5332.4769 565.1684 lineto
+5329.3257 575.2837 lineto
+closepath stroke
+grestore
+% node101
+gsave
+0 0 1 nodecolor
+newpath 5483 565 moveto
+5404 565 lineto
+5404 507 lineto
+5483 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5407.5 546 moveto
+5407.5 562 lineto
+5480.5 562 lineto
+5480.5 546 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5418.5 551.8 moveto 51 (javax.servlet) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5407.5 528 moveto
+5407.5 544 lineto
+5480.5 544 lineto
+5480.5 528 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5410.5 533.8 moveto 67 (javax.servlet-api) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5407.5 510 moveto
+5407.5 526 lineto
+5480.5 526 lineto
+5480.5 510 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5433.5 515.8 moveto 21 (3.1.0) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5404 507 moveto
+5404 565 lineto
+5483 565 lineto
+5483 507 lineto
+closepath stroke
+grestore
+% node100->node101
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5439.3145 681.8195 moveto
+5440.1498 652.9164 5441.4551 607.7526 5442.3858 575.5501 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 5445.8954 575.2654 moveto
+5442.6859 565.1684 lineto
+5438.8984 575.0631 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5445.8954 575.2654 moveto
+5442.6859 565.1684 lineto
+5438.8984 575.0631 lineto
+closepath stroke
+grestore
+% node102
+gsave
+0 0 1 nodecolor
+newpath 5584 565 moveto
+5497 565 lineto
+5497 507 lineto
+5584 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5500.5 546 moveto
+5500.5 562 lineto
+5581.5 562 lineto
+5581.5 546 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5509 551.8 moveto 64 (org.eclipse.jetty) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5500.5 528 moveto
+5500.5 544 lineto
+5581.5 544 lineto
+5581.5 528 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5522.5 533.8 moveto 37 (jetty-http) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5500.5 510 moveto
+5500.5 526 lineto
+5581.5 526 lineto
+5581.5 510 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5503.5 515.8 moveto 75 (9.4.57.v20241219) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5497 507 moveto
+5497 565 lineto
+5584 565 lineto
+5584 507 lineto
+closepath stroke
+grestore
+% node100->node102
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5455.1151 681.8195 moveto
+5472.4526 652.4138 5499.7137 606.1767 5518.7546 573.8819 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 5521.8281 575.5603 moveto
+5523.892 565.1684 lineto
+5515.7981 572.005 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5521.8281 575.5603 moveto
+5523.892 565.1684 lineto
+5515.7981 572.005 lineto
+closepath stroke
+grestore
+% node103
+gsave
+0 0 1 nodecolor
+newpath 5685 565 moveto
+5598 565 lineto
+5598 507 lineto
+5685 507 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5601.5 546 moveto
+5601.5 562 lineto
+5682.5 562 lineto
+5682.5 546 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5610 551.8 moveto 64 (org.eclipse.jetty) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5601.5 528 moveto
+5601.5 544 lineto
+5682.5 544 lineto
+5682.5 528 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5627.5 533.8 moveto 29 (jetty-io) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5601.5 510 moveto
+5601.5 526 lineto
+5682.5 526 lineto
+5682.5 510 lineto
+closepath stroke
+0.33333 1 0.39216 nodecolor
+9 /Helvetica,Arial,sans-serif set_font
+5604.5 515.8 moveto 75 (9.4.57.v20241219) alignedtext
+1 setlinewidth
+solid
+0.33333 1 0.39216 nodecolor
+newpath 5598 507 moveto
+5598 565 lineto
+5685 565 lineto
+5685 507 lineto
+closepath stroke
+grestore
+% node100->node103
+gsave
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5471.5673 681.8195 moveto
+5506.8096 651.7854 5562.6549 604.1931 5600.6288 571.8311 curveto
+stroke
+0.33333 1 0.39216 edgecolor
+newpath 5603.106 574.3186 moveto
+5608.4469 565.1684 lineto
+5598.5656 568.9908 lineto
+closepath fill
+1 setlinewidth
+solid
+0.33333 1 0.39216 edgecolor
+newpath 5603.106 574.3186 moveto
+5608.4469 565.1684 lineto
+5598.5656 568.9908 lineto
+closepath stroke
+grestore
+endpage
+showpage
+grestore
+%%PageTrailer
+%%EndPage: 1
+%%Trailer
+%%Pages: 1
+%%BoundingBox: 36 36 5801 968
+end
+restore
+%%EOF

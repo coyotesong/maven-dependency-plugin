@@ -26,52 +26,31 @@ import org.apache.maven.shared.dependency.graph.DependencyNode;
 /**
  * A dependency node visitor that serializes visited nodes to <a href="https://en.wikipedia.org/wiki/DOT_language">DOT
  * format</a>
+ * </p>
+ * {@see https://renenyffenegger.ch/notes/tools/Graphviz/examples/index} for examples
  *
  * @author <a href="mailto:pi.songs@gmail.com">Pi Song</a>
  * @author <a href="mailto:bgiles@coyotesong.com">Bear Giles</a> (version 3.9)
  * @since 2.1
  */
 public class DOTDependencyNodeVisitor extends VelocityDependencyNodeVisitor {
-    public static final String DEFAULT_MACRO_LIBRARY = "templates/macros/dot/dot-macros-for-dependency-tree.vm";
+    public static final String DEFAULT_MACRO_LIBRARY = "templates/macros/dot-macros-for-dependency-tree.vm";
 
     /**
      * {@inheritDoc}
      */
     public DOTDependencyNodeVisitor(Writer writer) {
-        super(writer, DEFAULT_TEMPLATE_NAME, DEFAULT_MACRO_LIBRARY);
+        super(writer, DEFAULT_FLAT_TEMPLATE_NAME, DEFAULT_MACRO_LIBRARY);
         super.setStyle(new DOTStyle());
     }
 
     /**
      * DOT-specific style
      * </p>
-     * This class lets us eliminate a lot of nasty YTL logic, esp.
-     * with the node- and edge-specific formats.
+     * This class lets us eliminate a lot of nasty YTL logic with the
+     * node- and edge-specific formats.
      */
     public static class DOTStyle extends Style {
-
-        @SuppressWarnings("unused")
-        public String getDefaultGraphFormat() {
-            return String.format(
-                    "color = \"%s\"; fontcolor = \"%s\"; fontname = \"%s\"; fontsize = %d",
-                    getColor(), getColor(), getFontname(), getFontsize() + 2);
-        }
-
-        @SuppressWarnings("unused")
-        public String getDefaultNodeFormat() {
-            final String color = getDefaultColor();
-            return String.format(
-                    "color = \"%s\"; fontcolor = \"%s\"; fontname = \"%s\"; fontsize = %d; style = \"%s\"; fillcolor = \"%s\"",
-                    color, color, getFontname(), getFontsize(), "filled", getBackgroundColor());
-        }
-
-        @SuppressWarnings("unused")
-        public String getDefaultEdgeFormat() {
-            final String color = getDefaultColor();
-            return String.format(
-                    "color = \"%s\"; fontcolor = \"%s\"; fontname = \"%s\"; fontsize = %d; style = \"%s\"",
-                    color, color, getFontname(), getFontsize(), "solid");
-        }
 
         public String getNodeFormat(DependencyNode node) {
             final String color = getColorForNode(node);

@@ -17,55 +17,39 @@
  under the License.
  *#
 
-#macro (header $root $style)
-#end
+#macro (header $root $style) #end
 
-#macro (footer $root $style)
-#end
+#macro (footer $root $style) #end
 
-#macro (setComma $node)
-#set ($comma = ",")
-#if ($node.last)
-  #set ($comma = "")
+#macro (showNestingDependencies $dependency)
+{
+  #showFlatContent($dependency)
+#if (!$dependency.children.empty)
+  #showChildDependencies($dependency)
 #end
+}#if (!${dependency.last}),#end
 #end
 
 #macro (showChildDependencies $parent)
-#foreach ($child in $parent.children)
+"children":
+[
 #indent
-#showNestingDependencies($child)
+  #foreach ($child in $parent.children)
+  #indent
+    #showNestingDependencies($child)
+  #end
 #end
 #end
+]
 #end
 
-#macro (showNestingDependencies $dependency)
+#macro (showFlatContent $dependency)
 #set ($artifact = $dependency.artifact)
-{
   "groupId": "$artifact.groupId",
   "artifactId": "$artifact.artifactId",
   "version": "$artifact.version",
-  "type": "$artifact.type",
-#if ($dependency.showScope)
-  "scope": "$artifact.scope",
-#end
-#if ($dependency.showClassifier)
-  "classifier": "$artifact.classifier",
-#end
-#if (!$dependency.hasChildren)
-  "optional": "$dependency.optional"
-#end
-#if ($dependency.hasChildren())
-  "optional": "$dependency.optional",
-  "children": [
-#indent
-  #showChildDependencies($dependency)
-#end
-  ]
-#end
-#if ($dependency.last)
-}
-#end
-#if (!$dependency.last)
-},
-#end
+  "type": "$!artifact.type",
+  "scope": "$!artifact.scope",
+  "classifier": "$!artifact.classifier",
+  "optional": "$dependency.optional"#if (!$dependency.children.empty),#end
 #end

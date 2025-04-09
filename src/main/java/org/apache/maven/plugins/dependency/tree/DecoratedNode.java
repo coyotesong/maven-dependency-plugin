@@ -160,10 +160,6 @@ public class DecoratedNode implements DependencyNode, Comparable<DecoratedNode> 
         return last;
     }
 
-    public boolean hasChildren() {
-        return !children.isEmpty();
-    }
-
     public String getNodeFormat() {
         if (style instanceof DOTDependencyNodeVisitor.DOTStyle) {
             return ((DOTDependencyNodeVisitor.DOTStyle) style).getNodeFormat(this);
@@ -186,10 +182,6 @@ public class DecoratedNode implements DependencyNode, Comparable<DecoratedNode> 
         }
 
         return true;
-    }
-
-    public boolean hasScope() {
-        return artifact.getScope() != null;
     }
 
     public boolean getShowClassifier() {

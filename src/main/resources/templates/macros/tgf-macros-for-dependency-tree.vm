@@ -17,11 +17,9 @@
  under the License.
  *#
 
-#macro (header $root $style)
-#end
+#macro (header $parent $child) #end
 
-#macro (footer $root $style)
-#end
+#macro (footer $parent $child) #end
 
 #macro (showSimpleDependency $dependency)
 $dependency.id $dependency.nodeString

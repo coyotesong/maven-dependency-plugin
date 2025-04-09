@@ -18,30 +18,16 @@ under the License.
 *#
 
 #**
-This template produces the dependency tree post 3.8.2
-*#
-
-#**
- * TODO - add ability to have string between nodes and edges (tgf))
+ * This template produces the nested dependency tree post 3.8.2
+ * Examples are dot, graphml, and tgf.
  *#
-#header($root $style)
-#if ($nestedFormat)
-    #walkTree($root)
-#end
-#if (!$nestedFormat)
-    #walkTreeForNodes($root)
 
-    #walkTreeForEdges($root)
-#end
+#header($root $style)
+    #walkTreeForNodes($parent)
+
+    #walkTreeForEdges($parent)
 #footer($root $style)
 
-#**
- * All recursion is handled by the macro - this is because the
- * children are often delimited in some manner.
- *#
-#macro(walkTree $parent)
-    #showNestingDependencies($root)
-#end
 
 #**
  * Recursive macro that shows the artifacts
@@ -49,9 +35,9 @@ This template produces the dependency tree post 3.8.2
  *#
 #macro(walkTreeForNodes $parent)
     #showSimpleDependency($parent)
-#foreach ($child in $parent.children)
-    #walkTreeForNodes($child)
-#end
+    #foreach ($child in $parent.children)
+        #walkTreeForNodes($child)
+    #end
 #end
 
 #**

@@ -28,13 +28,13 @@ import java.io.Writer;
  * @since 3.9
  */
 public class YamlDependencyNodeVisitor extends VelocityDependencyNodeVisitor {
-    public static final String DEFAULT_MACRO_LIBRARY = "templates/macros/yaml/yaml-macros-for-dependency-tree.vm";
+    public static final String DEFAULT_MACRO_LIBRARY = "templates/macros/yaml-macros-for-dependency-tree.vm";
 
     /**
      * {@inheritDoc}
      */
     public YamlDependencyNodeVisitor(Writer writer) {
-        super(writer, DEFAULT_TEMPLATE_NAME, DEFAULT_MACRO_LIBRARY);
-        super.setNested(Boolean.TRUE);
+        super(writer, DEFAULT_NESTED_TEMPLATE_NAME, DEFAULT_MACRO_LIBRARY);
+        super.setNested(true);
     }
 }

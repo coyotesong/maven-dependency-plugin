@@ -41,7 +41,8 @@ public class VelocityDependencyNodeVisitor extends AbstractSerializingVisitor
         implements DependencyNodeVisitor, Function<DependencyNode, Boolean> {
     private static final Logger LOG = LoggerFactory.getLogger(VelocityDependencyNodeVisitor.class);
 
-    public static final String DEFAULT_TEMPLATE_NAME = "templates/dependency-tree.vm";
+    public static final String DEFAULT_FLAT_TEMPLATE_NAME = "templates/flat-dependency-tree.vm";
+    public static final String DEFAULT_NESTED_TEMPLATE_NAME = "templates/nested-dependency-tree.vm";
 
     private String templateName;
     private String macroLibrary;

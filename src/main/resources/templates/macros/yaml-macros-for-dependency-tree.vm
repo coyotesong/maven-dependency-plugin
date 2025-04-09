@@ -27,34 +27,33 @@
 '$root.toNodeString':
 #end
 
-#macro (footer $root $style)
+#macro (footer $root $style) #end
+
+#macro (showNestingDependencies $dependency)
+#indent
+  #showFlatContent($dependency)
+#if (!$dependency.children.empty)
+  children:
+    #indent
+    #showChildDependencies($dependency)
+    #end
+#end
+#end
 #end
 
 #macro (showChildDependencies $parent)
-#for ($child in $parent.children index $idx)
-  #indent
-    #showNestingDependencies($child, $idx, $parent.children.size)
+  #foreach ($child in $parent.children)
+    #showNestingDependencies($child)
   #end
 #end
-#end
 
-#macro (showNestingDependencies $dependency)
+#macro (showFlatContent $dependency)
 #set ($artifact = $dependency.artifact)
-#indent
 - groupId: $artifact.groupId
   artifactId: $artifact.artifactId
   version: $artifact.version
   type: $artifact.type
-#if ($dependency.hasScope)
-  scope: $artifact.scope
-#end
-#if ($artifact.hasClassifier)
-  classifier: $artifact.classifier
-#end
+  scope: $!artifact.scope
+  classifier: $!artifact.classifier
   optional: $dependency.optional
-#if ($dependency.hasChildren)
-  children:
-  #showChildDependencies($dependency)
-#end
-#end
 #end

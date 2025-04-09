@@ -1,0 +1,71 @@
+#**
+Licensed to the Apache Software Foundation (ASF) under one
+or more contributor license agreements.  See the NOTICE file
+distributed with this work for additional information
+regarding copyright ownership.  The ASF licenses this file
+to you under the Apache License, Version 2.0 (the
+"License"); you may not use this file except in compliance
+with the License.  You may obtain a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing,
+software distributed under the License is distributed on an
+"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, either express or implied.  See the License for the
+specific language governing permissions and limitations
+under the License.
+*#
+
+#**
+ * This template produces the nested dependency tree post 3.8.2
+ *#
+
+#header($root $style)
+#if ($!nestedFormat)
+    #walkTree($root)
+#end
+#footer($root $style)
+
+#**
+ * All recursion is handled by the macro - this is because the
+ * children are often delimited in some manner.
+ *#
+#macro(walkTree $parent)
+    #showNestingDependencies($root)
+#end
+
+#**
+ *
+ * The format-specific macros should follow the pattern below.
+ * This is a simplest case (YAML) but even JSON is fairly
+ * straightforward with a little bit of prep work.
+ *
+ * This can be generalized if we start to add a lot of templates.
+ * We would only need to add a way to access the delimiter characters
+ * (see the JSON) example and whether to remove the final comma
+ * or semicolon in a list.
+ *
+#macro (showNestingDependencies $dependency)
+#indent
+  #showFlatContent($dependency)
+#if (!$dependency.children.empty)
+  children:
+    #indent
+    #showChildDependencies($dependency)
+    #end
+#end
+#end
+#end
+  
+#macro (showChildDependencies $parent)
+  #foreach ($child in $parent.children)
+    #showNestingDependencies($child)
+  #end
+#end
+
+#macro (showFlatContent $dependency)
+ - handle everything but the children
+#end
+*
+*#

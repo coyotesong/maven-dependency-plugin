@@ -19,9 +19,35 @@
 
 #macro (header $root $style)
 digraph "$root.toNodeString()" {
-    graph [ ranksep=1.5; nodesep=0.2; $style.defaultGraphFormat ]
-    node [ shape="none"; margin=0; $style.defaultNodeFormat ]
-    edge [ $style.defaultEdgeFormat ]
+    graph [
+        ranksep=1.5;
+        nodesep=0.2;
+        color="$style.color";
+
+        fontname="$style.fontname";
+        fontsize=$style.fontsize + 2
+        fontsize=${style.fontsize + 2}
+        fontcolor="$style.backgroundColor";
+    ]
+    node [
+        shape="none";
+        margin=0;
+        style="filled";
+        color="$style.color";
+
+        fontname="$style.fontname";
+        fontsize=$style.fontsize;
+        fontcolor="$style.backgroundColor";
+    ]
+    edge [
+        style="solid";
+        color="$style.color";
+
+        fontname="$style.fontname";
+        fontsize=$style.fontsize;
+        fontcolor="$style.backgroundColor";
+    ]
+
 #end
 
 #macro (footer $root $style)
@@ -35,7 +61,7 @@ digraph "$root.toNodeString()" {
 #macro (showSimpleDependency $dependency)
 #set ($artifact = $dependency.artifact)
     "$dependency.alias" [ $dependency.nodeFormat label = <
-        <table>
+        <table border='1' cellborder='1' cellspacing='0'>
             <tr><td>$artifact.groupId</td></tr>
             <tr><td>$artifact.artifactId</td></tr>
             <tr><td>$artifact.version</td></tr>

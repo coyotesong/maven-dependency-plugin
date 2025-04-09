@@ -29,12 +29,12 @@ import java.io.Writer;
  * @since 2.1
  */
 public class GraphmlDependencyNodeVisitor extends VelocityDependencyNodeVisitor {
-    public static final String DEFAULT_MACRO_LIBRARY = "templates/macros/graphml/graphml-macros-for-dependency-tree.vm";
+    public static final String DEFAULT_MACRO_LIBRARY = "templates/macros/graphml-macros-for-dependency-tree.vm";
 
     /**
      * {@inheritDoc}
      */
     public GraphmlDependencyNodeVisitor(Writer writer) {
-        super(writer, DEFAULT_TEMPLATE_NAME, DEFAULT_MACRO_LIBRARY);
+        super(writer, DEFAULT_FLAT_TEMPLATE_NAME, DEFAULT_MACRO_LIBRARY);
     }
 }

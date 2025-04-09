@@ -29,12 +29,12 @@ import java.io.Writer;
  * @since 2.1
  */
 public class TGFDependencyNodeVisitor extends VelocityDependencyNodeVisitor {
-    public static final String DEFAULT_MACRO_LIBRARY = "templates/macros/tgf/tgf-macros-for-dependency-tree.vm";
+    public static final String DEFAULT_MACRO_LIBRARY = "templates/macros/tgf-macros-for-dependency-tree.vm";
 
     /**
      * {@inheritDoc}
      */
     public TGFDependencyNodeVisitor(Writer writer) {
-        super(writer, DEFAULT_TEMPLATE_NAME, DEFAULT_MACRO_LIBRARY);
+        super(writer, DEFAULT_FLAT_TEMPLATE_NAME, DEFAULT_MACRO_LIBRARY);
     }
 }

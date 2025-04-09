@@ -27,13 +27,13 @@ import java.io.Writer;
  * @author <a href="mailto:bgiles@coyotesong.com">Bear Giles</a> (3.9)
  */
 public class JsonDependencyNodeVisitor extends VelocityDependencyNodeVisitor {
-    public static final String DEFAULT_MACRO_LIBRARY = "templates/macros/json/json-macros-for-dependency-tree.vm";
+    public static final String DEFAULT_MACRO_LIBRARY = "templates/macros/json-macros-for-dependency-tree.vm";
 
     /**
      * {@inheritDoc}
      */
     public JsonDependencyNodeVisitor(Writer writer) {
-        super(writer, DEFAULT_TEMPLATE_NAME, DEFAULT_MACRO_LIBRARY);
-        super.setNested(Boolean.TRUE);
+        super(writer, DEFAULT_NESTED_TEMPLATE_NAME, DEFAULT_MACRO_LIBRARY);
+        super.setNested(true);
     }
 }

@@ -21,6 +21,7 @@ package org.apache.maven.plugins.dependency.tree;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
+import java.util.function.Function;
 
 import org.apache.maven.artifact.Artifact;
 import org.apache.maven.model.Exclusion;
@@ -63,9 +64,11 @@ public class BuildingDependencyNodeVisitor implements DependencyNodeVisitor {
     /**
      * Creates a dependency node visitor that clones visited nodes into a new dependency tree, and then applies the
      * specified dependency node visitor on the resultant dependency tree.
+     * <p>
+     * This constructor is the best choice when the output format that can be naturally constructed as a stream.
      *
      * @param visitor the dependency node visitor to apply on the resultant dependency tree, or <code>null</code> for
-     *            none
+     *                none
      */
     public BuildingDependencyNodeVisitor(DependencyNodeVisitor visitor) {
         this.visitor = visitor;
@@ -114,9 +117,48 @@ public class BuildingDependencyNodeVisitor implements DependencyNodeVisitor {
         // apply the visitor to the resultant tree on the last visit
         if (parentNodes.empty() && visitor != null) {
             rootNode.accept(visitor);
+
+            // this is an unfortunate restriction but we can't use instanceof
+            // generic types and it's too risky to assume that the class implements
+            // the desired Function.
+            //
+            // This approach will still cover all official visitors, and third-party
+            // plugins can use getDependencyTree().
+            if (visitor instanceof AbstractSerializingVisitor) {
+                ((AbstractSerializingVisitor) visitor).apply(rootNode);
+            }
         }
 
         return true;
+    }
+
+    /**
+     * UpdatedependencyNodeVisitor
+     */
+    private interface NewDependencyNodeVisitor extends Function<DependencyNode, Boolean> {
+        default boolean visit(DependencyNode node) {
+            return true;
+        };
+
+        default boolean endVisit(DependencyNode node) {
+            return true;
+        };
+
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        default Boolean apply(DependencyNode node) {
+            if (!visit(node)) {
+                return Boolean.FALSE;
+            }
+            for (DependencyNode child : node.getChildren()) {
+                if (!apply(child)) {
+                    return Boolean.FALSE;
+                }
+            }
+            return endVisit(node);
+        };
     }
 
     // public methods ---------------------------------------------------------
@@ -139,7 +181,7 @@ public class BuildingDependencyNodeVisitor implements DependencyNodeVisitor {
         return rootNode;
     }
 
-    private static class WrapperNode implements DependencyNode {
+    protected static class WrapperNode implements DependencyNode {
 
         private final Artifact artifact;
 

@@ -104,7 +104,7 @@ public class TreeMojo extends AbstractMojo {
 
     /**
      * If specified, this parameter will cause the dependency tree to be written using the specified format. Currently
-     * supported formats are: <code>text</code> (default), <code>dot</code>, <code>graphml</code>, <code>tgf</code>
+     * supported formats are: <code>text</code> (default), <code>dot</code>, <code>dot2</code>, </code><code>graphml</code>, <code>tgf</code>
      * and <code>json</code> (since 3.7.0).
      * These additional formats can be plotted to image files.
      *
@@ -147,7 +147,7 @@ public class TreeMojo extends AbstractMojo {
      * <pre>
      * [groupId]:[artifactId]:[type]:[version]
      * </pre>
-     *
+     * t*
      * where each pattern segment is optional and supports full and partial <code>*</code> wildcards. An empty pattern
      * segment is treated as an implicit wildcard.
      * <p>
@@ -202,6 +202,15 @@ public class TreeMojo extends AbstractMojo {
      */
     @Parameter(property = "skip", defaultValue = "false")
     private boolean skip;
+
+    /**
+     * Velocity template
+     *
+     * @since 2.8.4
+     */
+    // FIXME - make it saner?
+    @Parameter(property = "templateName", defaultValue = "templates/dot/dot2.vm")
+    private String templateName;
 
     @Inject
     public TreeMojo(
@@ -364,6 +373,9 @@ public class TreeMojo extends AbstractMojo {
             return new DOTDependencyNodeVisitor(writer);
         } else if ("json".equals(outputType)) {
             return new JsonDependencyNodeVisitor(writer);
+        } else if ("velocity".equals(outputType)) {
+            // TODO: pass 'getLog()' through to object
+            return new VelocityDependencyNodeVisitor(writer, templateName);
         } else {
             return new SerializingDependencyNodeVisitor(writer, toGraphTokens(tokens));
         }

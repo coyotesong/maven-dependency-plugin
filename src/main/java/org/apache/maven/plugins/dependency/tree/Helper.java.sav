@@ -1,0 +1,613 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ *   http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+package org.apache.maven.plugins.dependency.tree;
+
+import org.apache.maven.artifact.Artifact;
+import org.apache.maven.shared.dependency.graph.DependencyNode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.io.StringWriter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Stack;
+
+/**
+ * Helper classes for DOT dependency charts.
+ *
+ * @author <a href="mailto:bgiles@coyotesong.com">Bear Giles</a>
+ * @since 2.1
+ */
+public class Helper {
+    private static final Logger LOG = LoggerFactory.getLogger(Helper.class);
+
+    boolean verbose = true;
+
+    /**
+     * Information about a single dependency.
+     */
+    public static class Node implements Comparable<Node> {
+        static String defaultFillcolor = "white";
+
+        static int counter = 0;
+
+        private final DependencyNode node;
+
+        DependencyNode parent;
+
+        String id;
+        String nodeString;
+        Artifact artifact;
+        Boolean optional;
+        List<Node> children = new ArrayList<>();
+        String edgeId;
+        Cluster cluster;
+
+        Node(DependencyNode node) {
+            this.node = node;
+            this.id = "node_" + counter++;
+
+            // this.nodeString = node.toNodeString();
+            this.parent = node.getParent();
+            // this.artifact = node.getArtifact();
+            // this.optional = node.getOptional();
+            this.edgeId = "\"" + id + "\"";
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public Artifact getArtifact() {
+            return artifact;
+        }
+
+        public String getGroupId() {
+            return artifact.getGroupId();
+        }
+
+        public String getArtifactId() {
+            return artifact.getArtifactId();
+        }
+
+        public String getVersion() {
+            return artifact.getVersion();
+        }
+
+        public String getType() {
+            return artifact.getType();
+        }
+
+        public String getClassifier() {
+            return artifact.getClassifier();
+        }
+
+        public boolean isOptional() {
+            return artifact.isOptional();
+        }
+
+        public List<Node> getChildren() {
+            return children;
+        }
+
+        public int getChildrenCount() {
+            return children.size();
+        }
+
+        String getColor() {
+            if (this.artifact.getScope() == null) {
+                return "black";
+            } else {
+                switch (artifact.getScope()) {
+                    case "compile":
+                        return "blue";
+                    case "test":
+                        return "darkgreen";
+                    default:
+                        return "black";
+                }
+            }
+        }
+
+        /**
+         * {@inheritDoc}
+         */
+        public String toString() {
+            return dependencyNode.tonodeString();
+        }
+
+        /**
+         * {@inheritDoc}
+         */
+        public int compareTo(Node that) {
+            return this.artifact.compareTo(that.artifact);
+        }
+    }
+
+    /**
+     * Information about a collection of dependencies
+     */
+    public static class Cluster {
+        static String defaultStyle = "filled";
+        static String defaultFillcolor = "lightgray";
+
+        static int counter = 0;
+        List<Node> parents = new ArrayList<>();
+        String id;
+        String groupId;
+        String version;
+        List<Node> nodes = new ArrayList<>();
+        String edgeId;
+        boolean isNested = false;
+
+        String style = defaultStyle;
+        String fillColor = defaultFillcolor;
+
+        List<Cluster> children = new ArrayList<>();
+
+        Cluster(String groupId, String version) {
+            this.id = "cluster_" + counter++;
+            this.groupId = groupId;
+            this.version = version;
+            this.edgeId = "\"" + groupId + "\"";
+        }
+
+        public String getId() {
+            return id;
+        }
+
+        public String getEdgeId() {
+            return edgeId;
+        }
+
+        public List<Cluster> getClusterChildren() {
+            return children;
+        }
+
+        public List<Node> getNodeChildren() {
+            return nodes;
+        }
+
+        public String getLabel() {
+
+            if (version == null) {
+                return groupId;
+            }
+            return groupId + " | " + version;
+        }
+
+        String getStyle() {
+            return style;
+        }
+
+        String getFillColor() {
+            return fillColor;
+        }
+
+        Node getSingletonNode() {
+            if (nodes.size() == 1) {
+                return nodes.get(0);
+            }
+
+            // return something so we don't barf...
+            LOG.warn("unexpected call to 'getSingletonNode'");
+            return nodes.get(0);
+        }
+
+        void add(Node node) {
+            node.cluster = this;
+            nodes.add(node);
+            if ((version != null) && !version.equals(node.artifact.getVersion())) {
+                version = null;
+            }
+        }
+
+        void addCluster(Cluster cluster) {
+            children.add(cluster);
+            cluster.isNested = true;
+        }
+
+        int getSize() {
+            return nodes.size();
+        }
+    }
+
+    private final List<Node> roots = new ArrayList<>();
+
+    private final Stack<Node> stack = new Stack<>();
+    private final Map<String, Node> dependencies = new LinkedHashMap<>();
+    private final Map<String, Cluster> clusters = new LinkedHashMap<>();
+
+    public Helper() {}
+
+    /**
+     * Add a dependency to the list.
+     * <p>
+     * Implementation node - we do perform a recursive descent ourselvess
+     * since the plugin may have applied filters to the list of dependencies.
+     * </p>
+     *
+     * @param dependencyNode dependency being added
+     * @return true
+     */
+    public boolean push(DependencyNode dependencyNode) {
+        String key = dependencyNode.toNodeString();
+        if (dependencies.containsKey(key)) {
+            LOG.warn("unexpected second visit to {}", dependencyNode.toNodeString());
+            // have we already visited this node during recursive descent?
+            stack.push(dependencies.get(key));
+            return true;
+        }
+
+        Node node = new Node(dependencyNode);
+        dependencies.put(key, node);
+        if (!stack.isEmpty()) {
+            Node parent = stack.peek();
+            if (dependencyNode.getParent() == null) {
+                LOG.warn("unexpected null parent for {}", dependencyNode.toNodeString());
+            } else if (!dependencyNode.getParent().toNodeString().equals(parent.nodeString)) {
+                LOG.warn(
+                        "unexpected parent for {}: {} vs {}",
+                        dependencyNode.getArtifact().getBaseVersion(),
+                        dependencyNode.getParent().getArtifact().getBaseVersion(),
+                        parent.artifact.getBaseVersion());
+            } else {
+                parent.children.add(node);
+            }
+        }
+
+        if (stack.isEmpty() && (dependencyNode.getParent() != null)) {
+            LOG.warn("unexpected behavior: top of stack and parent is not null for {}", dependencyNode.toNodeString());
+        } else if (!stack.isEmpty() && (dependencyNode.getParent() == null)) {
+            LOG.warn("unexpected behavior: not top of stack and parent is null for {}", dependencyNode.toNodeString());
+        }
+        stack.push(node);
+
+        if (dependencyNode.getParent() == null) {
+            roots.add(node);
+        }
+
+        return true;
+    }
+
+    /**
+     * Accepts 'completion' notice.
+     *
+     * @param dependencyNode finished dependency
+     * @return true
+     */
+    public boolean pop(DependencyNode dependencyNode) {
+        // todo - verify of stack and parameter match
+        stack.pop();
+        return stack.isEmpty();
+    }
+
+    public boolean prepare() {
+        this.clusters.putAll(identifyClusters());
+        return true;
+    }
+
+    public List<Node> getRoots() {
+        return roots;
+    }
+
+    public List<Node> getDependencies() {
+        return new ArrayList<>(dependencies.values());
+    }
+
+    public List<Cluster> getClusters() {
+        return new ArrayList<>(clusters.values());
+    }
+
+    // ------------------------------------------------------------
+    // ------------------------------------------------------------
+
+    /**
+     * {@inheritDoc}
+     */
+    public String toStringt() throws IOException {
+        // sanity check
+        if (roots.isEmpty()) {
+            return "// nothing to show";
+        }
+
+        try (StringWriter w = new StringWriter();
+                PrintWriter pw = new PrintWriter(w)) {
+            for (Node root : roots) {
+                pw.printf("// root: %s\n", root.artifact.toString());
+            }
+
+            pw.printf("digraph \"%s\" {\n", roots.get(0).nodeString);
+            // pw.printf("     fontname=\"%s\";\n", Node.defaultFontname);
+            pw.println("     graph [ ranksep=1.5; nodesep=0.2; ];");
+            pw.println();
+            pw.println();
+
+            // list dependencies (nodes)
+            this.clusters.putAll(identifyClusters());
+            for (Cluster cluster : clusters.values()) {
+                if (!cluster.isNested) {
+                    addCluster(pw, "    ", cluster);
+                }
+            }
+
+            // list the dependencies (edges)
+            addEdges(pw);
+
+            /*
+            for (Cluster cluster : clusters.values()) {
+                addEdges(pw, cluster);
+            }
+             */
+
+            pw.println("}");
+
+            if (verbose) {
+                pw.println();
+                for (Node dependency : dependencies.values()) {
+                    pw.printf("// %s  %s\n", dependency.id, dependency.artifact);
+                }
+                pw.println();
+                for (Cluster cluster : clusters.values()) {
+                    pw.printf("// %s  %s  %s\n", cluster.id, cluster.groupId, cluster.version);
+                }
+            }
+
+            pw.flush();
+            return w.toString();
+        }
+    }
+
+    void special(String groupId, Node node) {
+        String nodeGroupId = node.artifact.getGroupId();
+        String nodeVersion = node.artifact.getVersion();
+
+        if (!clusters.containsKey(groupId)) {
+            clusters.put(groupId, new Cluster(groupId, nodeVersion));
+        }
+        if (!groupId.equals(nodeGroupId)) {
+            if (!clusters.containsKey(nodeGroupId)) {
+                Cluster c = new Cluster(nodeGroupId, nodeVersion);
+                clusters.put(c.groupId, c);
+
+                clusters.get(groupId).addCluster(c);
+            }
+        }
+        if (nodeGroupId.equals("org.apache.maven")
+                && node.artifact.getArtifactId().equals("maven-archiver")) {
+            node.artifact.setVersion("3.6.3");
+        }
+        clusters.get(nodeGroupId).add(node);
+    }
+
+    Map<String, Cluster> identifyClusters() {
+        final Map<String, Cluster> clusters = new LinkedHashMap<>();
+        final Cluster driversCluster = new Cluster("Database Drivers", null);
+        for (Node node : dependencies.values()) {
+            String groupId = node.artifact.getGroupId();
+            String artifactId = node.artifact.getArtifactId();
+            String version = node.artifact.getVersion();
+            boolean found = false;
+
+            if ("jar".equals(node.artifact.getType())) {
+                if (groupId.startsWith("commons-") && groupId.equals(artifactId)) {
+                    if (!clusters.containsKey("org.apache.commons")) {
+                        clusters.put("org.apache.commons", new Cluster("org.apache.commons", version));
+                    }
+                    Cluster c = new Cluster(groupId, version);
+                    c.add(node);
+                    clusters.get("org.apache.commons").addCluster(c);
+                    found = true;
+                } else if (groupId.startsWith("com.google")) {
+                    special("com.google", node);
+                    found = true;
+                } else if (groupId.startsWith("org.junit")) {
+                    special("org.junit", node);
+                    found = true;
+                } else if (groupId.startsWith("org.apache.maven")) {
+                    special("org.apache.maven", node);
+                    found = true;
+                    // } else if (groupId.startsWith("org.apache.velocity")) {
+                    //    special("org.apache.velocity", node);
+                    //    found = true;
+                } else if (groupId.startsWith("com.fasterxml.jackson")) {
+                    special("com.fasterxml.jackson", node);
+                    found = true;
+                }
+            }
+
+            if (!found) {
+                if (!clusters.containsKey(groupId)) {
+                    clusters.put(groupId, new Cluster(groupId, version));
+                }
+                clusters.get(groupId).add(node);
+            }
+        }
+
+        if (driversCluster.getSize() > 0) {
+            clusters.put("Database Drivers", driversCluster);
+        }
+
+        // sort elements of cluster
+        for (Cluster cluster : clusters.values()) {
+            Collections.sort(cluster.nodes);
+        }
+
+        // identify parents
+        for (Node parent : dependencies.values()) {
+            if (!parent.children.isEmpty()) {
+                for (Node child : parent.children) {
+                    if (child.cluster != null) {
+                        child.cluster.parents.add(parent);
+                    }
+                }
+            }
+        }
+
+        return clusters;
+    }
+
+    /**
+     * Add a cluster to the graph
+     *
+     * @param pw      output writer
+     * @param cluster individual node
+     */
+    void addCluster(PrintWriter pw, String padding, Cluster cluster) {
+        final String prefix = "    ";
+        if ((cluster.getSize() == 1) && !cluster.isNested) {
+            addNode(pw, padding, cluster.getSingletonNode(), null, true);
+        } else {
+            pw.printf("%ssubgroup \"%s\" {\n", padding, cluster.id);
+            pw.printf("%s%scluster = true;\n", padding, prefix);
+            pw.printf("%s%slabel = \"%s\";\n", padding, prefix, cluster.getLabel());
+            pw.printf("%s%sstyle = \"%s\";\n", padding, prefix, cluster.getStyle());
+            pw.printf("%s%sfillcolor = \"%s\";\n", padding, prefix, cluster.getFillColor());
+            if (!cluster.children.isEmpty()) {
+                for (Cluster child : cluster.children) {
+                    // not sure why I need this test...
+                    if (!cluster.id.equals(child.id)) {
+                        addCluster(pw, padding + prefix, child);
+                    }
+                }
+            }
+            // if (cluster.getSize() > 1) {
+            boolean showVersion = cluster.version == null;
+            List<String> labels = new ArrayList<>();
+            for (int i = 0; i < cluster.nodes.size(); i++) {
+                Node node = cluster.nodes.get(i);
+                if (!node.id.equals(cluster.id)) {
+                    node.edgeId = "\"" + cluster.id + "\":f" + i;
+                    if (showVersion) {
+                        labels.add(String.format(
+                                "<td port=\"f%d\" color=\"%s\"><font color=\"%s\">%s</font></td><td>%s</td>",
+                                i,
+                                node.getColor(),
+                                node.getColor(),
+                                node.artifact.getArtifactId(),
+                                node.artifact.getVersion()));
+                    } else {
+                        labels.add(String.format(
+                                "<td port=\"f%d\" color=\"%s\"><font color=\"%s\">%s</font></td>",
+                                i, node.getColor(), node.getColor(), node.artifact.getArtifactId()));
+                    }
+                }
+            }
+            if (!labels.isEmpty()) {
+                pw.printf("%s%s\"%s\" [\n", padding, prefix, cluster.id);
+                StringBuilder sb = new StringBuilder();
+                sb.append("<table>\n<tr>");
+                sb.append(String.join("</tr>\n<tr>", labels));
+                sb.append("</tr>\n</table>");
+
+                pw.printf("%s%s%slabel = <%s>;\n", padding, prefix, prefix, sb.toString());
+                pw.printf("%s%s];\n", padding, prefix);
+            }
+            /*
+            } else {
+                for (Node child : cluster.nodes) {
+                    addNode(pw, padding + prefix, child, cluster.groupId, showVersion);
+                    }
+                    }
+                 */
+            // }
+            pw.printf("%s};\n", padding);
+        }
+    }
+
+    /**
+     * Add a node to the graph
+     * <p>
+     * TODO: make text italic if dependency is optional
+     *
+     * @param pw          output writer
+     * @param node        individual node
+     * @param groupId   true if this is within a cluster. (adds spacing)
+     * @param showVersion true if the version should be included
+     */
+    void addNode(PrintWriter pw, String padding, Node node, String groupId, boolean showVersion) {
+        final Artifact artifact = node.artifact;
+        pw.printf("%s\"%s\" [\n", padding, node.id);
+        padding = padding + "    ";
+        pw.printf("%sshape = \"none\";\n", padding);
+        pw.printf("%smargin = 0;\n", padding);
+        if (groupId != null) {
+            // pw.printf("%sstyle = \"%s\";\n", padding, node.getStyle());
+            pw.printf("%sfillcolor = \"%s\";\n", padding, node.getFillColor());
+            pw.printf("%sgroup = \"%s\";\n", padding, groupId);
+        }
+        pw.printf("%scolor = \"%s\";\n", padding, node.getColor());
+        pw.printf("%sfontcolor = \"%s\";\n", padding, node.getColor());
+        List<String> labels = new ArrayList<>(4);
+        if (!artifact.getGroupId().equals(groupId)) {
+            labels.add(String.format("<td>%s</td>", artifact.getGroupId()));
+        }
+        labels.add(String.format("<td>%s</td>", artifact.getArtifactId()));
+        if (showVersion) {
+            labels.add(String.format("<td>%s</td>", artifact.getVersion()));
+        }
+        if (!"jar".equals(artifact.getType())) {
+            labels.add(String.format("<td>%s</td>", artifact.getType()));
+        }
+        if (artifact.hasClassifier()) {
+            String classifier = artifact.getClassifier();
+            if (classifier.length() > 18) {
+                labels.add(String.format("<td>%s...</td>", classifier.substring(0, 15)));
+            } else {
+                labels.add(String.format("<td>%s</td>", classifier));
+            }
+        }
+
+        pw.printf("%slabel = <", padding);
+        pw.printf("<table>\n<tr>");
+        pw.printf(String.join("</tr>\n<tr>", labels));
+        pw.println("</tr></table>>;");
+        pw.printf("%s];\n", padding.substring(0, padding.length() - 4));
+    }
+
+    void addEdges(PrintWriter pw) {
+        for (Node node : dependencies.values()) {
+            if (!node.children.isEmpty()) {
+                for (Node child : node.children) {
+                    pw.printf("   %s -> %s [color=\"%s\"]", node.edgeId, child.edgeId, child.getColor());
+                    //   [color=\"%s\"];\n",
+                    // samehead=, sametail=
+                    // parent.nodeString,
+                    // child.nodeString);
+                    pw.println(";");
+                }
+            }
+        }
+
+        // pw.println();
+        // for (Cluster cluster : clusters.values()) {
+        //    for (Node child : cluster.nodes) {
+        //        if (child.parent != null) {
+        //            Node parent = dependencies.get(child.parent.toNodeString());
+        //            pw.printf("    %s -> \"%s\" [style=invis];\n", parent.edgeId, cluster.id);
+        //        }
+        //    }
+        // }
+    }
+}

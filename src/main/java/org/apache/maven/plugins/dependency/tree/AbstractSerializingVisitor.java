@@ -20,13 +20,16 @@ package org.apache.maven.plugins.dependency.tree;
 
 import java.io.PrintWriter;
 import java.io.Writer;
+import java.util.function.Function;
+
+import org.apache.maven.shared.dependency.graph.DependencyNode;
 
 /**
  * Abstract class for visitors performing serialization.
  *
  * @author <a href="mailto:jerome.creignou@gmail.com">Jerome Creignou</a>
  */
-public abstract class AbstractSerializingVisitor {
+public abstract class AbstractSerializingVisitor implements Function<DependencyNode, Boolean> {
 
     /**
      * The writer to serialize to.
@@ -47,5 +50,10 @@ public abstract class AbstractSerializingVisitor {
         } else {
             this.writer = new PrintWriter(writer, true);
         }
+    }
+
+    @Override
+    public Boolean apply(DependencyNode dependencyNode) {
+        return null;
     }
 }

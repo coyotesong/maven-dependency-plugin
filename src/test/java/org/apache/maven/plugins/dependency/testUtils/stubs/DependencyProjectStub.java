@@ -656,11 +656,6 @@ public class DependencyProjectStub extends MavenProject {
     }
 
     @Override
-    public Map<String, Artifact> getReportArtifactMap() {
-        return Collections.emptyMap();
-    }
-
-    @Override
     @Deprecated
     public void setExtensionArtifacts(Set<Artifact> set) {}
 

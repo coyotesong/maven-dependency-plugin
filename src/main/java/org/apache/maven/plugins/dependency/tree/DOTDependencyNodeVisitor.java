@@ -19,7 +19,6 @@
 package org.apache.maven.plugins.dependency.tree;
 
 import java.io.Writer;
-import java.util.List;
 
 import org.apache.maven.shared.dependency.graph.DependencyNode;
 import org.apache.maven.shared.dependency.graph.traversal.DependencyNodeVisitor;
@@ -45,6 +44,7 @@ public class DOTDependencyNodeVisitor extends AbstractSerializingVisitor impleme
     /**
      * {@inheritDoc}
      */
+    /*
     @Override
     public boolean visit(DependencyNode node) {
         if (node.getParent() == null || node.getParent() == node) {
@@ -61,15 +61,63 @@ public class DOTDependencyNodeVisitor extends AbstractSerializingVisitor impleme
 
         return true;
     }
+     */
+
+    @Override
+    public boolean visit(DependencyNode dependencyNode) {
+        return false;
+    }
+
+    @Override
+    public boolean endVisit(DependencyNode dependencyNode) {
+        return false;
+    }
 
     /**
      * {@inheritDoc}
      */
+    /*
     @Override
     public boolean endVisit(DependencyNode node) {
         if (node.getParent() == null || node.getParent() == node) {
             writer.write(" } ");
         }
         return true;
+    }
+     */
+
+    protected Boolean applyNodes(DependencyNode node) {
+        return Boolean.TRUE;
+    }
+
+    protected Boolean applyEdges(DependencyNode node) {
+
+        if (!node.getChildren().isEmpty()) {
+            for (DependencyNode child : node.getChildren()) {
+                // Generate "currentNode -> Child" lines
+                writer.println("\t\"" + node.toNodeString() + "\" -> \"" + child.toNodeString() + "\" ; ");
+                // applyEdges(child);
+            }
+            for (DependencyNode child : node.getChildren()) {
+                // Generate "currentNode -> Child" lines
+                // writer.println("\t\"" + node.toNodeString() + "\" -> \"" + child.toNodeString() + "\" ; ");
+                applyEdges(child);
+            }
+        }
+
+        return Boolean.TRUE;
+    }
+
+    public Boolean apply(DependencyNode node) {
+        if (node.getParent() == null || node.getParent() == node) {
+            writer.write("digraph \"" + node.toNodeString() + "\" { " + System.lineSeparator());
+        }
+
+        applyNodes(node);
+        applyEdges(node);
+
+        writer.write(" } ");
+
+        return Boolean.TRUE;
     }
 }

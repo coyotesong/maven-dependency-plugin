@@ -1,0 +1,161 @@
+//  Licensed to the Apache Software Foundation (ASF) under one
+//  or more contributor license agreements.  See the NOTICE file
+//  distributed with this work for additional information
+//  regarding copyright ownership.  The ASF licenses this file
+//  to you under the Apache License, Version 2.0 (the
+//  "License"); you may not use this file except in compliance
+//  with the License.  You may obtain a copy of the License at
+//
+//    http://www.apache.org/licenses/LICENSE-2.0
+//
+//  Unless required by applicable law or agreed to in writing,
+//  software distributed under the License is distributed on an
+//  "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+//  KIND, either express or implied.  See the License for the
+//  specific language governing permissions and limitations
+//  under the License.
+
+
+digraph "$title" {
+    graph [ ranksep=1.5; nodesep=0.2; fontname="$style.fontname"; ];
+    node [ shape="none"; margin=0; fontname="$style.fontname"; fontsize=$style.fontsize; style="filled", fillcolor="white"];
+    edge [ fontname="$style.fontname"; fontsize=$style.fontsize ]
+
+#if ($useDependencies)
+#foreach ($root in $roots)
+    #walkDependenciesForNodes($root)
+#end
+#else
+#foreach ($root in $roots)
+    #showSingleDependency($root)
+#end
+#foreach ($cluster in $clusters)
+    #walkClustersForNodes($cluster, "")
+#end
+#end
+
+    // walking the edges...
+#foreach ($root in $roots)
+    #walkDependenciesForEdges($root)
+#end
+}
+
+// ------------------------------------------------------------
+// Velocity macros follow....
+// ------------------------------------------------------------
+// Styling
+// ------------------------------------------------------------
+#macro (setColorFromScope $scope)
+    #if ($scope == "compile")
+        #set ($scopeColor = "black")
+    #elseif ($scope == "test")
+        #set ($scopeColor = "darkgreen")
+    #elseif ($scope == "import")
+        #set ($scopeColor = "orange")
+    #else
+        #set ($scopeColor = "blue")
+    #end
+#end
+
+#macro (setEdgeStyleFromOptional $optional)
+    #if ($optional)
+        #set ($edgeStyle = "dashed")
+    #else
+        #set ($edgeStyle = "solid")
+    #end
+#end
+
+// ------------------------------------------------------------
+// Content generation
+// ------------------------------------------------------------
+#macro (walkDependenciesForNodes $root)
+    #showSimpleDependency($root)
+
+    #foreach ($child in $root.children)
+        #walkTheDependenciesForNodes($child)
+    #end
+#end
+
+#macro (walkClustersForNodes $cluster $pad)
+#set ($pad = "    " + $pad)
+#if ($cluster.hasNoChildren)
+
+$pad #showClusterDependencies($cluster, $pad)
+#else
+    subgroup {
+$pad     cluster = true;
+$pad     label = "$cluster.label"
+$pad     style = "filled";
+$pad     fillcolor = "lightgray";
+#foreach ($child in $cluster.clusterChildren)
+$pad #walkClustersForNodes($child, $pad)
+#end
+$pad #showClusterDependencies($cluster, $pad)
+$pad };
+#end
+#end
+
+#macro (walkDependenciesForEdges $parent)
+#foreach($child in $parent.children)
+    #setColorFromScope($child.scope)
+    #setEdgeStyleFromOptional($child.optional)
+    $parent.edgeId -> $child.edgeId [ color = $scopeColor; style = $edgeStyle; ];
+#end
+#foreach ($child in $parent.children)
+    #walkDependenciesForEdges($child)
+#end
+#end
+
+// ------------------------------------------------------------
+// ------------------------------------------------------------
+#macro (showSingleDependency $dependency)
+    #setColorFromScope($dependency.scope)
+    "$dependency.groupId" [
+        fillcolor = "white";
+        color = $scopeColor;
+        fontcolor = $scopeColor;
+        #if ($dependency.optional)
+        fontname = $(style.italicFontname);
+        style = "dashed";
+        #end
+        label = <
+            <table>
+                <tr><td>$dependency.groupId</td></tr>
+                <tr><td>$dependency.artifactId</td></tr>
+                <tr><td>$dependency.version</td></tr>
+        #if ($dependency.type != "jar")
+                <tr><td>$dependency.type</td></tr>
+        #end
+        #if ($dependency.hasClassifier)
+                <tr><td><b>$dependency.classifier</b></td></tr>
+        #end
+            </table>
+        >;
+    ];
+#end
+
+
+#macro (showClusterDependencies $cluster $pad)
+#if ($cluster.hasDependencies)
+    "$cluster.groupId" [
+$pad          fillcolor = "white";
+$pad          label = <
+$pad              <table>
+$pad                  <tr><td colspan="2"><b>$cluster.groupId</b></td></tr>
+    #foreach ($dependency in $cluster.dependencies)
+       #setColorFromScope($dependency.scope)
+        $pad                  <tr><td port="f$dependency.port" color="$scopeColor"><font color="$scopeColor">$dependency.artifactId</font></td><td><font color="$scopeColor">$dependency.version</font></td></tr>
+       #if ($dependency.type != "jar")
+$pad             <!-- <tr><td>$dependency.type</td></tr> -->
+       #end
+       #if ($dependency.hasClassifier)
+$pad             <!--    <tr><td><b>$dependency.classifier</b></td></tr> -->
+       #end
+    #end
+$pad              </table>
+$pad          >;
+$pad      ];
+#end
+#end
+
+
